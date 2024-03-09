@@ -1,0 +1,110 @@
+@media screen and (max-width: 720px) {}
+
+@media screen and (min-width: 720px) {
+    .hero-section {
+        background-image: url('/Images/herobg.png');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+
+
+
+}
+
+.second-section {
+    position: relative;
+    background-image: url('/Images/hdsecondbg.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-color: #012F6D;
+    background-blend-mode: hard-light;
+}
+
+.slide-item {
+    margin-right: 10px !important;
+    /* Adjust this value to set the desired gap */
+}
+
+.slick-list {
+    margin: 0 -10px !important;
+    /* Adjust this value to set the gap for the first and last items */
+}
+
+.react-multi-carousel-list ul {
+    height: 100%;
+}
+
+.react-multi-carousel-list ul li {
+    height: 100%;
+    width: 290px !important;
+    margin-right: 30px !important;
+}
+
+.cards {
+    height: 100%;
+    width: 300px !important;
+    margin-right: 30px !important;
+}
+
+.react-multiple-carousel__arrow {
+    top: 120% !important;
+}
+
+.forth-first {
+    background-image: url('/Images/forthfirstbg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.forth-first::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    z-index: 10;
+    height: 100%;
+    background-image: url('/Images/forthfirstbgblend.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.forth-last-top {
+    background-color: #012f6d;
+    background-image: url('/Images/forthlasttop.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+
+.forth-last-bottom {
+    background-color: #0040A1;
+    background-image: url('/Images/forthlastbottom.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+
+/* @media screen and (max-width: 720px) {
+    .half{
+        width: 50%;
+     
+    }
+} */
+
+@media screen and (min-width:1080px) and (max-width:1400px) {
+    .resp-controls {
+        margin-top: -3rem !important;
+    }
+}
+
+
+
+
+.hideAnimation{
+    opacity: 0;
+    transition: all 2s;
+}
+
+.show{
+    opacity: 1;
+}
