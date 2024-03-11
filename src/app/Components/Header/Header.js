@@ -3,7 +3,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import './Header.css'
 
-const Header = () => {
+const Header = ({ handleToggleModal }) => {
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
@@ -21,7 +21,8 @@ const Header = () => {
     }, []);
     return (
         <>
-            <div className='flex justify-between hideAnimation lg:px-28 bg-white '>
+            <div className='lg:flex hidden justify-between hideAnimation lg:px-28 bg-white '>
+            {/* <div className='flex  justify-between hideAnimation lg:px-28 bg-white '> */}
                 <div className='bg-[#012F6D] py-7 px-9 flex-col lg:max-w-[138px] h-full flex justify-center items-center'>
                     <div className='flex justify-center items-center w-full'>
                         <img src='/Images/capitaltext.png' className='max-w-[46px]'></img>
@@ -56,6 +57,24 @@ const Header = () => {
                     </div>
                 </div>
 
+            </div>
+
+            <div className='relative bg-[#012F6D]  md:hidden flex w-full justify-between px-4 py-7'>
+                <div className=''>
+                    <div className='bg-[#012F6D]   flex-col lg:max-w-[138px] h-full flex justify-center items-center'>
+                      
+                        <div className='flex mt-2 justify-center items-center w-full'>
+                            <img src='/Images/ewfwhitetext.png' className='max-w-[79px]'></img>
+                        </div>
+                    </div>
+                </div>
+                <div className='absolute z-50 top-1/2 transform -translate-x-1/2 -translate-y-1/2 right-5'>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="13" viewBox="0 0 21 13" fill="none" onClick={() => { handleToggleModal() }}>
+                        <rect width="21" height="3" rx="1" fill="white" />
+                        <rect y="5" width="21" height="3" rx="1" fill="white" />
+                        <rect y="10" width="21" height="3" rx="1" fill="white" />
+                    </svg>
+                </div>
             </div>
         </>
     )

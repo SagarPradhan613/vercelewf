@@ -13,7 +13,7 @@ const Landing = () => {
     const viewRef = useRef(null);
 
 
-    
+
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
@@ -64,15 +64,15 @@ const Landing = () => {
                     <div className="w-full flex flex-col pt-6 lg:pt-0 justify-between lg:pr-28 lg:pl-20 lg:w-1/2">
                         <p className='text-[#012F6D] font-normal leading-7 text-base'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
 
-                        <div className='flex gap-8 pt-6 lg:pt-0'>
-                            <div className='bg-[#F6161E] transform hover:scale-110 transition-transform duration-500 px-8 py-4 text-white flex items-center justify-center gap-3'>
+                        <div className='flex relative z-50 gap-8 pt-6 lg:pt-0'>
+                            <div className='bg-[#F6161E] transform hover:scale-110 transition-transform duration-500 w-[169px] py-3 text-white flex items-center justify-center gap-3'>
                                 <p className='text-base font-bold'>Get Started</p>
                                 <svg width="19" height="12" viewBox="0 0 19 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M18.251 6.9483C18.5439 6.65541 18.5439 6.18053 18.251 5.88764L13.4781 1.11467C13.1852 0.821774 12.7103 0.821774 12.4174 1.11467C12.1245 1.40756 12.1245 1.88243 12.4174 2.17533L16.66 6.41797L12.4174 10.6606C12.1245 10.9535 12.1245 11.4284 12.4174 11.7213C12.7103 12.0142 13.1852 12.0142 13.4781 11.7213L18.251 6.9483ZM0.720703 7.16797H17.7207V5.66797H0.720703V7.16797Z" fill="white" />
                                 </svg>
                             </div>
 
-                            <div className='bg-white transform hover:scale-110 transition-transform duration-500 border border-[#012F6D] px-8 py-4 text-[#012F6D] flex items-center justify-center gap-8'>
+                            <div className='bg-white transform hover:scale-110 transition-transform duration-500 border border-[#012F6D] w-[169px] py-3 text-[#012F6D] flex items-center justify-center gap-8'>
                                 <p className='text-base font-bold '>Learn more</p>
 
                             </div>
@@ -103,12 +103,14 @@ const Landing = () => {
                 <div className='absolute flex flex-col justify-between lg:left-28 -top-10 bg-[#F6161E] lg:w-[389px] lg:h-[300px]  w-[250px]  px-4 py-8 lg:py-10 lg:px-10'>
                     <p className='tiro text-white text-3xl lg:text-5xl'>
                         Aur<br />
-                        Investment<br />
-                        Options
+                        <span className="tiro-regular">
+                            Investment<br />
+                            Options
+                        </span>
                     </p>
 
                     <div className='flex w-full mt-6 lg:mt-0 justify-between'>
-                        <p className='lg:text-base text-xs font-bold text-white'>INVEST NOW</p>
+                        <p className='lg:text-base text-xs font-semibold text-white'>INVEST NOW</p>
 
                         <div>
                             <svg className="transform hover:scale-110 transition-transform duration-500" width="35" height="24" viewBox="0 0 35 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -226,7 +228,7 @@ const Landing = () => {
                                 </div>
 
                                 <div className="flex mt-6">
-                                    <p className="font-bold text-4xl text-[#F6161E]">2085 X</p>
+                                    <p className="font-bold text-3xl lg:text-4xl text-[#F6161E]">2085 X</p>
                                     <p className="font-bold text-2xl text-[#0040A1] ml-6"> return</p>
                                 </div>
                             </div>
@@ -257,7 +259,7 @@ const Landing = () => {
                                 </div>
 
                                 <div className="flex mt-6">
-                                    <p className="font-bold text-4xl text-[#F6161E]">541 X</p>
+                                    <p className="font-bold text-3xl lg:text-4xl text-[#F6161E]">541 X</p>
                                     <p className="font-bold text-2xl text-[#0040A1] ml-6"> return</p>
                                 </div>
                             </div>
@@ -288,7 +290,7 @@ const Landing = () => {
                                 </div>
 
                                 <div className="flex mt-6">
-                                    <p className="font-bold text-4xl text-[#F6161E]">2085 X</p>
+                                    <p className="font-bold text-3xl lg:text-4xl text-[#F6161E]">2085 X</p>
                                     <p className="font-bold text-2xl text-[#0040A1] ml-6"> return</p>
                                 </div>
                             </div>
@@ -319,7 +321,7 @@ const Landing = () => {
                                 </div>
 
                                 <div className="flex mt-6">
-                                    <p className="font-bold text-4xl text-[#F6161E]">2085 X</p>
+                                    <p className="font-bold text-3xl lg:text-4xl text-[#F6161E]">2085 X</p>
                                     <p className="font-bold text-2xl text-[#0040A1] ml-6"> return</p>
                                 </div>
                             </div>
@@ -350,7 +352,7 @@ const Landing = () => {
                                 </div>
 
                                 <div className="flex mt-6">
-                                    <p className="font-bold text-4xl text-[#F6161E]">2085 X</p>
+                                    <p className="font-bold text-3xl lg:text-4xl text-[#F6161E]">2085 X</p>
                                     <p className="font-bold text-2xl text-[#0040A1] ml-6"> return</p>
                                 </div>
                             </div>
@@ -381,7 +383,7 @@ const Landing = () => {
                                 </div>
 
                                 <div className="flex mt-6">
-                                    <p className="font-bold text-4xl text-[#F6161E]">2085 X</p>
+                                    <p className="font-bold text-3xl lg:text-4xl text-[#F6161E]">2085 X</p>
                                     <p className="font-bold text-2xl text-[#0040A1] ml-6"> return</p>
                                 </div>
                             </div>
@@ -412,7 +414,7 @@ const Landing = () => {
                                 </div>
 
                                 <div className="flex mt-6">
-                                    <p className="font-bold text-4xl text-[#F6161E]">2085 X</p>
+                                    <p className="font-bold text-3xl lg:text-4xl text-[#F6161E]">2085 X</p>
                                     <p className="font-bold text-2xl text-[#0040A1] ml-6"> return</p>
                                 </div>
                             </div>
@@ -488,7 +490,7 @@ const Landing = () => {
                                 </div>
                             </div>
 
-                            <div className="w-full items-center -mt-10 flex justify-between">
+                            <div className="w-full items-end -mt-10 flex justify-between">
                                 <p className="text-lg font-bold text-white">Advanced Plan</p>
                                 <div>
                                     <img className="transform hover:scale-110 transition-transform duration-500" src="/Images/redbtn.png"></img>
@@ -551,7 +553,7 @@ const Landing = () => {
 
                                 <div className="w-full items-center -mt-10 flex justify-between">
                                     <p className="text-lg font-bold text-white">Medium Plan</p>
-                                    <div className="flex transform hover:scale-110 transition-transform duration-500 items-center px-6 py-3 text-white bg-[#F6161E]">
+                                    <div className="flex transform hover:scale-110 transition-transform duration-500 items-center lg:px-6 px-4 py-2 lg:py-3 text-white bg-[#F6161E]">
                                         <div className="flex font-bold text-base">
                                             Get Started
                                         </div>
@@ -612,7 +614,7 @@ const Landing = () => {
                                 </div>
                             </div>
 
-                            <div className="w-full items-center -mt-10 flex justify-between">
+                            <div className="w-full items-end -mt-10 flex justify-between">
                                 <p className="text-lg font-bold text-white">Advanced Plan</p>
                                 <div>
                                     <img className="transform hover:scale-110 transition-transform duration-500" src="/Images/redbtn.png"></img>
@@ -639,7 +641,7 @@ const Landing = () => {
                             <div>
                                 <p className="opacity-70 text-xl font-bold text-white">smart investing through analysis, research, and market savvy</p>
                                 <div className="flex mt-8 items-center justify-between w-full">
-                                    <p className="text-white transform hover:scale-110 transition-transform duration-500 text-lg font-bold">Know More</p>
+                                    <p className="text-white transform hover:scale-110 transition-transform duration-500 text-lg font-semibold">Know More</p>
                                     <div>
                                         <svg className="transform hover:scale-110 transition-transform duration-500" width="34" height="23" viewBox="0 0 34 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M33.4308 12.7735C34.0166 12.1878 34.0166 11.238 33.4308 10.6522L23.8848 1.10629C23.299 0.5205 22.3493 0.5205 21.7635 1.10629C21.1777 1.69207 21.1777 2.64182 21.7635 3.22761L30.2488 11.7129L21.7635 20.1982C21.1777 20.784 21.1777 21.7337 21.7635 22.3195C22.3493 22.9053 23.2991 22.9053 23.8848 22.3195L33.4308 12.7735ZM0.207031 13.2129L32.3701 13.2129L32.3701 10.2129L0.207031 10.2129L0.207031 13.2129Z" fill="white" />
@@ -668,7 +670,7 @@ const Landing = () => {
                             <div>
                                 <p className="opacity-70 text-xl font-bold text-white">smart investing through analysis, research, and market savvy</p>
                                 <div className="flex mt-8 items-center justify-between w-full">
-                                    <p className="text-white transform hover:scale-110 transition-transform duration-500 text-lg font-bold">Know More</p>
+                                    <p className="text-white transform hover:scale-110 transition-transform duration-500 text-lg font-semibold">Know More</p>
                                     <div>
                                         <svg className="transform hover:scale-110 transition-transform duration-500" width="34" height="23" viewBox="0 0 34 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M33.4308 12.7735C34.0166 12.1878 34.0166 11.238 33.4308 10.6522L23.8848 1.10629C23.299 0.5205 22.3493 0.5205 21.7635 1.10629C21.1777 1.69207 21.1777 2.64182 21.7635 3.22761L30.2488 11.7129L21.7635 20.1982C21.1777 20.784 21.1777 21.7337 21.7635 22.3195C22.3493 22.9053 23.2991 22.9053 23.8848 22.3195L33.4308 12.7735ZM0.207031 13.2129L32.3701 13.2129L32.3701 10.2129L0.207031 10.2129L0.207031 13.2129Z" fill="white" />
@@ -695,7 +697,7 @@ const Landing = () => {
 
                             <div>
                                 <div className="flex mt-8 items-center justify-between w-full">
-                                    <p className="text-white transform hover:scale-110 transition-transform duration-500 text-lg font-bold">Know More</p>
+                                    <p className="text-white transform hover:scale-110 transition-transform duration-500 text-lg font-semibold">Know More</p>
                                     <div className="transform hover:scale-110 transition-transform duration-500">
                                         <svg width="34" height="23" viewBox="0 0 34 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M33.4308 12.7735C34.0166 12.1878 34.0166 11.238 33.4308 10.6522L23.8848 1.10629C23.299 0.5205 22.3493 0.5205 21.7635 1.10629C21.1777 1.69207 21.1777 2.64182 21.7635 3.22761L30.2488 11.7129L21.7635 20.1982C21.1777 20.784 21.1777 21.7337 21.7635 22.3195C22.3493 22.9053 23.2991 22.9053 23.8848 22.3195L33.4308 12.7735ZM0.207031 13.2129L32.3701 13.2129L32.3701 10.2129L0.207031 10.2129L0.207031 13.2129Z" fill="white" />
@@ -720,7 +722,7 @@ const Landing = () => {
 
                             <div>
                                 <div className="flex mt-8 items-center justify-between w-full">
-                                    <p className="text-white text-lg transform hover:scale-110 transition-transform duration-500 font-bold">Know More</p>
+                                    <p className="text-white text-lg transform hover:scale-110 transition-transform duration-500 font-semibold">Know More</p>
                                     <div className="transform hover:scale-110 transition-transform duration-500">
                                         <svg width="34" height="23" viewBox="0 0 34 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M33.4308 12.7735C34.0166 12.1878 34.0166 11.238 33.4308 10.6522L23.8848 1.10629C23.299 0.5205 22.3493 0.5205 21.7635 1.10629C21.1777 1.69207 21.1777 2.64182 21.7635 3.22761L30.2488 11.7129L21.7635 20.1982C21.1777 20.784 21.1777 21.7337 21.7635 22.3195C22.3493 22.9053 23.2991 22.9053 23.8848 22.3195L33.4308 12.7735ZM0.207031 13.2129L32.3701 13.2129L32.3701 10.2129L0.207031 10.2129L0.207031 13.2129Z" fill="white" />
@@ -748,13 +750,13 @@ const Landing = () => {
                         </div>
 
                         <div className="flex justify-between mt-28">
-                            <div className="half flex items-end">
+                            <div className="half flex items-center lg:items-end">
                                 <p className=" font-bold text-3xl lg:text-7xl text-[#F6161E]" >10</p>
-                                <p className="font-bold text-xl lg:text-2xl text-[#F6161E] lg:whitespace-nowrap ml-2 lg:ml-3">Years Experiene</p>
+                                <p className="font-bold text-[10px] lg:text-2xl text-[#F6161E] lg:whitespace-nowrap ml-2 lg:ml-3">Years Experiene</p>
                             </div>
                             <div className="flex half items-end ">
                                 <div className="flex items-center px-3 transform hover:scale-110 transition-transform duration-500 lg:px-6 py-3 gap-2 bg-[#012F6D]">
-                                    <p className="lg:text-base text-sm font-bold text-white ">Learn more</p>
+                                    <p className="lg:text-base text-sm font-medium text-white ">Learn more</p>
                                     <div className="flex items-center h-full mt-1">
                                         <svg width="19" height="12" viewBox="0 0 19 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M18.2812 6.26764C18.5741 5.97474 18.5741 5.49987 18.2812 5.20698L13.5082 0.434005C13.2153 0.141112 12.7404 0.141111 12.4475 0.434005C12.1546 0.726898 12.1546 1.20177 12.4475 1.49467L16.6902 5.73731L12.4475 9.97995C12.1546 10.2728 12.1546 10.7477 12.4475 11.0406C12.7404 11.3335 13.2153 11.3335 13.5082 11.0406L18.2812 6.26764ZM0.839844 6.4873L17.7508 6.48731L17.7508 4.98731L0.839844 4.9873L0.839844 6.4873Z" fill="white" />
@@ -778,13 +780,13 @@ const Landing = () => {
                         </div>
 
                         <div className="flex justify-between mt-28">
-                            <div className=" flex items-end">
+                            <div className=" flex items-center lg:items-end">
                                 <p className=" font-bold text-3xl lg:text-7xl text-[#F6161E]" >20</p>
-                                <p className="font-bold text-xl lg:text-2xl text-[#F6161E] whitespace-nowrap ml-3">Years</p>
+                                <p className="font-bold text-[10px] lg:text-2xl text-[#F6161E] whitespace-nowrap ml-3">Years</p>
                             </div>
                             <div className="flex items-end ">
                                 <div className="flex items-center px-3 lg:px-6 py-3 transform hover:scale-110 transition-transform duration-500 gap-2 bg-[#012F6D]">
-                                    <p className="lg:text-base text-sm font-bold text-white ">Learn more</p>
+                                    <p className="lg:text-base text-sm font-medium text-white ">Learn more</p>
                                     <div className="flex items-center h-full mt-1">
                                         <svg width="19" height="12" viewBox="0 0 19 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M18.2812 6.26764C18.5741 5.97474 18.5741 5.49987 18.2812 5.20698L13.5082 0.434005C13.2153 0.141112 12.7404 0.141111 12.4475 0.434005C12.1546 0.726898 12.1546 1.20177 12.4475 1.49467L16.6902 5.73731L12.4475 9.97995C12.1546 10.2728 12.1546 10.7477 12.4475 11.0406C12.7404 11.3335 13.2153 11.3335 13.5082 11.0406L18.2812 6.26764ZM0.839844 6.4873L17.7508 6.48731L17.7508 4.98731L0.839844 4.9873L0.839844 6.4873Z" fill="white" />
@@ -812,7 +814,7 @@ const Landing = () => {
 
                             <div className="flex w-full relative z-50 mt-24 lg:mt-32 gap-6">
                                 <div className="flex items-center px-3 transform hover:scale-110 transition-transform duration-500 lg:px-6 py-3 gap-2 bg-[#012F6D]">
-                                    <p className="lg:text-base text-sm font-bold text-white ">Learn more</p>
+                                    <p className="lg:text-base text-sm font-medium text-white ">Learn more</p>
                                     <div className="flex items-center h-full ">
                                         <svg width="19" height="12" viewBox="0 0 19 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M18.2812 6.26764C18.5741 5.97474 18.5741 5.49987 18.2812 5.20698L13.5082 0.434005C13.2153 0.141112 12.7404 0.141111 12.4475 0.434005C12.1546 0.726898 12.1546 1.20177 12.4475 1.49467L16.6902 5.73731L12.4475 9.97995C12.1546 10.2728 12.1546 10.7477 12.4475 11.0406C12.7404 11.3335 13.2153 11.3335 13.5082 11.0406L18.2812 6.26764ZM0.839844 6.4873L17.7508 6.48731L17.7508 4.98731L0.839844 4.9873L0.839844 6.4873Z" fill="white" />
@@ -821,7 +823,7 @@ const Landing = () => {
                                     </div>
                                 </div>
                                 <div className="flex items-center px-3 transform hover:scale-110 transition-transform duration-500 lg:px-6 py-3 gap-2 bg-[#0040A1]">
-                                    <p className="lg:text-base text-sm font-bold text-white ">Get Started</p>
+                                    <p className="lg:text-base text-sm font-medium text-white ">Get Started</p>
                                     <div className="flex items-center h-full ">
                                         <svg width="19" height="12" viewBox="0 0 19 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M18.2812 6.26764C18.5741 5.97474 18.5741 5.49987 18.2812 5.20698L13.5082 0.434005C13.2153 0.141112 12.7404 0.141111 12.4475 0.434005C12.1546 0.726898 12.1546 1.20177 12.4475 1.49467L16.6902 5.73731L12.4475 9.97995C12.1546 10.2728 12.1546 10.7477 12.4475 11.0406C12.7404 11.3335 13.2153 11.3335 13.5082 11.0406L18.2812 6.26764ZM0.839844 6.4873L17.7508 6.48731L17.7508 4.98731L0.839844 4.9873L0.839844 6.4873Z" fill="white" />
@@ -857,7 +859,7 @@ const Landing = () => {
             {/* fifth box */}
             <div ref={viewRef} className="flex hideAnimation lg:flex-row flex-col">
                 <div className="lg:w-1/2 lg:py-24 w-full lg:-mt-8 px-10 py-10 lg:px-28 bg-[#012F6D]">
-                    <div className="w-full text-white text-6xl">
+                    <div className="w-full text-white text-5xl lg:text-6xl">
                         <p className="tiro-regular">Book an</p>
                         <p className="tiro">appointment</p>
                     </div>
@@ -913,8 +915,8 @@ const Landing = () => {
                             <input placeholder="Second Name" className="w-1/2 black px-4 py-4 text-[#000000] font-bold text-base bg-white border-b border-b-[#000000]"></input>
                         </div>
                         <div className="w-full gap-10 mt-1 flex">
-                            <input placeholder="First Name" className="w-1/2 black px-4 py-4 text-[#000000] font-bold text-base bg-white border-b border-b-[#000000]"></input>
-                            <input placeholder="Second Name" className="w-1/2 black px-4 py-4 text-[#000000] font-bold text-base bg-white border-b border-b-[#000000]"></input>
+                            <input placeholder="Phone" className="w-1/2 black px-4 py-4 text-[#000000] font-bold text-base bg-white border-b border-b-[#000000]"></input>
+                            <input placeholder="Email" className="w-1/2 black px-4 py-4 text-[#000000] font-bold text-base bg-white border-b border-b-[#000000]"></input>
                         </div>
                         <div className="w-full flex mt-6 ">
                             <textarea type="textArea" placeholder="Message" className="px-4 pb-12 w-[100%] py-4 text-black font-bold text-base bg-white black border-b border-black"></textarea>
@@ -938,13 +940,13 @@ const Landing = () => {
 
             {/* sixth box */}
 
-            <div className="flex lg:flex-row hideAnimation flex-col w-full items-center justify-between bg-[#0040A1] py-10 px-10 lg:py-20 lg:px-28">
+            <div className="flex lg:flex-row hideAnimation flex-col w-full  lg:items-center justify-between bg-[#0040A1] py-10 px-10 lg:py-20 lg:px-28">
                 <div>
                     <p className="tiro text-white text-3xl lg:text-6xl">Join Today,</p>
                     <p className="tiro-regular text-white text-3xl lg:text-6xl  lg:ml-0 lg:mt-2">Conquer with us</p>
                 </div>
 
-                <div className="flex transform hover:scale-110 transition-transform duration-500 justify-between mt-6 lg:mt-0 items-center px-3 lg:px-6 lg:py-4 py-3 gap-10 bg-white">
+                <div className="flex newhalf transform hover:scale-110 transition-transform duration-500 justify-between mt-6 lg:mt-0 items-center px-3 lg:px-6 lg:py-4 py-3 gap-10 bg-white">
                     <div>
                         <p className="lg:text-base text-sm font-bold text-[#0040A1] ">Join now</p>
                     </div>

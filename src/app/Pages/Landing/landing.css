@@ -84,12 +84,12 @@
     background-blend-mode: multiply;
 }
 
-/* @media screen and (max-width: 720px) {
-    .half{
+@media screen and (max-width: 720px) {
+    .newhalf{
         width: 50%;
      
     }
-} */
+}
 
 @media screen and (min-width:1080px) and (max-width:1400px) {
     .resp-controls {
