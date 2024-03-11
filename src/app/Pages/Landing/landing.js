@@ -418,7 +418,7 @@ const Landing = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="flex mt-6 px-4 lg:px-0 resp-controls lg:-mt-6 lg:pr-10 text-white  justify-between w-full items-center">
+                    <div className="flex mt-6 px-4 lg:px-0 resp-controls relative z-50 lg:-mt-6 lg:pr-10 text-white  justify-between w-full items-center">
                         <div onClick={() => { handlePrev() }}>
                             <svg width="33" height="23" viewBox="0 0 33 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M-0.866325 12.6339C-1.45211 12.0481 -1.45211 11.0984 -0.866325 10.5126L8.67962 0.966638C9.2654 0.380852 10.2152 0.380852 10.8009 0.966639C11.3867 1.55243 11.3867 2.50217 10.8009 3.08796L2.31566 11.5732L10.8009 20.0585C11.3867 20.6443 11.3867 21.5941 10.8009 22.1798C10.2151 22.7656 9.2654 22.7656 8.67962 22.1798L-0.866325 12.6339ZM32.3574 13.0732L0.194336 13.0732L0.194336 10.0732L32.3574 10.0732L32.3574 13.0732Z" fill="white" />
