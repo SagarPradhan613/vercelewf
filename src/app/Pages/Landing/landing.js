@@ -752,7 +752,7 @@ const Landing = () => {
                         <div className="flex justify-between mt-28">
                             <div className="half flex items-center lg:items-end">
                                 <p className=" font-bold text-3xl lg:text-7xl text-[#F6161E]" >10</p>
-                                <p className="font-bold text-[10px] lg:text-2xl text-[#F6161E] lg:whitespace-nowrap ml-2 lg:ml-3">Years Experiene</p>
+                                <p className="font-bold text-[10px] lg:text-2xl text-[#F6161E] lg:whitespace-nowrap ml-2 lg:ml-3">Years Experience</p>
                             </div>
                             <div className="flex half items-end ">
                                 <div className="flex items-center px-3 transform hover:scale-110 transition-transform duration-500 lg:px-6 py-3 gap-2 bg-[#012F6D]">
