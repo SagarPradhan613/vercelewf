@@ -100,7 +100,7 @@ const Landing = () => {
 
             {/* second box */}
             <div className='w-full mt-10 lg:mt-0 hideAnimation  lg:px-0 lg:pt-64 lg:pb-36 lg:pl-28 pt-32 pb-16  flex flex-col lg:flex-row relative bg-[#012F6D]  second-section'>
-                <div className='absolute flex flex-col justify-between lg:left-28 -top-10 bg-[#F6161E] lg:w-[389px] lg:h-[300px]  w-[250px]  px-4 py-8 lg:py-10 lg:px-10'>
+                <div className='absolute box-animation flex flex-col justify-between lg:left-28 -top-10 bg-[#F6161E] lg:w-[389px] lg:h-[300px]  w-[250px]  px-4 py-8 lg:py-10 lg:px-10'>
                     <p className='tiro text-white text-3xl lg:text-5xl'>
                         Aur<br />
                         <span className="tiro-regular">
@@ -110,7 +110,7 @@ const Landing = () => {
                     </p>
 
                     <div className='flex w-full mt-6 lg:mt-0 justify-between'>
-                        <p className='lg:text-base text-xs font-semibold text-white'>INVEST NOW</p>
+                        <p className='lg:text-base text-xs font-semibold inter text-white'>INVEST NOW</p>
 
                         <div>
                             <svg className="transform hover:scale-110 transition-transform duration-500" width="35" height="24" viewBox="0 0 35 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -125,9 +125,9 @@ const Landing = () => {
                     <div className='mt-20 px-4 lg:px-0'>
                         <div>
                             <p className='text-white font-bold text-base opacity-50'>Updated on September </p>
-                            <div className='flex w-full justify-between mt-2'>
-                                <div className='text-white'>
-                                    <p className='font-bold text-xl lg:text-3xl'>Overall
+                            <div className='flex w-full  justify-between mt-2'>
+                                <div className='text-white font-normal inter'>
+                                    <p className='font-medium text-xl lg:text-3xl'>Overall
                                         <br />
                                         Investments</p>
                                 </div>
@@ -139,7 +139,7 @@ const Landing = () => {
                                 </div>
 
                             </div>
-                            <div className='w-full h-[1px] mt-10 bg-white'>
+                            <div className='w-full h-[1px] mt-10 bg-[rgba(199,199,199,0.5)]'>
 
                             </div>
                         </div>
@@ -148,7 +148,7 @@ const Landing = () => {
                             <p className='text-white font-bold text-base opacity-50'>Updated on September </p>
                             <div className='flex w-full justify-between mt-2'>
                                 <div className='text-white'>
-                                    <p className='font-bold text-xl lg:text-3xl'>Investments
+                                    <p className='font-medium inter text-xl lg:text-3xl'>Investments
                                         <br />
                                         Last year.</p>
                                 </div>
@@ -159,14 +159,14 @@ const Landing = () => {
                                 </div>
 
                             </div>
-                            <div className='w-full h-[1px] mt-10 bg-white'>
+                            <div className='w-full h-[1px] mt-10 bg-[rgba(199,199,199,0.5)]'>
 
                             </div>
                         </div>
 
                         <div className='w-full mt-10 flex items-center'>
-                            <div className='flex justify-between  w-1/2 items-center pr-20'>
-                                <div className='text-white text-xl lg:text-2xl'>
+                            <div className='flex directionLeft justify-between  w-1/2 items-center pr-20'>
+                                <div className='text-white inter font-medium flex lg:block gap-2  text-xl lg:text-2xl'>
                                     <p>Total</p>
                                     <p>Return</p>
                                 </div>
@@ -180,8 +180,8 @@ const Landing = () => {
 
                             </div>
 
-                            <div className='flex justify-between pl-10 w-1/2 items-center'>
-                                <div className='text-white text-xl lg:text-2xl'>
+                            <div className='flex directionRight justify-between pl-10 w-1/2 items-center'>
+                                <div className='text-white inter font-medium flex gap-2 lg:block text-xl lg:text-2xl'>
                                     <p>Total</p>
                                     <p>Liquid</p>
                                 </div>
@@ -198,7 +198,7 @@ const Landing = () => {
 
                 <div className="lg:w-1/2 w-full mt-8 lg:mt-0 lg:pl-28">
                     <div className="w-full px-4 lg:px-0 flex justify-start items-start">
-                        <p className="tiro text-3xl lg:text-5xl text-white">our great Achievements</p>
+                        <p className="tiro text-3xl lg:text-5xl text-white">our great <span className="tiro-regular">Achievements</span> </p>
                     </div>
 
                     <div ref={boxRef} className="carousel-container mt-10 scroll-smooth w-full relative overflow-hidden flex h-full">
@@ -498,7 +498,7 @@ const Landing = () => {
                             </div>
                         </div>
 
-                        <div className="transform hover:scale-90 transition-transform duration-500">
+                        <div className="transform scaleAnimation hover:scale-90 transition-transform duration-500">
                             <div className="bg-[#F6161E]  w-full flex justify-between py-3 px-4 items-center">
                                 <p className="text-white font-bold text-2xl">Most Popular</p>
                                 <div>
@@ -629,8 +629,8 @@ const Landing = () => {
             </div>
 
             {/* forth box */}
-            <div ref={viewRef} className="bg-[#E8ECF2] hideAnimation w-full px-4 py-6 lg:px-28 lg:py-28">
-                <div className="flex lg:flex-row flex-col w-full gap-4">
+            <div  className="bg-[#E8ECF2]  w-full px-4 py-6 lg:px-28 lg:py-28">
+                <div  className="flex hideAnimation lg:flex-row flex-col w-full gap-4">
                     <div className=" lg:w-1/3 lg:min-h-[547px] relative forth-first">
                         <div className="relative flex-col h-full flex py-10 px-8 justify-between z-20">
                             <div className="text-5xl text-white">
@@ -738,7 +738,7 @@ const Landing = () => {
                     </div>
                 </div>
 
-                <div className="flex lg:flex-row flex-col mt-4 w-full gap-4">
+                <div   className="flex hideAnimation lg:flex-row flex-col mt-4 w-full gap-4">
                     <div className="lg:w-1/2 bg-white w-full px-8 py-8">
                         <div className="flex lg:flex-row flex-col  justify-between">
                             <div className="half">
@@ -800,7 +800,7 @@ const Landing = () => {
                     </div>
                 </div>
 
-                <div className="lg:mt-20 lg:max-h-[605px] mt-10 lg:flex-row flex-col flex w-full">
+                <div  className="lg:mt-20 hideAnimation lg:max-h-[605px] mt-10 lg:flex-row flex-col flex w-full">
                     <div className="lg:w-1/2 relative overflow-hidden bg-white w-full">
                         <div className="py-14 px-10">
                             <div className="flex w-full">
@@ -865,7 +865,7 @@ const Landing = () => {
                     </div>
                     <div className="form mt-16">
                         <div className="w-full flex gap-10">
-                            <input placeholder="First Name" className="white w-1/2 px-4 py-4 text-white font-bold text-base bg-[#012F6D] border-b border-b-white"></input>
+                            <input placeholder="First Name" className="white  w-1/2 px-4 py-4 text-white font-bold text-base bg-[#012F6D] border-b border-b-white"></input>
                             <input placeholder="Second Name" className="white w-1/2 px-4 py-4 text-white font-bold text-base bg-[#012F6D] border-b border-b-white"></input>
                         </div>
                         <div className="w-full mt-1 flex">
@@ -890,8 +890,8 @@ const Landing = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="mt-16 group flex items-center gap-6 px-6 ">
-                            <p className="text-white font-bold text-base">Book Appoinment</p>
+                        <div className="mt-16 group flex items-center transform hover:scale-105 transition-transform duration-500 gap-6 px-6 ">
+                            <p className="text-white font-bold text-base ">Book Appoinment</p>
                             <div className="transform group-hover:scale-110 transition-transform duration-500">
                                 <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M17.4472 6.4151C17.7401 6.1222 17.7401 5.64733 17.4472 5.35444L12.6742 0.581466C12.3813 0.288572 11.9064 0.288572 11.6135 0.581466C11.3207 0.874359 11.3207 1.34923 11.6135 1.64213L15.8562 5.88477L11.6135 10.1274C11.3207 10.4203 11.3207 10.8952 11.6135 11.1881C11.9064 11.481 12.3813 11.481 12.6742 11.1881L17.4472 6.4151ZM0.00585931 6.63477L16.9168 6.63477L16.9168 5.13477L0.00585944 5.13477L0.00585931 6.63477Z" fill="white" />

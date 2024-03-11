@@ -85,9 +85,19 @@
 }
 
 @media screen and (max-width: 720px) {
-    .newhalf{
+    .newhalf {
         width: 50%;
-     
+
+    }
+
+    .directionLeft {
+        flex-direction: column;
+        align-items: baseline;
+    }
+
+    .directionRight {
+        flex-direction: column;
+        align-items: end;
     }
 }
 
@@ -95,16 +105,64 @@
     .resp-controls {
         margin-top: -3rem !important;
     }
+
 }
 
 
 
 
-.hideAnimation{
+.hideAnimation {
     opacity: 0;
     transition: all 2s;
 }
 
-.show{
+.show {
     opacity: 1;
+}
+
+input:focus {
+    outline: none !important;
+}
+
+textarea:focus {
+    outline: none !important;
+}
+
+@keyframes updown {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+        /* Adjust the value for desired distance */
+    }
+}
+
+.box-animation {
+    animation: updown 2.5s infinite alternate ease-in-out;
+    /* Adjust the duration as needed */
+}
+
+@keyframes infiniteScale {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+@media screen and (min-width:1280px) {
+    .scaleAnimation {
+        animation: infiniteScale 2.5s infinite alternate ease-in-out;
+    }
 }

@@ -27,10 +27,18 @@ body {
 .tiro-regular{
   font-family: TiroTelugu-Regular !important;
 }
+.inter{
+  font-family: Inter !important;
+}
 
 @font-face {
   font-family: msjh_0;
   src: url(/Fonts/msjh_0.ttf);
+}
+
+@font-face {
+  font-family: Inter;
+  src: url(/Fonts/Inter.ttf);
 }
 
 @font-face {
@@ -45,6 +53,8 @@ body {
   color: white ;
 }
 
+
+
 .black::placeholder{
   color: black !important;
 }
@@ -52,9 +62,12 @@ body {
 
 .hideAnimation{
   opacity: 0;
-  transition: all 2s;
+  scale: 0.9;
+  transition: all 0.5s;
 }
 
 .show{
   opacity: 1;
+  scale: 1;
 }
+
