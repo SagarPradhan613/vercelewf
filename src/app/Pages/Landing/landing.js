@@ -13,10 +13,31 @@ const Landing = () => {
     const boxRef = useRef(null);
     const viewRef = useRef(null);
 
+    // top direction Animation
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                console.log(entry, "entryyyyyyy");
+                if (entry.isIntersecting) {
 
+                    setTimeout(() => {
+                        entry.target.classList.add('bottom-to-top');
+                        entry.target.classList.remove('hideTopAnimation');
+                    }, 1000); // Remove class after 2 seconds
+                }
+            });
+        });
 
+        const hiddenElements = document.querySelectorAll('.hideTopAnimation');
+        hiddenElements.forEach((el) => observer.observe(el));
 
+        return () => {
+            // Clean up observer on component unmount
+            observer.disconnect();
+        };
+    }, []);
 
+// show Animation
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
@@ -33,6 +54,7 @@ const Landing = () => {
         hiddenElements.forEach((el) => observer.observe(el));
     }, []);
 
+    // left to right animation
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
@@ -47,6 +69,7 @@ const Landing = () => {
         hiddenElements.forEach((el) => observer.observe(el));
     }, []);
 
+// right to left Animation
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
@@ -60,6 +83,9 @@ const Landing = () => {
         const hiddenElements = document.querySelectorAll('.hideRightAnimation');
         hiddenElements.forEach((el) => observer.observe(el));
     }, []);
+
+
+    // delay animation
 
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
@@ -75,6 +101,8 @@ const Landing = () => {
         hiddenElements.forEach((el) => observer.observe(el));
     }, []);
 
+    // slow hide Animation
+
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
@@ -84,7 +112,7 @@ const Landing = () => {
                     setTimeout(() => {
                         entry.target.classList.add('slowly-hidden');
                         entry.target.classList.remove('slowly-visible');
-                    }, 1000); // Remove class after 2 seconds
+                    }, 500); // Remove class after 2 seconds
                 }
             });
         });
@@ -107,7 +135,7 @@ const Landing = () => {
                     setTimeout(() => {
                         entry.target.classList.add('slowly-hidden');
                         entry.target.classList.remove('slowly-visible-icons');
-                    }, 2000); // Remove class after 2 seconds
+                    }, 1000); // Remove class after 2 seconds
                 }
             });
         });
@@ -169,16 +197,9 @@ const Landing = () => {
     };
 
 
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 3,
-        slidesToScroll: 3
-    };
+ 
 
-
-
+ 
 
 
 
@@ -258,7 +279,7 @@ const Landing = () => {
                 </div>
 
 
-                <div className='lg:w-1/2 hideDelay w-full'>
+                <div className='lg:w-1/2 hideTopAnimation w-full'>
                     <div className='mt-20  px-4 lg:px-0'>
                         <div>
                             <p className='text-white font-bold text-base opacity-50'>Updated on September </p>
@@ -333,7 +354,7 @@ const Landing = () => {
                 </div>
 
 
-                <div className="lg:w-1/2  hideDelay w-full mt-8 lg:mt-0 lg:pl-28">
+                <div className="lg:w-1/2  hideTopAnimation w-full mt-8 lg:mt-0 lg:pl-28">
                     <div className="w-full px-4 lg:px-0 flex justify-start items-start">
                         <p className="tiro text-3xl lg:text-5xl text-white">our great <span className="tiro-regular">Achievements</span> </p>
                     </div>
@@ -1173,6 +1194,9 @@ const Landing = () => {
                     </div>
                 </div>
             </div>
+
+
+           
 
         </>
     )

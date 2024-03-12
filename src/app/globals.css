@@ -103,7 +103,7 @@ body {
 
 
 .left-to-right {
-  animation: slideFromLeft 1.5s ease-out;
+  animation: slideFromLeft 1s ease-out;
 
 }
 
@@ -119,7 +119,7 @@ body {
 }
 
 .right-to-left{
-  animation: slideFromRight 1.5s ease-out;
+  animation: slideFromRight 1s ease-out;
 }
 @keyframes slideFromRight {
   from {
@@ -189,3 +189,25 @@ body {
  .individual-rotate-360:hover {
   transform: rotate(360deg);
 }
+
+
+.bottom-to-top {
+  animation: slideFromBottom 1s ease-out;
+
+}
+
+@keyframes slideFromBottom {
+  from {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.hideTopAnimation{
+  opacity: 0;
+}
+
