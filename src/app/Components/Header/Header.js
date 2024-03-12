@@ -21,13 +21,13 @@ const Header = ({ handleToggleModal }) => {
     }, []);
     return (
         <>
-            <div className='lg:flex hidden justify-between hideAnimation lg:px-28 bg-white '>
+            <div className='lg:flex hidden justify-between  lg:px-28 bg-white '>
             {/* <div className='flex  justify-between hideAnimation lg:px-28 bg-white '> */}
-                <div className='bg-[#012F6D] py-7 px-9 flex-col lg:max-w-[138px] h-full flex justify-center items-center'>
-                    <div className='flex justify-center items-center w-full'>
+                <div className='bg-[#012F6D] overflow-hidden group py-7 px-9 flex-col lg:max-w-[138px] h-full flex justify-center items-center'>
+                    <div className='flex group-hover:scale-110 transition-all duration-500 ease-in-out justify-center items-center w-full'>
                         <img src='/Images/capitaltext.png' className='max-w-[46px]'></img>
                     </div>
-                    <div className='flex mt-2 justify-center items-center w-full'>
+                    <div className='flex group-hover:scale-110 transition-all duration-500 ease-in-out mt-2 justify-center items-center w-full'>
                         <img src='/Images/ewfwhitetext.png' className='max-w-[79px]'></img>
                     </div>
                 </div>

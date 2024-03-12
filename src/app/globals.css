@@ -20,14 +20,15 @@ body {
   font-family: msjh_0;
 }
 
-.tiro{
+.tiro {
   font-family: TiroTelugu-Italic !important;
 }
 
-.tiro-regular{
+.tiro-regular {
   font-family: TiroTelugu-Regular !important;
 }
-.inter{
+
+.inter {
   font-family: Inter !important;
 }
 
@@ -45,29 +46,146 @@ body {
   font-family: TiroTelugu-Italic;
   src: url(/Fonts/TiroTelugu-Italic.ttf);
 }
+
 @font-face {
   font-family: TiroTelugu-Regular;
   src: url(/Fonts/TiroTelugu-Regular.ttf);
 }
+
 .white::placeholder {
-  color: white ;
+  color: white;
+  transition: all 0.7s;
 }
 
+.white:hover::placeholder{
+  color: rgba(255, 255, 255, 0.5);
+ 
+}
 
+.black:hover::placeholder{
+  color: rgba(112,112,112,0.5) !important;
+}
 
-.black::placeholder{
+.black::placeholder {
   color: black !important;
+  transition: all 0.7s;
 }
 
 
-.hideAnimation{
+/* .hideAnimation {
   opacity: 0;
   scale: 0.9;
-  transition: all 0.5s;
+  transition: all 1s;
 }
 
-.show{
-  opacity: 1;
+.show {
   scale: 1;
+  opacity: 1;
+} */
+
+
+
+
+
+
+.hideAnimation {
+  transform: translateY(100%);
+  opacity: 0;
+  transition: all 2s;
 }
 
+
+
+.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+
+.left-to-right {
+  animation: slideFromLeft 1.5s ease-out;
+
+}
+
+@keyframes slideFromLeft {
+  from {
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.right-to-left{
+  animation: slideFromRight 1.5s ease-out;
+}
+@keyframes slideFromRight {
+  from {
+    transform: translateX(40%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes delayAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.delayShow{
+  animation: delayAnimation 2s ease-out ;
+}
+
+
+.slowly-hidden{
+   animation: delayAnimation 2s ease-out ;
+}
+
+.slowly-visible{
+  opacity: 0;
+  transition: all 2s ease-in-out;
+}
+.slowly-visible-icons{
+  opacity: 0;
+  transition: all 2s ease-in-out;
+}
+
+.rotate-360 {
+  transition: transform 0.5s ease;
+}
+
+.group:hover .rotate-360 {
+  transform: rotate(360deg);
+}
+
+.icon-360{
+  transition: transform 0.5s ease;
+}
+.icon-360:hover{
+  transform: rotate(180deg);
+}
+
+.move-up {
+  transition: transform 0.3s ease-in-out; /* Transition property for smooth movement */
+}
+
+.move-up:hover {
+  transform: translateY(-10px); /* Moves the element 10px upwards on hover */
+}
+
+.individual-rotate-360 {
+  transition: transform 0.5s ease;
+}
+
+ .individual-rotate-360:hover {
+  transform: rotate(360deg);
+}

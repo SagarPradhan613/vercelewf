@@ -18,6 +18,7 @@
     background-size: 100% 100%;
     background-color: #012F6D;
     background-blend-mode: hard-light;
+    background-attachment: fixed;
 }
 
 .slide-item {
@@ -105,20 +106,12 @@
     .resp-controls {
         margin-top: -3rem !important;
     }
-
 }
 
 
 
 
-.hideAnimation {
-    opacity: 0;
-    transition: all 2s;
-}
 
-.show {
-    opacity: 1;
-}
 
 input:focus {
     outline: none !important;
@@ -165,4 +158,67 @@ textarea:focus {
     .scaleAnimation {
         animation: infiniteScale 2.5s infinite alternate ease-in-out;
     }
+}
+
+.input-wrapper {
+    position: relative;
+    width: fit-content;
+}
+
+.input-wrapper input {
+    border: none;
+    border-bottom: 2px solid transparent;
+    outline: none;
+    background-color: #012F6D;
+    color: white;
+    padding: 4px;
+    padding-left: 0;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    width: 200px; /* Set your desired width */
+}
+
+.input-wrapper input:hover {
+    border-bottom-width: 100%;
+}
+.slick-arrow{
+    position: absolute !important;
+    top: 140% !important;
+}
+.cards-white{
+    background-color: white;
+    width: 306px !important;
+    /* height: 457px !important; */
+}
+
+
+.overlay{
+   background-color: rgba(0,0,0,0.6);
+   transition: all 1s ease-in-out;
+   opacity: 0;
+}
+
+@media screen and (min-width:1900px){
+  .resp-large{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100%;
+  }
+}
+
+.image-container {
+    overflow: hidden; /* Ensure the image does not overflow its container */
+    height: 100%; /* Set container height to match the parent */
+    width: 100%; /* Set container width to match the parent */
+    position: relative; /* Ensure absolute positioning works relative to this container */
+}
+
+.scale-on-hover {
+    transition: transform 0.3s ease-in-out; /* Add a smooth transition */
+}
+
+.scale-on-hover:hover {
+    transform: scale(1.2); /* Scale the image by 20% on hover */
 }
