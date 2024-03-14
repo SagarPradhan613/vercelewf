@@ -272,4 +272,19 @@ textarea:focus {
         margin-top: 2rem;
         margin-bottom: 2rem;
     }
+    .resposnive-exp-margin{
+        margin-left: 2rem;
+    }
+    .responsive-who-we-text{
+        font-size: 14px !important;
+    }
+}
+@media screen and (min-width:1300px) and (max-width:1500px){
+    .resposnive-exp-margin{
+        margin-left: 2rem;
+    }
+    .responsive-who-we-text{
+        font-size: 14px !important;
+    }
+    
 }

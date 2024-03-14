@@ -220,10 +220,14 @@ const Landing = () => {
     };
 
 
-
-
-
-
+    const contact = useRef(null);
+    const plans = useRef(null);
+    const book = useRef(null);
+  
+    const scrollToSection = (ref) => {
+      ref.current.scrollIntoView({ behavior: 'smooth' });
+    };
+   
 
 
     return (
@@ -241,18 +245,18 @@ const Landing = () => {
                     </div>
 
                     <div className="w-full  flex flex-col pt-6 lg:pt-0 justify-between lg:pr-28 lg:pl-20 lg:w-1/2">
-                        <p className='text-[#012F6D] right-to-left font-normal leading-7 text-base'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                        <p className='text-[#012F6D] right-to-left font-normal leading-7 text-base'>EWF Capital is at the forefront of unlocking the transformative potential of cryptocurrency investments. Founded in 2017 with a vision to redefine the landscape of digital asset investing, our expertly crafted strategies are designed to navigate the volatility of the crypto markets, targeting substantial returns for our investors.</p>
 
-                        <div className='flex slowly-visible relative z-50 gap-8 pt-6 lg:pt-0'>
-                            <div className='bg-[#F6161E] transform hover:scale-110 transition-transform duration-500 w-[169px] py-3 text-white flex items-center justify-center gap-3'>
-                                <p className='text-base font-bold'>Get Started</p>
+                        <div className='flex slowly-visible  relative z-50 gap-8 pt-6 lg:pt-0'>
+                            <div  onClick={() => scrollToSection(contact)}  className='bg-[#F6161E] transform hover:scale-110 transition-transform duration-500 w-[169px] py-3 text-white flex items-center justify-center gap-3'>
+                                <p className='text-base font-bold'>Contact Us</p>
                                 <svg width="19" height="12" viewBox="0 0 19 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M18.251 6.9483C18.5439 6.65541 18.5439 6.18053 18.251 5.88764L13.4781 1.11467C13.1852 0.821774 12.7103 0.821774 12.4174 1.11467C12.1245 1.40756 12.1245 1.88243 12.4174 2.17533L16.66 6.41797L12.4174 10.6606C12.1245 10.9535 12.1245 11.4284 12.4174 11.7213C12.7103 12.0142 13.1852 12.0142 13.4781 11.7213L18.251 6.9483ZM0.720703 7.16797H17.7207V5.66797H0.720703V7.16797Z" fill="white" />
                                 </svg>
                             </div>
 
-                            <div className='bg-white transform hover:scale-110 transition-transform duration-500 border border-[#012F6D] w-[169px] py-3 text-[#012F6D] flex items-center justify-center gap-8'>
-                                <p className='text-base font-bold '>Learn more</p>
+                            <div onClick={() => scrollToSection(plans)} className='bg-white transform hover:scale-110 transition-transform duration-500 border border-[#012F6D] w-[169px] py-3 text-[#012F6D] flex items-center justify-center gap-8'>
+                                <p className='text-base font-bold '>Our Plans</p>
 
                             </div>
                         </div>
@@ -282,15 +286,15 @@ const Landing = () => {
             <div className='w-full mt-10 lg:mt-0   lg:px-0 lg:pt-64 lg:pb-36 lg:pl-28 pt-32 pb-16  flex flex-col lg:flex-row relative bg-[#012F6D]  second-section'>
                 <div className='absolute group transform hover:scale-110 transition-transform duration-1000 flex flex-col justify-between lg:left-28 -top-10 bg-[#F6161E] lg:w-[389px] lg:h-[300px]  w-[250px]  px-4 py-8 lg:py-10 lg:px-10'>
                     <p className='tiro text-white text-3xl lg:text-5xl'>
-                        Aur<br />
+                        A Glance<br />
                         <span className="tiro-regular">
-                            Investment<br />
-                            Options
+                            At Past<br />
+                            Investments
                         </span>
                     </p>
 
-                    <div className='flex w-full mt-6 lg:mt-0 justify-between'>
-                        <p className='lg:text-base text-xs font-semibold inter text-white'>INVEST NOW</p>
+                    <div onClick={() => scrollToSection(contact)}  c className='flex w-full mt-6 lg:mt-0 justify-between'>
+                        <p className='lg:text-base text-xs font-semibold inter text-white'>Request an update</p>
 
                         <div className="rotate-360 transition duration-500 ease-in-out">
                             <svg className="" width="35" height="24" viewBox="0 0 35 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -305,12 +309,12 @@ const Landing = () => {
                 <div className='lg:w-1/2 hideTopAnimation w-full'>
                     <div className='mt-20  px-4 lg:px-0'>
                         <div>
-                            <p className='text-white font-bold text-base opacity-50'>Updated on September </p>
+                            <p className='text-white font-bold text-base opacity-50'>Updated on March </p>
                             <div className='flex w-full  justify-between mt-2'>
                                 <div className='text-white font-normal inter'>
                                     <p className='font-medium text-xl lg:text-3xl'>Overall
                                         <br />
-                                        Investments</p>
+                                        Investment</p>
                                 </div>
 
                                 <div className='flex text-white'>
@@ -326,17 +330,17 @@ const Landing = () => {
                         </div>
 
                         <div className='mt-10'>
-                            <p className='text-white font-bold text-base opacity-50'>Updated on September </p>
+                            <p className='text-white font-bold text-base opacity-50'>Updated on March </p>
                             <div className='flex w-full justify-between mt-2'>
                                 <div className='text-white'>
-                                    <p className='font-medium inter text-xl lg:text-3xl'>Investments
+                                    <p className='font-medium inter text-xl lg:text-3xl'>Last Year
                                         <br />
-                                        Last year.</p>
+                                        Investment</p>
                                 </div>
 
                                 <div className='flex text-white'>
-                                    <p className='font-bold lg:text-7xl text-3xl'>10003.24</p>
-                                    <p className='font-bold lg:text-3xl text-xl ml-1'>$</p>
+                                    <p className='font-bold lg:text-7xl text-3xl'>6.17</p>
+                                    <p className='font-bold lg:text-3xl text-xl ml-1'>M</p>
                                 </div>
 
                             </div>
@@ -346,14 +350,14 @@ const Landing = () => {
                         </div>
 
                         <div className='w-full mt-10 flex items-center'>
-                            <div className='flex directionLeft justify-between  w-1/2 items-center pr-20'>
+                            <div className='flex directionLeft justify-between  w-1/2 items-center pr-10'>
                                 <div className='text-white inter font-medium flex lg:block gap-2  text-xl lg:text-2xl'>
                                     <p>Total</p>
-                                    <p>Return</p>
+                                    <p>Return %</p>
                                 </div>
 
-                                <div className=' text-3xl lg:text-5xl text-white font-bold'>
-                                    <p>140%</p>
+                                <div className=' text-3xl ml- lg:text-4xl text-white font-bold'>
+                                    <p>708,600%</p>
                                 </div>
                             </div>
 
@@ -364,11 +368,11 @@ const Landing = () => {
                             <div className='flex directionRight justify-between pl-10 w-1/2 items-center'>
                                 <div className='text-white inter font-medium flex gap-2 lg:block text-xl lg:text-2xl'>
                                     <p>Total</p>
-                                    <p>Liquid</p>
+                                    <p>ROI (x)</p>
                                 </div>
 
-                                <div className=' text-3xl lg:text-5xl text-white font-bold'>
-                                    <p>28%</p>
+                                <div className=' text-3xl lg:text-4xl text-white font-bold'>
+                                    <p>7,086X</p>
                                 </div>
                             </div>
 
@@ -379,7 +383,7 @@ const Landing = () => {
 
                 <div className="lg:w-1/2  hideTopAnimation w-full mt-8 lg:mt-0 lg:pl-28">
                     <div className="w-full px-4 lg:px-0 flex justify-start items-start">
-                        <p className="tiro text-3xl lg:text-5xl text-white">our great <span className="tiro-regular">Achievements</span> </p>
+                        <p className="tiro text-3xl lg:text-5xl text-white">our seed<span className="tiro-regular ml-2">Investments</span> </p>
                     </div>
 
                     <div ref={boxRef} className="carousel-container  mt-10 scroll-smooth w-full relative overflow-hidden flex h-full">
@@ -397,13 +401,13 @@ const Landing = () => {
                                     </div>
                                 </div>
                                 <div>
-                                    <p className="font-bold text-sm text-[#012F6D] opacity-60 mt-6">showcasing the foresight and then diligence applied</p>
+                                    <p className="font-bold text-sm text-[#012F6D] opacity-60 mt-6">Celestia (TIA) is the first modular blockchain network that enables anyone to easily deploy their own blockchain with minimal overhead.</p>
                                 </div>
                             </div>
                             <div>
                                 <div className="flex items-center">
                                     <div>
-                                        <p className="font-bold text-sm text-[#012F6D]">Seed Round <br />investment</p>
+                                        <p className="font-bold text-sm text-[#012F6D]">Invested At <br /> Price</p>
                                     </div>
                                     <div className="flex ml-6">
                                         <p className="text-[#012F6D] font-bold text-3xl">0.01</p>
@@ -412,7 +416,7 @@ const Landing = () => {
                                 </div>
 
                                 <div className="flex mt-6">
-                                    <p className="font-bold text-3xl lg:text-4xl text-[#F6161E]">2085 X</p>
+                                    <p className="font-bold text-3xl lg:text-4xl text-[#F6161E]">2,085X</p>
                                     <p className="font-bold text-2xl text-[#0040A1] ml-6"> return</p>
                                 </div>
                             </div>
@@ -431,13 +435,13 @@ const Landing = () => {
                                     </div>
                                 </div>
                                 <div>
-                                    <p className="font-bold text-sm text-[#012F6D] opacity-60 mt-6">showcasing the foresight and then diligence applied</p>
+                                    <p className="font-bold text-sm text-[#012F6D] opacity-60 mt-6">Injective is a blockchain built for finance. It is an open, interoperable layer-one blockchain powering next-generation DeFi applications.</p>
                                 </div>
                             </div>
                             <div>
                                 <div className="flex items-center">
                                     <div>
-                                        <p className="font-bold text-sm text-[#012F6D]">Seed Round <br />investment</p>
+                                        <p className="font-bold text-sm text-[#012F6D]">Invested At <br /> Price</p>
                                     </div>
                                     <div className="flex ml-6">
                                         <p className="text-[#012F6D] font-bold text-3xl">0.083</p>
@@ -458,29 +462,29 @@ const Landing = () => {
                             <div>
                                 <div className="flex items-center gap-4">
                                     <div className="group-hover:rotate-180 transition-all duration-500 ease-in-out">
-                                        <img src="/Images/cardpp1.png" className="max-w-[50px] max-h-[50px]"></img>
+                                        <img src="/Images/bandpp.png" className="max-w-[50px] max-h-[50px]"></img>
                                     </div>
                                     <div>
-                                        <p className="font-bold text-3xl text-[#012F6D]">Celestia</p>
+                                        <p className="font-bold text-3xl text-[#012F6D]">Band</p>
                                     </div>
                                 </div>
                                 <div>
-                                    <p className="font-bold text-sm text-[#012F6D] opacity-60 mt-6">showcasing the foresight and then diligence applied</p>
+                                    <p className="font-bold text-sm text-[#012F6D] opacity-60 mt-6">Band Protocol is a cross-chain data oracle which takes real-world data and supplies it to on-chain apps, while also connecting APIs to smart contracts.</p>
                                 </div>
                             </div>
                             <div>
                                 <div className="flex items-center">
                                     <div>
-                                        <p className="font-bold text-sm text-[#012F6D]">Seed Round <br />investment</p>
+                                        <p className="font-bold text-sm text-[#012F6D]">Invested At <br /> Price</p>
                                     </div>
                                     <div className="flex ml-6">
-                                        <p className="text-[#012F6D] font-bold text-3xl">0.01</p>
+                                        <p className="text-[#012F6D] font-bold text-3xl">0.3</p>
                                         <p className="text-[#012F6D] font-bold text-base">$</p>
                                     </div>
                                 </div>
 
                                 <div className="flex mt-6">
-                                    <p className="font-bold text-3xl lg:text-4xl text-[#F6161E]">2085 X</p>
+                                    <p className="font-bold text-3xl lg:text-4xl text-[#F6161E]">76 X</p>
                                     <p className="font-bold text-2xl text-[#0040A1] ml-6"> return</p>
                                 </div>
                             </div>
@@ -492,29 +496,29 @@ const Landing = () => {
                             <div>
                                 <div className="flex items-center gap-4">
                                     <div className="group-hover:rotate-180 transition-all duration-500 ease-in-out">
-                                        <img src="/Images/cardpp1.png" className="max-w-[50px] max-h-[50px]"></img>
+                                        <img src="/Images/uniswap.png" className="max-w-[50px] max-h-[50px]"></img>
                                     </div>
                                     <div>
-                                        <p className="font-bold text-3xl text-[#012F6D]">Celestia</p>
+                                        <p className="font-bold text-3xl text-[#012F6D]">Uniswap</p>
                                     </div>
                                 </div>
                                 <div>
-                                    <p className="font-bold text-sm text-[#012F6D] opacity-60 mt-6">showcasing the foresight and then diligence applied</p>
+                                    <p className="font-bold text-sm text-[#012F6D] opacity-60 mt-6">Uniswap is a popular decentralized trading protocol, known for its role in facilitating automated trading of decentralized finance (DeFi) tokens.</p>
                                 </div>
                             </div>
                             <div>
                                 <div className="flex items-center">
                                     <div>
-                                        <p className="font-bold text-sm text-[#012F6D]">Seed Round <br />investment</p>
+                                        <p className="font-bold text-sm text-[#012F6D]">Invested At <br /> Price</p>
                                     </div>
                                     <div className="flex ml-6">
-                                        <p className="text-[#012F6D] font-bold text-3xl">0.01</p>
+                                        <p className="text-[#012F6D] font-bold text-3xl">0.045</p>
                                         <p className="text-[#012F6D] font-bold text-base">$</p>
                                     </div>
                                 </div>
 
                                 <div className="flex mt-6">
-                                    <p className="font-bold text-3xl lg:text-4xl text-[#F6161E]">2085 X</p>
+                                    <p className="font-bold text-3xl lg:text-4xl text-[#F6161E]">1,000 X</p>
                                     <p className="font-bold text-2xl text-[#0040A1] ml-6"> return</p>
                                 </div>
                             </div>
@@ -526,29 +530,29 @@ const Landing = () => {
                             <div>
                                 <div className="flex items-center gap-4">
                                     <div className="group-hover:rotate-180 transition-all duration-500 ease-in-out">
-                                        <img src="/Images/cardpp1.png" className="max-w-[50px] max-h-[50px]"></img>
+                                        <img src="/Images/Hedera.png" className="max-w-[50px] max-h-[50px]"></img>
                                     </div>
                                     <div>
-                                        <p className="font-bold text-3xl text-[#012F6D]">Celestia</p>
+                                        <p className="font-bold text-3xl text-[#012F6D]">Hedera</p>
                                     </div>
                                 </div>
                                 <div>
-                                    <p className="font-bold text-sm text-[#012F6D] opacity-60 mt-6">showcasing the foresight and then diligence applied</p>
+                                    <p className="font-bold text-sm text-[#012F6D] opacity-60 mt-6">Hedera is the enterprise-grade public network for the decentralized economy that allows individuals and businesses to create powerful DApps.</p>
                                 </div>
                             </div>
                             <div>
                                 <div className="flex items-center">
                                     <div>
-                                        <p className="font-bold text-sm text-[#012F6D]">Seed Round <br />investment</p>
+                                        <p className="font-bold text-sm text-[#012F6D]">Invested At <br /> Price</p>
                                     </div>
                                     <div className="flex ml-6">
-                                        <p className="text-[#012F6D] font-bold text-3xl">0.01</p>
+                                        <p className="text-[#012F6D] font-bold text-3xl"> 0.001</p>
                                         <p className="text-[#012F6D] font-bold text-base">$</p>
                                     </div>
                                 </div>
 
                                 <div className="flex mt-6">
-                                    <p className="font-bold text-3xl lg:text-4xl text-[#F6161E]">2085 X</p>
+                                    <p className="font-bold text-3xl lg:text-4xl text-[#F6161E]">570 X</p>
                                     <p className="font-bold text-2xl text-[#0040A1] ml-6"> return</p>
                                 </div>
                             </div>
@@ -560,29 +564,29 @@ const Landing = () => {
                             <div>
                                 <div className="flex items-center gap-4">
                                     <div className="group-hover:rotate-180 transition-all duration-500 ease-in-out">
-                                        <img src="/Images/cardpp1.png" className="max-w-[50px] max-h-[50px]"></img>
+                                        <img src="/Images/Cronos.png" className="max-w-[50px] max-h-[50px]"></img>
                                     </div>
                                     <div>
-                                        <p className="font-bold text-3xl text-[#012F6D]">Celestia</p>
+                                        <p className="font-bold text-3xl text-[#012F6D]">Cronos</p>
                                     </div>
                                 </div>
                                 <div>
-                                    <p className="font-bold text-sm text-[#012F6D] opacity-60 mt-6">showcasing the foresight and then diligence applied</p>
+                                    <p className="font-bold text-sm text-[#012F6D] opacity-60 mt-6">Cronos chain is a decentralized, open-source blockchain developed by the Crypto.com payment, trading and financial services company.</p>
                                 </div>
                             </div>
                             <div>
                                 <div className="flex items-center">
                                     <div>
-                                        <p className="font-bold text-sm text-[#012F6D]">Seed Round <br />investment</p>
+                                        <p className="font-bold text-sm text-[#012F6D]">Invested At <br /> Price</p>
                                     </div>
                                     <div className="flex ml-6">
-                                        <p className="text-[#012F6D] font-bold text-3xl">0.01</p>
+                                        <p className="text-[#012F6D] font-bold text-3xl">0.1</p>
                                         <p className="text-[#012F6D] font-bold text-base">$</p>
                                     </div>
                                 </div>
 
                                 <div className="flex mt-6">
-                                    <p className="font-bold text-3xl lg:text-4xl text-[#F6161E]">2085 X</p>
+                                    <p className="font-bold text-3xl lg:text-4xl text-[#F6161E]">9.6 X</p>
                                     <p className="font-bold text-2xl text-[#0040A1] ml-6"> return</p>
                                 </div>
                             </div>
@@ -594,29 +598,29 @@ const Landing = () => {
                             <div>
                                 <div className="flex items-center gap-4">
                                     <div className="group-hover:rotate-180 transition-all duration-500 ease-in-out">
-                                        <img src="/Images/cardpp1.png" className="max-w-[50px] max-h-[50px]"></img>
+                                        <img src="/Images/thor.png" className="max-w-[50px] max-h-[50px]"></img>
                                     </div>
                                     <div>
-                                        <p className="font-bold text-3xl text-[#012F6D]">Celestia</p>
+                                        <p className="font-bold text-3xl text-[#012F6D]">THORChain</p>
                                     </div>
                                 </div>
                                 <div>
-                                    <p className="font-bold text-sm text-[#012F6D] opacity-60 mt-6">showcasing the foresight and then diligence applied</p>
+                                    <p className="font-bold text-sm text-[#012F6D] opacity-60 mt-6">THORChain is a decentralized liquidity protocol that allows users to easily exchange cryptocurrency assets without losing full custody of their assets.</p>
                                 </div>
                             </div>
                             <div>
                                 <div className="flex items-center">
                                     <div>
-                                        <p className="font-bold text-sm text-[#012F6D]">Seed Round <br />investment</p>
+                                        <p className="font-bold text-sm text-[#012F6D]">Invested At <br /> Price</p>
                                     </div>
                                     <div className="flex ml-6">
-                                        <p className="text-[#012F6D] font-bold text-3xl">0.01</p>
+                                        <p className="text-[#012F6D] font-bold text-3xl">0.02</p>
                                         <p className="text-[#012F6D] font-bold text-base">$</p>
                                     </div>
                                 </div>
 
                                 <div className="flex mt-6">
-                                    <p className="font-bold text-3xl lg:text-4xl text-[#F6161E]">2085 X</p>
+                                    <p className="font-bold text-3xl lg:text-4xl text-[#F6161E]">1,063 X</p>
                                     <p className="font-bold text-2xl text-[#0040A1] ml-6"> return</p>
                                 </div>
                             </div>
@@ -643,13 +647,13 @@ const Landing = () => {
             </div>
 
             {/* third box */}
-            <div ref={viewRef} className="w-full  overflow-hidden relative flex flex-col justify-center ">
+            <div ref={viewRef}  id="plan" className="w-full  overflow-hidden relative flex flex-col justify-center ">
                 <div className="absolute z-10 h-full w-full ">
                     <img src="/Images/thirdbg.png" className="w-full h-full"></img>
                 </div>
-                <div className="relative lg:px-48 lg:py-24 px-6 py-6 h-full w-full z-20">
+                <div ref={plans} className="relative lg:px-48 lg:py-24 px-6 py-6 h-full w-full z-20">
                     <div className="flex w-full justify-center items-center">
-                        <p className="text-[#012F6D] tiro-regular font-light text-3xl lg:text-7xl">Our Investment <span className="tiro">Plans</span> </p>
+                        <p className="text-[#012F6D] tiro-regular font-light text-3xl lg:text-7xl">EWF Investment <span className="tiro">Plans</span> </p>
                     </div>
                     <div className="lg:mt-20  test-scroll mt-10 lg:items-end w-full justify-center items-center lg:flex-row flex-col flex gap-6">
                         <div className="transform group hideLeftAnimation  hover:scale-90 transition-transform duration-500 flex flex-col justify-between h-full px-8 min-h-[481px] min-w-[350px] lg:min-w-[400px] py-8 bg-[#012F6D]">
@@ -667,7 +671,7 @@ const Landing = () => {
                                         </svg>
                                     </div>
                                     <div>
-                                        <p className="text-lg font-bold text-white">Diversified Portfolio</p>
+                                        <p className="text-lg font-bold text-white">High Stability</p>
                                     </div>
 
                                 </div>
@@ -679,7 +683,7 @@ const Landing = () => {
                                         </svg>
                                     </div>
                                     <div>
-                                        <p className="text-lg font-bold text-white">High Risk</p>
+                                        <p className="text-lg font-bold text-white">Low Risk</p>
                                     </div>
 
                                 </div>
@@ -691,13 +695,13 @@ const Landing = () => {
                                         </svg>
                                     </div>
                                     <div>
-                                        <p className="text-lg font-bold text-white">High Return</p>
+                                        <p className="text-lg font-bold text-white">Low Returns</p>
                                     </div>
                                 </div>
                             </div>
 
                             <div className="w-full items-end -mt-10 flex justify-between">
-                                <p className="text-lg font-bold text-white">Advanced Plan</p>
+                                <p className="text-lg font-bold text-white">Starter Plan</p>
                                 <div className="rotate-360">
                                     <img className="transform hover:scale-110 transition-transform duration-500" src="/Images/redbtn.png"></img>
                                 </div>
@@ -728,7 +732,7 @@ const Landing = () => {
                                             </svg>
                                         </div>
                                         <div>
-                                            <p className="text-lg font-bold text-white">Medium Volatile </p>
+                                            <p className="text-lg font-bold text-white">Diversified Portfolio</p>
                                         </div>
 
                                     </div>
@@ -752,7 +756,7 @@ const Landing = () => {
                                             </svg>
                                         </div>
                                         <div>
-                                            <p className="text-lg font-bold text-white">Moderate Return</p>
+                                            <p className="text-lg font-bold text-white">Moderate Returns</p>
                                         </div>
                                     </div>
                                 </div>
@@ -791,7 +795,7 @@ const Landing = () => {
                                         </svg>
                                     </div>
                                     <div>
-                                        <p className="text-lg font-bold text-white">High Volatile</p>
+                                        <p className="text-lg font-bold text-white">High Volatility</p>
                                     </div>
 
                                 </div>
@@ -815,7 +819,7 @@ const Landing = () => {
                                         </svg>
                                     </div>
                                     <div>
-                                        <p className="text-lg font-bold text-white">High Return</p>
+                                        <p className="text-lg font-bold text-white">High Returns</p>
                                     </div>
                                 </div>
                             </div>
@@ -840,14 +844,14 @@ const Landing = () => {
                     <div className="hideLeftAnimation group move-up lg:w-1/3 lg:min-h-[547px] relative forth-first">
                         <div className="relative flex-col h-full flex py-10 px-8 justify-between z-20">
                             <div className="text-5xl text-white">
-                                <p className="tiro-regular">Expert</p>
+                                <p className="tiro-regular">Expert Data</p>
                                 <p className="tiro">Analysis</p>
                             </div>
 
                             <div>
-                                <p className="opacity-70 lg:text-xl text-base font-bold text-white">smart investing through analysis, research, and market savvy</p>
-                                <div className="flex mt-8 items-center justify-between w-full">
-                                    <p className="text-white transform group-hover:scale-125 transition-transform duration-500 text-lg font-semibold">Know More</p>
+                                <p className="opacity-70 lg:text-xl text-base font-bold text-white">Leveraging big data and machine learning to uncover market patterns</p>
+                                <div onClick={() => scrollToSection(contact)}  c className="flex mt-8 items-center justify-between w-full">
+                                    <p className="text-white transform group-hover:scale-125 transition-transform duration-500 text-lg font-semibold">Learn More</p>
                                     <div>
                                         <svg className="transform group-hover:scale-125 transition-transform duration-500" width="34" height="23" viewBox="0 0 34 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M33.4308 12.7735C34.0166 12.1878 34.0166 11.238 33.4308 10.6522L23.8848 1.10629C23.299 0.5205 22.3493 0.5205 21.7635 1.10629C21.1777 1.69207 21.1777 2.64182 21.7635 3.22761L30.2488 11.7129L21.7635 20.1982C21.1777 20.784 21.1777 21.7337 21.7635 22.3195C22.3493 22.9053 23.2991 22.9053 23.8848 22.3195L33.4308 12.7735ZM0.207031 13.2129L32.3701 13.2129L32.3701 10.2129L0.207031 10.2129L0.207031 13.2129Z" fill="white" />
@@ -874,9 +878,9 @@ const Landing = () => {
                             </div>
 
                             <div>
-                                <p className="opacity-70 lg:text-xl text-base font-bold text-white">smart investing through analysis, research, and market savvy</p>
-                                <div className="flex mt-8  items-center justify-between w-full">
-                                    <p className="text-white group-hover:scale-125 transition-transform duration-500 transform hover:scale-110 text-lg font-semibold">Know More</p>
+                                <p className="opacity-70 lg:text-xl text-base font-bold text-white">Utilizing advanced modeling techniques and stringent controls to protect your capital</p>
+                                <div onClick={() => scrollToSection(contact)}  c className="flex mt-8  items-center justify-between w-full">
+                                    <p className="text-white group-hover:scale-125 transition-transform duration-500 transform hover:scale-110 text-lg font-semibold">Learn More</p>
                                     <div>
                                         <svg className="group-hover:scale-125 transition-transform duration-500" width="34" height="23" viewBox="0 0 34 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M33.4308 12.7735C34.0166 12.1878 34.0166 11.238 33.4308 10.6522L23.8848 1.10629C23.299 0.5205 22.3493 0.5205 21.7635 1.10629C21.1777 1.69207 21.1777 2.64182 21.7635 3.22761L30.2488 11.7129L21.7635 20.1982C21.1777 20.784 21.1777 21.7337 21.7635 22.3195C22.3493 22.9053 23.2991 22.9053 23.8848 22.3195L33.4308 12.7735ZM0.207031 13.2129L32.3701 13.2129L32.3701 10.2129L0.207031 10.2129L0.207031 13.2129Z" fill="white" />
@@ -901,8 +905,8 @@ const Landing = () => {
                             </div>
 
                             <div>
-                                <div className="flex  mt-8 items-center justify-between w-full">
-                                    <p className="text-white group-hover:scale-125 transition-transform duration-500 text-lg font-semibold">Know More</p>
+                                <div onClick={() => scrollToSection(contact)}  c className="flex  mt-8 items-center justify-between w-full">
+                                    <p className="text-white group-hover:scale-125 transition-transform duration-500 text-lg font-semibold">Learn More</p>
                                     <div className="group-hover:scale-125 transition-transform duration-500">
                                         <svg width="34" height="23" viewBox="0 0 34 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M33.4308 12.7735C34.0166 12.1878 34.0166 11.238 33.4308 10.6522L23.8848 1.10629C23.299 0.5205 22.3493 0.5205 21.7635 1.10629C21.1777 1.69207 21.1777 2.64182 21.7635 3.22761L30.2488 11.7129L21.7635 20.1982C21.1777 20.784 21.1777 21.7337 21.7635 22.3195C22.3493 22.9053 23.2991 22.9053 23.8848 22.3195L33.4308 12.7735ZM0.207031 13.2129L32.3701 13.2129L32.3701 10.2129L0.207031 10.2129L0.207031 13.2129Z" fill="white" />
@@ -919,15 +923,15 @@ const Landing = () => {
                         <div className="move-up group forth-last-bottom h-1/2 w-full flex-col  flex py-10 px-8 justify-between z-20">
                             <div className="text-4xl text-white">
                                 <div className="flex items-center">
-                                    <p className="tiro-regular">Data</p>
+                                    <p className="tiro-regular">Trends</p>
                                 </div>
 
                                 <p className="tiro">Analysis</p>
                             </div>
 
                             <div>
-                                <div className="flex  mt-8 items-center justify-between w-full">
-                                    <p className="text-white text-lg group-hover:scale-125 transition-transform duration-500 font-semibold">Know More</p>
+                                <div onClick={() => scrollToSection(contact)}  c className="flex  mt-8 items-center justify-between w-full">
+                                    <p className="text-white text-lg group-hover:scale-125 transition-transform duration-500 font-semibold">Learn More</p>
                                     <div className="group-hover:scale-125 transition-transform duration-500">
                                         <svg width="34" height="23" viewBox="0 0 34 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M33.4308 12.7735C34.0166 12.1878 34.0166 11.238 33.4308 10.6522L23.8848 1.10629C23.299 0.5205 22.3493 0.5205 21.7635 1.10629C21.1777 1.69207 21.1777 2.64182 21.7635 3.22761L30.2488 11.7129L21.7635 20.1982C21.1777 20.784 21.1777 21.7337 21.7635 22.3195C22.3493 22.9053 23.2991 22.9053 23.8848 22.3195L33.4308 12.7735ZM0.207031 13.2129L32.3701 13.2129L32.3701 10.2129L0.207031 10.2129L0.207031 13.2129Z" fill="white" />
@@ -944,23 +948,23 @@ const Landing = () => {
                 </div>
 
                 <div className="flex   lg:flex-row flex-col mt-4 w-full gap-4">
-                    <div className="lg:w-1/2 hideLeftAnimation bg-white w-full px-8 py-8">
+                    <div className="lg:w-1/2 flex flex-col justify-between hideLeftAnimation bg-white w-full px-8 py-8">
                         <div className="flex lg:flex-row flex-col  justify-between">
                             <div className="half">
                                 <p className="tiro-regular text-2xl lg:text-4xl text-[#012F6D]" >Our <span className="tiro">Expertise</span></p>
                             </div>
-                            <div className="lg:w-1/2">
-                                <p className="font-bold text-sm lg:text-sm text-[#012F6D]">Lorem Ipsum is simply dummy text of the printing and industry.</p>
+                            <div className="lg:w-1/2 mt-4 lg:mt-0">
+                                <p className="font-bold text-sm lg:text-sm text-[#012F6D] resposnive-exp-margin">Our analysts and traders brings together a wealth of knowledge and strategic acumen, dedicated to maximizing your investment returns</p>
                             </div>
                         </div>
 
-                        <div className="flex justify-between mt-28">
+                        <div className="flex justify-between mt-10 lg:mt-0">
                             <div className="half flex items-center lg:items-end">
                                 <p className=" font-bold text-3xl lg:text-7xl text-[#F6161E]" >10</p>
                                 <p className="font-bold text-[10px] lg:text-2xl text-[#F6161E] lg:whitespace-nowrap ml-2 lg:ml-3">Years Experience</p>
                             </div>
                             <div className="flex half items-end ">
-                                <div className="flex items-center px-3 transform hover:scale-110 transition-transform duration-500 lg:px-6 py-3 gap-2 bg-[#012F6D]">
+                                <div onClick={() => scrollToSection(contact)}  c className="flex items-center px-3 transform hover:scale-110 transition-transform duration-500 lg:px-6 py-3 gap-2 bg-[#012F6D]">
                                     <p className="lg:text-base text-sm font-medium text-white ">Learn more</p>
                                     <div className="flex items-center h-full mt-1">
                                         <svg width="19" height="12" viewBox="0 0 19 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -977,20 +981,20 @@ const Landing = () => {
                     <div className="lg:w-1/2 hideRightAnimation bg-white w-full px-8 py-8">
                         <div className="flex lg:flex-row flex-col justify-between">
                             <div>
-                                <p className="tiro-regular text-2xl lg:text-4xl  text-[#012F6D]" >Sales <span className="tiro">Records</span></p>
+                                <p className="tiro-regular text-2xl lg:text-4xl  text-[#012F6D]" >Market<span className="tiro">Research</span></p>
                             </div>
-                            <div className="lg:w-1/2">
-                                <p className="font-bold text-sm lg:text-sm text-[#012F6D]">Lorem Ipsum is simply dummy text of the printing and industry.</p>
+                            <div className="lg:w-1/2 mt-4 lg:mt-0">
+                                <p className="font-bold text-sm lg:text-sm text-[#012F6D] resposnive-exp-margin">We delve into the intricacies of the cryptocurrency markets, employing a meticulous approach to uncover emerging trends, evaluate economic indicators, and assess the potential impact of global events on assets.</p>
                             </div>
                         </div>
 
-                        <div className="flex justify-between mt-28">
+                        <div className="flex justify-between mt-10 lg:mt-28">
                             <div className=" flex items-center lg:items-end">
-                                <p className=" font-bold text-3xl lg:text-7xl text-[#F6161E]" >20</p>
-                                <p className="font-bold text-[10px] lg:text-2xl text-[#F6161E] whitespace-nowrap ml-3">Years</p>
+                                <p className=" font-bold text-3xl lg:text-7xl text-[#F6161E]" >14</p>
+                                <p className="font-bold text-[10px] lg:text-2xl text-[#F6161E] whitespace-nowrap ml-3">Years Experience</p>
                             </div>
                             <div className="flex items-end ">
-                                <div className="flex items-center px-3 lg:px-6 py-3 transform hover:scale-110 transition-transform duration-500 gap-2 bg-[#012F6D]">
+                                <div onClick={() => scrollToSection(contact)}  c className="flex items-center px-3 lg:px-6 py-3 transform hover:scale-110 transition-transform duration-500 gap-2 bg-[#012F6D]">
                                     <p className="lg:text-base text-sm font-medium text-white ">Learn more</p>
                                     <div className="flex items-center h-full mt-1">
                                         <svg width="19" height="12" viewBox="0 0 19 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1006,9 +1010,9 @@ const Landing = () => {
                 </div>
 
                 <div className="w-full mt-24 lg:flex hideTopAnimationnodelay bg-[#013276] lg:min-h-[290px]">
-                    <div className="lg:w-1/2 w-full case-study-left  flex justify-center items-center">
+                    <div className="lg:w-1/2 group w-full case-study-left  flex justify-center items-center">
                         <p className="tiro mr-6 font-normal text-5xl lg:text-6xl text-white">Case Study</p>
-                        <div className="lg:block hidden">
+                        <div className="lg:block hidden  group-hover:translate-x-4 transition-all duration-500 ease-in-out">
                             <svg width="57" height="24" viewBox="0 0 57 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M56.0607 13.0607C56.6464 12.4749 56.6464 11.5251 56.0607 10.9393L46.5147 1.3934C45.9289 0.807615 44.9792 0.807615 44.3934 1.3934C43.8076 1.97919 43.8076 2.92894 44.3934 3.51472L52.8787 12L44.3934 20.4853C43.8076 21.0711 43.8076 22.0208 44.3934 22.6066C44.9792 23.1924 45.9289 23.1924 46.5147 22.6066L56.0607 13.0607ZM-1.31134e-07 13.5L55 13.5L55 10.5L1.31134e-07 10.5L-1.31134e-07 13.5Z" fill="white" />
                             </svg>
@@ -1024,7 +1028,7 @@ const Landing = () => {
                 </div>
 
                 <div className="flex lg:flex-row flex-col w-full gap-5 mt-5">
-                    <div className=" w-full hideLeftAnimation lg:w-1/3 px-10 py-10 min-h-[537px] flex flex-col justify-between analyzing bg-red-600">
+                    <div className="group w-full hideLeftAnimation lg:w-1/3 px-10 py-10 min-h-[537px] flex flex-col justify-between analyzing ">
                         <div>
                             <p className="tiro font-normal text-6xl text-white">Analyzing </p>
                             <p className="tiro font-normal text-4xl text-white mt-2">Bitcoin Bull Run <br /> Cycles</p>
@@ -1032,12 +1036,12 @@ const Landing = () => {
                         <div className="flex  w-full justify-between">
                             <p className="font-bold  lg:block hidden text-base text-white">Analysis on right</p>
                             <p className="font-bold  lg:hidden block text-base text-white">Analysis on bottom</p>
-                            <div className="lg:block hidden">
+                            <div className="lg:block transition-all duration-500 ease-in-out group-hover:translate-x-4 hidden">
                                 <svg width="34" height="24" viewBox="0 0 34 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M33.2237 13.0607C33.8095 12.4749 33.8095 11.5251 33.2237 10.9393L23.6778 1.3934C23.092 0.807609 22.1423 0.80761 21.5565 1.3934C20.9707 1.97918 20.9707 2.92893 21.5565 3.51472L30.0418 12L21.5565 20.4853C20.9707 21.0711 20.9707 22.0208 21.5565 22.6066C22.1423 23.1924 23.092 23.1924 23.6778 22.6066L33.2237 13.0607ZM1.31134e-07 13.5L32.1631 13.5L32.1631 10.5L-1.31134e-07 10.5L1.31134e-07 13.5Z" fill="white" />
                                 </svg>
                             </div>
-                            <div className="lg:hidden block rotate-90">
+                            <div className="lg:hidden transition-all duration-500 ease-in-out group-hover:translate-y-4 block rotate-90">
                                 <svg width="34" height="24" viewBox="0 0 34 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M33.2237 13.0607C33.8095 12.4749 33.8095 11.5251 33.2237 10.9393L23.6778 1.3934C23.092 0.807609 22.1423 0.80761 21.5565 1.3934C20.9707 1.97918 20.9707 2.92893 21.5565 3.51472L30.0418 12L21.5565 20.4853C20.9707 21.0711 20.9707 22.0208 21.5565 22.6066C22.1423 23.1924 23.092 23.1924 23.6778 22.6066L33.2237 13.0607ZM1.31134e-07 13.5L32.1631 13.5L32.1631 10.5L-1.31134e-07 10.5L1.31134e-07 13.5Z" fill="white" />
                                 </svg>
@@ -1055,7 +1059,7 @@ const Landing = () => {
                         </div>
 
                         <div>
-                            <p className="font-bold text-base text-[#152246] opacity-80">During the 2017 bull run, EWF Capital strategically positioned itself to capitalize on Bitcoin's meteoric rise. By deploying dynamic trading strategies and actively engaging in project launches, the firm achieved a substantial gain of 1,420%.</p>
+                            <p className="font-bold text-base text-[#152246] opacity-80">During the 2017 bull run, EWF Capital strategically positioned itself to capitalize on Bitcoin's meteoric rise. By deploying dynamic trading strategies and actively engaging in project launches, the firm achieved a substantial gain of 3,420x.</p>
 
                             <p className="font-bold text-base text-[#152246] opacity-80 mt-8">This early success set a precedent for excellence in wealth generation.</p>
                         </div>
@@ -1073,13 +1077,13 @@ const Landing = () => {
                         <div>
                             <p className="font-bold text-base text-[#152246] opacity-80 mt-10">Re-entering the market in 2020, EWF Capital demonstrated renewed strategic vigor. Leveraging market timing excellence, the firm capitalized on phases of market dormancy to amass positions at favorable prices. Tactical trading during market downturns enabled EWF Capital to accumulate assets at discounted prices.</p>
 
-                            <p className="font-bold text-base text-[#152246] opacity-80 mt-8">Active participation in project launches further contributed to the impressive average Return on Investment (ROI) of 750% within less than a year.</p>
+                            <p className="font-bold text-base text-[#152246] opacity-80 mt-8">Active participation in project launches further contributed to the impressive average Return on Investment (ROI) of 750x within less than a year.</p>
                         </div>
                     </div>
                 </div>
 
                 <div className="flex lg:flex-row flex-col w-full  mt-5">
-                    <div className=" w-full lg:w-1/3 px-10 py-10 min-h-[517px] flex flex-col justify-between strategies hideLeftAnimation">
+                    <div className="group w-full lg:w-1/3 px-10 py-10 min-h-[517px] flex flex-col justify-between strategies hideLeftAnimation">
                         <div>
                             <p className="tiro font-normal text-6xl text-white">Strategies </p>
                             <p className="tiro font-normal text-4xl text-white mt-2">Employed</p>
@@ -1087,12 +1091,12 @@ const Landing = () => {
                         <div className="flex  w-full justify-between">
                             <p className="font-bold  lg:block hidden text-base text-white">Strategies on right</p>
                             <p className="font-bold  lg:hidden block text-base text-white">Strategies on bottom</p>
-                            <div className="lg:block hidden">
+                            <div className="lg:block transition-all duration-500 ease-in-out group-hover:translate-x-4 hidden">
                                 <svg width="34" height="24" viewBox="0 0 34 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M33.2237 13.0607C33.8095 12.4749 33.8095 11.5251 33.2237 10.9393L23.6778 1.3934C23.092 0.807609 22.1423 0.80761 21.5565 1.3934C20.9707 1.97918 20.9707 2.92893 21.5565 3.51472L30.0418 12L21.5565 20.4853C20.9707 21.0711 20.9707 22.0208 21.5565 22.6066C22.1423 23.1924 23.092 23.1924 23.6778 22.6066L33.2237 13.0607ZM1.31134e-07 13.5L32.1631 13.5L32.1631 10.5L-1.31134e-07 10.5L1.31134e-07 13.5Z" fill="white" />
                                 </svg>
                             </div>
-                            <div className="lg:hidden block rotate-90">
+                            <div className="lg:hidden transition-all duration-500 ease-in-out group-hover:translate-y-4 block rotate-90">
                                 <svg width="34" height="24" viewBox="0 0 34 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M33.2237 13.0607C33.8095 12.4749 33.8095 11.5251 33.2237 10.9393L23.6778 1.3934C23.092 0.807609 22.1423 0.80761 21.5565 1.3934C20.9707 1.97918 20.9707 2.92893 21.5565 3.51472L30.0418 12L21.5565 20.4853C20.9707 21.0711 20.9707 22.0208 21.5565 22.6066C22.1423 23.1924 23.092 23.1924 23.6778 22.6066L33.2237 13.0607ZM1.31134e-07 13.5L32.1631 13.5L32.1631 10.5L-1.31134e-07 10.5L1.31134e-07 13.5Z" fill="white" />
                                 </svg>
@@ -1105,7 +1109,7 @@ const Landing = () => {
                         <div className="px-10 w-full font-normal text-3xl text-[#012F6D] flex flex-col justify-between py-10">
                             <div className="w-full lg:flex-row flex-col flex items-start justify-between">
                                 <div>
-                                    <p className="tiro-regular" >Market Timing Excellence:</p>
+                                    <p className="tiro-regular" >Market Timing Excellence</p>
                                 </div>
 
                                 <div className="lg:w-1/2 mt-6 lg:mt-0 lg:pl-10  responsive-strategies-top">
@@ -1115,7 +1119,7 @@ const Landing = () => {
 
                             <div className="w-full my-10 responsive-strategies-marging lg:my-0 flex lg:flex-row flex-col  items-start justify-between">
                                 <div>
-                                    <p className="tiro-regular">Tactical Trading During <br />Downturns:</p>
+                                    <p className="tiro-regular">Tactical Trading During <br />Downturns</p>
                                 </div>
 
                                 <div className="lg:w-1/2 mt-6 lg:mt-0 lg:pl-10 responsive-strategies-mid">
@@ -1125,7 +1129,7 @@ const Landing = () => {
 
                             <div className="w-full flex lg:flex-row flex-col  items-start justify-between">
                                 <div>
-                                    <p className="mb-10 tiro-regular">Active Participation in <br /> Project Launches:</p>
+                                    <p className="mb-10 tiro-regular">Active Participation in <br /> Project Launches</p>
                                 </div>
 
                                 <div className="lg:w-1/2 mt-6 lg:mt-0 lg:pl-10 responsive-strategies-bot">
@@ -1153,19 +1157,22 @@ const Landing = () => {
 
                 <div className="lg:mt-28 resp-direction   mt-10 lg:flex-row flex-col flex w-full">
                     <div className="lg:w-1/2 hideLeftAnimation relative overflow-hidden bg-white w-full">
-                        <div className="py-14 resp-large px-10">
-                            <div className="flex w-full">
-                                <p className="tiro-regular text-[#0040A1] text-6xl">Who we <span className="tiro"> are?</span> </p>
+                        <div className="py-14  h-full flex flex-col justify-between  resp-large px-10">
+                            <div>
+                                <div className="flex w-full">
+                                    <p className="tiro-regular text-[#0040A1] text-6xl">Who are <span className="tiro"> we?</span> </p>
+                                </div>
+
+                                <div className="flex font-bold opacity-70 mt-8 flex-col gap-6 text-[#152246] responsive-who-we-text text-base">
+                                    <p>EWF Capital is a collective of visionary strategists, seasoned analysts, and cryptocurrency aficionados dedicated to the art and science of investing. Established on the bedrock of comprehensive market research, advanced risk management, and algorithmic precision, we pride ourselves on our ability to identify and capitalize on opportunities within the ever-evolving crypto space.</p>
+                                    <p>Our commitment extends beyond achieving financial success; we aim to empower our clients with the knowledge and tools necessary for informed investment decisions in the digital era.</p>
+                                </div>
                             </div>
 
-                            <div className="flex font-bold opacity-70 mt-8 flex-col gap-6 text-[#152246] text-lg lg:text-xl">
-                                <p>Lorem Ipsum is simply dummy text of the printing and type set ting industry. Lorem Ipsum has been the industry's standard du mmy text ever since the 1500s, </p>
-                                <p>when an unknown printer took a galley of type and  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</p>
-                            </div>
 
-                            <div className="flex w-full relative z-50 mt-24 lg:mt-32 gap-6">
-                                <div className="flex items-center px-3 transform hover:scale-110 transition-transform duration-500 lg:px-6 py-3 gap-2 bg-[#012F6D]">
-                                    <p className="lg:text-base text-sm font-medium text-white ">Learn more</p>
+                            <div className="flex w-full relative z-50 mt-24 lg:mt-10 gap-6">
+                                <div onClick={() => scrollToSection(book)} className="flex items-center px-3 transform hover:scale-110 transition-transform duration-500 lg:px-6 py-3 gap-2 bg-[#012F6D]">
+                                    <p className="lg:text-base text-sm font-medium text-white ">Book an appointment</p>
                                     <div className="flex items-center h-full ">
                                         <svg width="19" height="12" viewBox="0 0 19 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M18.2812 6.26764C18.5741 5.97474 18.5741 5.49987 18.2812 5.20698L13.5082 0.434005C13.2153 0.141112 12.7404 0.141111 12.4475 0.434005C12.1546 0.726898 12.1546 1.20177 12.4475 1.49467L16.6902 5.73731L12.4475 9.97995C12.1546 10.2728 12.1546 10.7477 12.4475 11.0406C12.7404 11.3335 13.2153 11.3335 13.5082 11.0406L18.2812 6.26764ZM0.839844 6.4873L17.7508 6.48731L17.7508 4.98731L0.839844 4.9873L0.839844 6.4873Z" fill="white" />
@@ -1173,8 +1180,8 @@ const Landing = () => {
 
                                     </div>
                                 </div>
-                                <div className="flex items-center px-3 transform hover:scale-110 transition-transform duration-500 lg:px-6 py-3 gap-2 bg-[#0040A1]">
-                                    <p className="lg:text-base text-sm font-medium text-white ">Get Started</p>
+                                <div onClick={() => scrollToSection(contact)}  c className="flex items-center px-3 transform hover:scale-110 transition-transform duration-500 lg:px-6 py-3 gap-2 bg-[#0040A1]">
+                                    <p className="lg:text-base text-sm font-medium text-white ">Contact Us</p>
                                     <div className="flex items-center h-full ">
                                         <svg width="19" height="12" viewBox="0 0 19 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M18.2812 6.26764C18.5741 5.97474 18.5741 5.49987 18.2812 5.20698L13.5082 0.434005C13.2153 0.141112 12.7404 0.141111 12.4475 0.434005C12.1546 0.726898 12.1546 1.20177 12.4475 1.49467L16.6902 5.73731L12.4475 9.97995C12.1546 10.2728 12.1546 10.7477 12.4475 11.0406C12.7404 11.3335 13.2153 11.3335 13.5082 11.0406L18.2812 6.26764ZM0.839844 6.4873L17.7508 6.48731L17.7508 4.98731L0.839844 4.9873L0.839844 6.4873Z" fill="white" />
@@ -1191,8 +1198,11 @@ const Landing = () => {
                         </div>
 
                     </div>
+
+
+
                     <div className="lg:w-1/2 hideRightAnimation relative w-full">
-                        <div className="absolute bottom-28 left-10">
+                        <div className="absolute z-50 bottom-28 left-10">
                             <svg width="96" height="37" viewBox="0 0 96 37" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M26.7662 7.70788C26.0625 5.66733 25.3061 4.27757 24.4969 3.53869C23.7228 2.76466 22.4359 2.16655 20.9609 2.16655V1.11108C21.1368 1.11108 21.4008 1.09346 21.7526 1.05832C22.0693 1.02308 22.4035 1.00555 22.7553 1.00555C24.6904 1.00555 26.432 1.44529 27.98 2.32484C29.5632 3.20449 30.8298 4.99883 31.7798 7.70788L38.2971 27.6643L43.9439 10.9347L42.6773 7.29315C41.9737 5.2526 41.2173 3.86284 40.408 3.12396C39.634 2.34993 38.4554 1.89258 36.8722 1.75182V0.696347C37.0481 0.696347 37.2944 0.678731 37.6109 0.643586C37.9628 0.608348 38.3146 0.59082 38.6665 0.59082C40.6015 0.59082 42.3431 1.03055 43.8912 1.9102C45.4745 2.78975 46.741 4.5841 47.691 7.29315L54.7628 27.6643L53.9711 36.4777H52.9157L45.105 14.2595L37.5054 36.4777H36.45L26.7662 7.70788Z" fill="white" />
                                 <path d="M56.7253 7.70819C56.0214 5.66755 55.265 4.27788 54.4559 3.539C53.6818 2.76497 52.3949 2.16686 50.9199 2.16686V1.11139C51.0959 1.11139 51.3597 1.09377 51.7116 1.05862C52.0282 1.02339 52.3624 1.00586 52.7143 1.00586C54.6494 1.00586 56.3913 1.44559 57.9392 2.32515C59.5221 3.20479 60.7886 4.99914 61.7388 7.70819L68.2559 27.6645C68.2559 30.6918 67.7098 34.2108 67.4644 36.478H66.4091L56.7253 7.70819Z" fill="white" />
@@ -1202,12 +1212,12 @@ const Landing = () => {
                                 <path d="M55.7956 15.375L52.9863 36.4462H54.67L57.4201 19.8162L55.7956 15.375Z" fill="white" />
                             </svg>
                         </div>
-                        <div className="overflow-hidden relative">
+                        <div className="overflow-hidden h-full relative">
                             <img src="/Images/croppedsixthsecbg.png" className="h-full w-full hover:scale-110 transition-all duration-500 ease-in-out"></img>
                         </div>
                     </div>
                     {/* <div className="lg:w-1/2 hideRightAnimation relative w-full">
-                        <div className="absolute bottom-28 left-10">
+                        <div className="absolute z-50 bottom-28 left-10">
                             <svg width="96" height="37" viewBox="0 0 96 37" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M26.7662 7.70788C26.0625 5.66733 25.3061 4.27757 24.4969 3.53869C23.7228 2.76466 22.4359 2.16655 20.9609 2.16655V1.11108C21.1368 1.11108 21.4008 1.09346 21.7526 1.05832C22.0693 1.02308 22.4035 1.00555 22.7553 1.00555C24.6904 1.00555 26.432 1.44529 27.98 2.32484C29.5632 3.20449 30.8298 4.99883 31.7798 7.70788L38.2971 27.6643L43.9439 10.9347L42.6773 7.29315C41.9737 5.2526 41.2173 3.86284 40.408 3.12396C39.634 2.34993 38.4554 1.89258 36.8722 1.75182V0.696347C37.0481 0.696347 37.2944 0.678731 37.6109 0.643586C37.9628 0.608348 38.3146 0.59082 38.6665 0.59082C40.6015 0.59082 42.3431 1.03055 43.8912 1.9102C45.4745 2.78975 46.741 4.5841 47.691 7.29315L54.7628 27.6643L53.9711 36.4777H52.9157L45.105 14.2595L37.5054 36.4777H36.45L26.7662 7.70788Z" fill="white" />
                                 <path d="M56.7253 7.70819C56.0214 5.66755 55.265 4.27788 54.4559 3.539C53.6818 2.76497 52.3949 2.16686 50.9199 2.16686V1.11139C51.0959 1.11139 51.3597 1.09377 51.7116 1.05862C52.0282 1.02339 52.3624 1.00586 52.7143 1.00586C54.6494 1.00586 56.3913 1.44559 57.9392 2.32515C59.5221 3.20479 60.7886 4.99914 61.7388 7.70819L68.2559 27.6645C68.2559 30.6918 67.7098 34.2108 67.4644 36.478H66.4091L56.7253 7.70819Z" fill="white" />
@@ -1227,7 +1237,7 @@ const Landing = () => {
 
             {/* fifth box */}
             <div ref={viewRef} className="flex  lg:flex-row flex-col">
-                <div className="lg:w-1/2 lg:py-24 w-full lg:-mt-8 px-10 py-10 lg:px-28 bg-[#012F6D]">
+                <div id="book" ref={book} className="lg:w-1/2 lg:py-24 w-full lg:-mt-8 px-10 py-10 lg:px-28 bg-[#012F6D]">
                     <div className="w-full text-white text-5xl lg:text-6xl">
                         <p className="tiro-regular">Book an</p>
                         <p className="tiro">appointment</p>
@@ -1238,26 +1248,26 @@ const Landing = () => {
                             <input placeholder="Second Name" className="white w-1/2 px-4 py-4 text-white font-bold text-base bg-[#012F6D] border-b border-b-white hover:border-b-[rgba(255,255,255,0.5)]"></input>
                         </div>
                         <div className="w-full group  group mt-1 flex">
-                            <input placeholder="Email" className="white hover:border-b-[rgba(255,255,255,0.5)] transition-all duration-700 px-4 w-[80%] py-4 text-white font-bold text-base bg-[#012F6D] border-b border-white"></input>
-                            <div className="flex  items-center justify-between w-[20%] border-b transition-all duration-700 group-hover:border-b-[rgba(255,255,255,0.5)] border-t-0  border-white">
+                            <input placeholder="Email" className="white hover:border-b-[rgba(255,255,255,0.5)] transition-all duration-700 px-4 w-full py-4 text-white font-bold text-base bg-[#012F6D] border-b border-b-white"></input>
+                            {/* <div className="flex  items-center justify-between w-[20%] border-b transition-all duration-700 group-hover:border-b-[rgba(255,255,255,0.5)] border-t-0  border-white">
                                 <p className="font-bold text-base group-hover:text-[rgba(255,255,255,0.5)] transition-all duration-700 text-white">Verify</p>
                                 <div className="rotate-360">
                                     <svg width="19" height="12" viewBox="0 0 19 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M17.8788 6.35064C18.1717 6.05775 18.1717 5.58288 17.8788 5.28998L13.1058 0.517013C12.813 0.224119 12.3381 0.224119 12.0452 0.517013C11.7523 0.809906 11.7523 1.28478 12.0452 1.57767L16.2878 5.82031L12.0452 10.063C11.7523 10.3558 11.7523 10.8307 12.0452 11.1236C12.3381 11.4165 12.813 11.4165 13.1058 11.1236L17.8788 6.35064ZM0.4375 6.57031L17.3485 6.57031L17.3485 5.07031L0.4375 5.07031L0.4375 6.57031Z" fill="white" />
                                     </svg>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
-                        <div className="w-full group flex">
-                            <input placeholder="Mobile" className="px-4 w-[80%] hover:border-b-[rgba(255,255,255,0.5)] transition-all duration-700 white py-4 text-white font-bold text-base bg-[#012F6D] border-b border-white"></input>
-                            <div className="flex items-center justify-between w-[20%] border-b border-white transition-all group-hover:border-b-[rgba(255,255,255,0.5)] duration-700">
+                        <div className="w-full mt-1 group flex">
+                            <input placeholder="Mobile (Optional)" className="px-4 w-full hover:border-b-[rgba(255,255,255,0.5)] transition-all duration-700 white py-4 text-white font-bold text-base bg-[#012F6D] border-b border-white"></input>
+                            {/* <div className="flex items-center justify-between w-[20%] border-b border-white transition-all group-hover:border-b-[rgba(255,255,255,0.5)] duration-700">
                                 <p className="font-bold text-base text-white  group-hover:text-[rgba(255,255,255,0.5)] transition-all duration-700">Verify</p>
                                 <div className="rotate-360">
                                     <svg width="19" height="12" viewBox="0 0 19 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M17.8788 6.35064C18.1717 6.05775 18.1717 5.58288 17.8788 5.28998L13.1058 0.517013C12.813 0.224119 12.3381 0.224119 12.0452 0.517013C11.7523 0.809906 11.7523 1.28478 12.0452 1.57767L16.2878 5.82031L12.0452 10.063C11.7523 10.3558 11.7523 10.8307 12.0452 11.1236C12.3381 11.4165 12.813 11.4165 13.1058 11.1236L17.8788 6.35064ZM0.4375 6.57031L17.3485 6.57031L17.3485 5.07031L0.4375 5.07031L0.4375 6.57031Z" fill="white" />
                                     </svg>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                         <div className="mt-16 group flex items-center transform  gap-6 px-6 ">
                             <p className="text-white font-bold text-base transition-all duration-700 group-hover:text-[rgba(255,255,255,0.5)]">Book Appoinment</p>
@@ -1272,7 +1282,7 @@ const Landing = () => {
 
                 </div>
 
-                <div className="lg:w-1/2 lg:py-24 w-full  px-10 py-10 lg:px-28 bg-white">
+                <div ref={contact} id="section1" className="lg:w-1/2 lg:py-24 w-full   px-10 py-10 lg:px-28 bg-white">
                     <div className="w-full flex gap-2 text-[#0040A1] text-6xl">
                         <p className="tiro-regular">Contact</p>
                         <p className="tiro">us</p>
@@ -1283,7 +1293,7 @@ const Landing = () => {
                             <input placeholder="Second Name" className="w-1/2 black px-4 py-4 text-[#000000] font-bold text-base bg-white border-b border-b-[#000000] hover:border-b-[rgba(112,112,112,0.5)] transition-all duration-700"></input>
                         </div>
                         <div className="w-full gap-10 mt-1 flex">
-                            <input placeholder="Phone" className="w-1/2 black px-4 py-4 text-[#000000] hover:border-b-[rgba(112,112,112,0.5)] transition-all duration-700 font-bold text-base bg-white border-b border-b-[#000000]"></input>
+                            <input placeholder="Phone (Optional)" className="w-1/2 black px-4 py-4 text-[#000000] hover:border-b-[rgba(112,112,112,0.5)] transition-all duration-700 font-bold text-base bg-white border-b border-b-[#000000]"></input>
                             <input placeholder="Email" className="w-1/2 black px-4 py-4 text-[#000000] font-bold text-base hover:border-b-[rgba(112,112,112,0.5)] transition-all duration-700 bg-white border-b border-b-[#000000]"></input>
                         </div>
                         <div className="w-full flex mt-6 ">
@@ -1311,7 +1321,7 @@ const Landing = () => {
             <div className="flex lg:flex-row overflow-hidden flex-col w-full  lg:items-center justify-between bg-[#0040A1] py-10 px-10 lg:py-20 lg:px-28">
                 <div className="hideLeftAnimation">
                     <p className="tiro text-white text-3xl lg:text-6xl">Join Today,</p>
-                    <p className="tiro-regular text-white text-3xl lg:text-6xl  lg:ml-0 lg:mt-2">Conquer with us</p>
+                    <p className="tiro-regular text-white text-3xl lg:text-6xl  lg:ml-0 lg:mt-2">Conquer this bull run with us</p>
                 </div>
 
                 <div className="flex slowly-visible newhalf transform hover:scale-110 transition-transform duration-500 justify-between mt-6 lg:mt-0 items-center px-3 lg:px-6 lg:py-4 py-3 gap-10 bg-white">

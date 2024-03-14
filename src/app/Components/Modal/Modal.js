@@ -43,7 +43,7 @@ const Modal = ({ isOpen, onClose, setOpenPrivacy, handleToggleModal }) => {
                         />
                     </svg>
                 </button>
-                <div className='flex  justify-between px-6 align-middle items-center'>
+                <div className='flex  justify-center px-6 align-middle items-center'>
                     {/* <img src='Images/blacktextlogo.png' className='z-10 hover:transform hover:scale-110 hover:transition-transform hover:ease-in hover:duration-300' ></img> */}
                     <svg width="81" height="31" viewBox="0 0 81 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M22.2684 6.25997C21.6717 4.5297 21.0303 3.35126 20.3441 2.72473C19.6878 2.0684 18.5965 1.56123 17.3458 1.56123V0.66625C17.495 0.66625 17.7188 0.651312 18.0171 0.621511C18.2856 0.591631 18.569 0.576768 18.8673 0.576768C20.5082 0.576768 21.985 0.949638 23.2976 1.69545C24.6401 2.44134 25.7141 3.96285 26.5196 6.25997L32.0459 23.1819L36.8341 8.99614L35.7601 5.9083C35.1635 4.17803 34.5221 2.99959 33.8359 2.37306C33.1795 1.71673 32.1801 1.32892 30.8377 1.20956V0.314579C30.9868 0.314579 31.1957 0.299641 31.4641 0.26984C31.7624 0.23996 32.0608 0.225098 32.3592 0.225098C34 0.225098 35.4767 0.597967 36.7894 1.34386C38.1319 2.08967 39.2059 3.61118 40.0115 5.9083L46.0079 23.1819L45.3366 30.6552H44.4417L37.8187 11.8154L31.3746 30.6552H30.4797L22.2684 6.25997Z" fill="#012F6D" />
@@ -54,11 +54,11 @@ const Modal = ({ isOpen, onClose, setOpenPrivacy, handleToggleModal }) => {
                         <path d="M46.8832 12.7607L44.501 30.628H45.9287L48.2606 16.5267L46.8832 12.7607Z" fill="#012F6D" />
                     </svg>
 
-                    <div>
+                    {/* <div>
                         <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M18.9217 17.2197C18.4966 16.7975 17.8151 16.7975 17.3898 17.2197C17.1694 17.4418 17.0454 17.7435 17.0454 18.0581C17.0454 18.3278 17.1365 18.5878 17.3014 18.7965L17.3898 18.8963L19.7219 21.569C20.2904 22.1437 21.2122 22.1437 21.7807 21.569C22.3491 20.9945 22.3491 20.0628 21.7807 19.4881H21.7319L18.9217 17.2197ZM16.3144 2.7933C14.5448 1.00478 12.1449 0 9.64246 0C4.43142 0 0.207031 4.26983 0.207031 9.53694C0.207031 14.804 4.43142 19.0739 9.64246 19.0739C14.8535 19.0739 19.0779 14.804 19.0779 9.53694C19.0779 7.00758 18.0838 4.58182 16.3144 2.7933ZM9.70703 17C13.8492 17 17.207 13.6421 17.207 9.5C17.207 5.35786 13.8492 2 9.70703 2C5.5649 2 2.20703 5.35786 2.20703 9.5C2.20703 13.6421 5.5649 17 9.70703 17Z" fill="#012F6D" />
                         </svg>
-                    </div>
+                    </div> */}
 
 
                 </div>
@@ -70,7 +70,7 @@ const Modal = ({ isOpen, onClose, setOpenPrivacy, handleToggleModal }) => {
                             <a href='/'>
                                 <div className='bg-[#012F6D] text-white px-10 py-3  rounded-[5px]  ' >
                                     <p className='md:text-lg text-sm font-medium'>
-                                        Sign in
+                                      Join Us
                                     </p>
                                 </div>
                             </a>
