@@ -37,7 +37,30 @@ const Landing = () => {
         };
     }, []);
 
-// show Animation
+    // top direction Animation without delay
+
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                console.log(entry, "entryyyyyyy");
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('bottom-to-top');
+                    entry.target.classList.remove('hideTopAnimation');
+
+                }
+            });
+        });
+
+        const hiddenElements = document.querySelectorAll('.hideTopAnimationnodelay');
+        hiddenElements.forEach((el) => observer.observe(el));
+
+        return () => {
+            // Clean up observer on component unmount
+            observer.disconnect();
+        };
+    }, []);
+
+    // show Animation
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
@@ -69,7 +92,7 @@ const Landing = () => {
         hiddenElements.forEach((el) => observer.observe(el));
     }, []);
 
-// right to left Animation
+    // right to left Animation
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
@@ -197,9 +220,9 @@ const Landing = () => {
     };
 
 
- 
 
- 
+
+
 
 
 
@@ -822,7 +845,7 @@ const Landing = () => {
                             </div>
 
                             <div>
-                                <p className="opacity-70 text-xl font-bold text-white">smart investing through analysis, research, and market savvy</p>
+                                <p className="opacity-70 lg:text-xl text-base font-bold text-white">smart investing through analysis, research, and market savvy</p>
                                 <div className="flex mt-8 items-center justify-between w-full">
                                     <p className="text-white transform group-hover:scale-125 transition-transform duration-500 text-lg font-semibold">Know More</p>
                                     <div>
@@ -851,7 +874,7 @@ const Landing = () => {
                             </div>
 
                             <div>
-                                <p className="opacity-70 text-xl font-bold text-white">smart investing through analysis, research, and market savvy</p>
+                                <p className="opacity-70 lg:text-xl text-base font-bold text-white">smart investing through analysis, research, and market savvy</p>
                                 <div className="flex mt-8  items-center justify-between w-full">
                                     <p className="text-white group-hover:scale-125 transition-transform duration-500 transform hover:scale-110 text-lg font-semibold">Know More</p>
                                     <div>
@@ -982,14 +1005,160 @@ const Landing = () => {
                     </div>
                 </div>
 
-                <div className="lg:mt-20 resp-direction   mt-10 lg:flex-row flex-col flex w-full">
+                <div className="w-full mt-24 lg:flex hideTopAnimationnodelay bg-[#013276] lg:min-h-[290px]">
+                    <div className="lg:w-1/2 w-full case-study-left  flex justify-center items-center">
+                        <p className="tiro mr-6 font-normal text-5xl lg:text-6xl text-white">Case Study</p>
+                        <div className="lg:block hidden">
+                            <svg width="57" height="24" viewBox="0 0 57 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M56.0607 13.0607C56.6464 12.4749 56.6464 11.5251 56.0607 10.9393L46.5147 1.3934C45.9289 0.807615 44.9792 0.807615 44.3934 1.3934C43.8076 1.97919 43.8076 2.92894 44.3934 3.51472L52.8787 12L44.3934 20.4853C43.8076 21.0711 43.8076 22.0208 44.3934 22.6066C44.9792 23.1924 45.9289 23.1924 46.5147 22.6066L56.0607 13.0607ZM-1.31134e-07 13.5L55 13.5L55 10.5L1.31134e-07 10.5L-1.31134e-07 13.5Z" fill="white" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div className="lg:w-1/2 w-full py-8 px-8 flex flex-col justify-between" >
+                        <p className="font-normal text-5xl text-white tiro-regular ">Background</p>
+
+                        <p className="font-bold leading-6 mt-10 opacity-80 lg:mt-0 text-white text-base">
+                            Bitcoin's volatile nature often leads to significant price fluctuations, characterized by alternating periods of rapid growth (bull runs) and decline (bear markets). EWF Capital recognized the potential for substantial returns during bull runs and formulated strategic approaches to capitalize on these opportunities.
+                        </p>
+                    </div>
+                </div>
+
+                <div className="flex lg:flex-row flex-col w-full gap-5 mt-5">
+                    <div className=" w-full hideLeftAnimation lg:w-1/3 px-10 py-10 min-h-[537px] flex flex-col justify-between analyzing bg-red-600">
+                        <div>
+                            <p className="tiro font-normal text-6xl text-white">Analyzing </p>
+                            <p className="tiro font-normal text-4xl text-white mt-2">Bitcoin Bull Run <br /> Cycles</p>
+                        </div>
+                        <div className="flex  w-full justify-between">
+                            <p className="font-bold  lg:block hidden text-base text-white">Analysis on right</p>
+                            <p className="font-bold  lg:hidden block text-base text-white">Analysis on bottom</p>
+                            <div className="lg:block hidden">
+                                <svg width="34" height="24" viewBox="0 0 34 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M33.2237 13.0607C33.8095 12.4749 33.8095 11.5251 33.2237 10.9393L23.6778 1.3934C23.092 0.807609 22.1423 0.80761 21.5565 1.3934C20.9707 1.97918 20.9707 2.92893 21.5565 3.51472L30.0418 12L21.5565 20.4853C20.9707 21.0711 20.9707 22.0208 21.5565 22.6066C22.1423 23.1924 23.092 23.1924 23.6778 22.6066L33.2237 13.0607ZM1.31134e-07 13.5L32.1631 13.5L32.1631 10.5L-1.31134e-07 10.5L1.31134e-07 13.5Z" fill="white" />
+                                </svg>
+                            </div>
+                            <div className="lg:hidden block rotate-90">
+                                <svg width="34" height="24" viewBox="0 0 34 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M33.2237 13.0607C33.8095 12.4749 33.8095 11.5251 33.2237 10.9393L23.6778 1.3934C23.092 0.807609 22.1423 0.80761 21.5565 1.3934C20.9707 1.97918 20.9707 2.92893 21.5565 3.51472L30.0418 12L21.5565 20.4853C20.9707 21.0711 20.9707 22.0208 21.5565 22.6066C22.1423 23.1924 23.092 23.1924 23.6778 22.6066L33.2237 13.0607ZM1.31134e-07 13.5L32.1631 13.5L32.1631 10.5L-1.31134e-07 10.5L1.31134e-07 13.5Z" fill="white" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div className=" w-full slowly-visible lg:w-1/3 py-10 pl-10 pr-14 min-h-[537px] flex flex-col justify-between bg-white">
+                        <div className="flex items-center w-full justify-between">
+                            <p className="text-[#012F6D] tiro font-normal text-4xl">(2017-2019)</p>
+                            <div className="h-full w-[1px] bg-[#F6161E]">
+
+                            </div>
+                        </div>
+
+                        <div>
+                            <p className="font-bold text-base text-[#152246] opacity-80">During the 2017 bull run, EWF Capital strategically positioned itself to capitalize on Bitcoin's meteoric rise. By deploying dynamic trading strategies and actively engaging in project launches, the firm achieved a substantial gain of 1,420%.</p>
+
+                            <p className="font-bold text-base text-[#152246] opacity-80 mt-8">This early success set a precedent for excellence in wealth generation.</p>
+                        </div>
+                    </div>
+
+
+                    <div className=" w-full hideRightAnimation lg:w-1/3 py-10 pl-10 pr-14 min-h-[537px] flex flex-col justify-between bg-white">
+                        <div className="flex items-center w-full justify-between">
+                            <p className="text-[#012F6D] font-normal text-4xl tiro">(2020-2021)</p>
+                            <div className="h-full w-[1px] bg-[#F6161E]">
+
+                            </div>
+                        </div>
+
+                        <div>
+                            <p className="font-bold text-base text-[#152246] opacity-80 mt-10">Re-entering the market in 2020, EWF Capital demonstrated renewed strategic vigor. Leveraging market timing excellence, the firm capitalized on phases of market dormancy to amass positions at favorable prices. Tactical trading during market downturns enabled EWF Capital to accumulate assets at discounted prices.</p>
+
+                            <p className="font-bold text-base text-[#152246] opacity-80 mt-8">Active participation in project launches further contributed to the impressive average Return on Investment (ROI) of 750% within less than a year.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="flex lg:flex-row flex-col w-full  mt-5">
+                    <div className=" w-full lg:w-1/3 px-10 py-10 min-h-[517px] flex flex-col justify-between strategies hideLeftAnimation">
+                        <div>
+                            <p className="tiro font-normal text-6xl text-white">Strategies </p>
+                            <p className="tiro font-normal text-4xl text-white mt-2">Employed</p>
+                        </div>
+                        <div className="flex  w-full justify-between">
+                            <p className="font-bold  lg:block hidden text-base text-white">Strategies on right</p>
+                            <p className="font-bold  lg:hidden block text-base text-white">Strategies on bottom</p>
+                            <div className="lg:block hidden">
+                                <svg width="34" height="24" viewBox="0 0 34 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M33.2237 13.0607C33.8095 12.4749 33.8095 11.5251 33.2237 10.9393L23.6778 1.3934C23.092 0.807609 22.1423 0.80761 21.5565 1.3934C20.9707 1.97918 20.9707 2.92893 21.5565 3.51472L30.0418 12L21.5565 20.4853C20.9707 21.0711 20.9707 22.0208 21.5565 22.6066C22.1423 23.1924 23.092 23.1924 23.6778 22.6066L33.2237 13.0607ZM1.31134e-07 13.5L32.1631 13.5L32.1631 10.5L-1.31134e-07 10.5L1.31134e-07 13.5Z" fill="white" />
+                                </svg>
+                            </div>
+                            <div className="lg:hidden block rotate-90">
+                                <svg width="34" height="24" viewBox="0 0 34 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M33.2237 13.0607C33.8095 12.4749 33.8095 11.5251 33.2237 10.9393L23.6778 1.3934C23.092 0.807609 22.1423 0.80761 21.5565 1.3934C20.9707 1.97918 20.9707 2.92893 21.5565 3.51472L30.0418 12L21.5565 20.4853C20.9707 21.0711 20.9707 22.0208 21.5565 22.6066C22.1423 23.1924 23.092 23.1924 23.6778 22.6066L33.2237 13.0607ZM1.31134e-07 13.5L32.1631 13.5L32.1631 10.5L-1.31134e-07 10.5L1.31134e-07 13.5Z" fill="white" />
+                                </svg>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div className="flex hideRightAnimation lg:flex-row flex-col w-full lg:ml-5 gap-4 lg:w-2/3 bg-white">
+                        <div className="px-10 w-full font-normal text-3xl text-[#012F6D] flex flex-col justify-between py-10">
+                            <div className="w-full lg:flex-row flex-col flex items-start justify-between">
+                                <div>
+                                    <p className="tiro-regular" >Market Timing Excellence:</p>
+                                </div>
+
+                                <div className="lg:w-1/2 mt-6 lg:mt-0 lg:pl-10  responsive-strategies-top">
+                                    <p className="font-bold text-base opacity-80 text-[#152246]">EWF capitalized on low valuations during short bearish trends. Identifying opportune entry points enabled the firm to amass positions at favorable prices.</p>
+                                </div>
+                            </div>
+
+                            <div className="w-full my-10 responsive-strategies-marging lg:my-0 flex lg:flex-row flex-col  items-start justify-between">
+                                <div>
+                                    <p className="tiro-regular">Tactical Trading During <br />Downturns:</p>
+                                </div>
+
+                                <div className="lg:w-1/2 mt-6 lg:mt-0 lg:pl-10 responsive-strategies-mid">
+                                    <p className="font-bold text-base opacity-80 text-[#152246]">Tactical trading maneuvers during significant market downturns enabled the firm to accumulate assets at deeply discounted prices, turning adversity into advantage.</p>
+                                </div>
+                            </div>
+
+                            <div className="w-full flex lg:flex-row flex-col  items-start justify-between">
+                                <div>
+                                    <p className="mb-10 tiro-regular">Active Participation in <br /> Project Launches:</p>
+                                </div>
+
+                                <div className="lg:w-1/2 mt-6 lg:mt-0 lg:pl-10 responsive-strategies-bot">
+                                    <p className="font-bold text-base opacity-80 text-[#152246]">EWF Capital actively engaged in project launches, identifying promising projects early in their development. This proactive involvement allowed the firm to ride the upward trajectory of these projects, contributing significantly to overall ROI.</p>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+
+                    {/* <div className="flex w-full gap-4  lg:w-1/3 bg-white">
+                        <div className="px-10 w-full border border-black font-bold text-base text-[#012F6D] flex flex-col justify-between py-10">
+                            <p>EWF capitalized on low valuations during short bearish trends. Identifying opportune entry points enabled the firm to amass positions at favorable prices.</p>
+
+                            <p>Tactical Trading During <br/>Downturns:</p>
+
+                            <p>Active Participation in <br/> Project Launches:</p>
+
+                        </div>
+                    </div> */}
+
+                </div>
+
+                <div className="lg:mt-28 resp-direction   mt-10 lg:flex-row flex-col flex w-full">
                     <div className="lg:w-1/2 hideLeftAnimation relative overflow-hidden bg-white w-full">
                         <div className="py-14 resp-large px-10">
                             <div className="flex w-full">
                                 <p className="tiro-regular text-[#0040A1] text-6xl">Who we <span className="tiro"> are?</span> </p>
                             </div>
 
-                            <div className="flex opacity-80 mt-8 flex-col gap-6 text-[#152246] text-lg lg:text-xl">
+                            <div className="flex font-bold opacity-70 mt-8 flex-col gap-6 text-[#152246] text-lg lg:text-xl">
                                 <p>Lorem Ipsum is simply dummy text of the printing and type set ting industry. Lorem Ipsum has been the industry's standard du mmy text ever since the 1500s, </p>
                                 <p>when an unknown printer took a galley of type and  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</p>
                             </div>
@@ -1196,7 +1365,7 @@ const Landing = () => {
             </div>
 
 
-           
+
 
         </>
     )

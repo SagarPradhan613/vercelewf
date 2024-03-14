@@ -176,49 +176,100 @@ textarea:focus {
     font-size: 1rem;
     font-weight: bold;
     transition: all 0.3s ease-in-out;
-    width: 200px; /* Set your desired width */
+    width: 200px;
+    /* Set your desired width */
 }
 
 .input-wrapper input:hover {
     border-bottom-width: 100%;
 }
-.slick-arrow{
+
+.slick-arrow {
     position: absolute !important;
     top: 140% !important;
 }
-.cards-white{
+
+.cards-white {
     background-color: white;
     width: 306px !important;
     /* height: 457px !important; */
 }
 
 
-.overlay{
-   background-color: rgba(0,0,0,0.6);
-   transition: all 1s ease-in-out;
-   opacity: 0;
+.overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: all 1s ease-in-out;
+    opacity: 0;
 }
 
-@media screen and (min-width:1900px){
-  .resp-large{
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    height: 100%;
-  }
+@media screen and (min-width:1900px) {
+    .resp-large {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        height: 100%;
+    }
 }
 
 .image-container {
-    overflow: hidden; /* Ensure the image does not overflow its container */
-    height: 100%; /* Set container height to match the parent */
-    width: 100%; /* Set container width to match the parent */
-    position: relative; /* Ensure absolute positioning works relative to this container */
+    overflow: hidden;
+    /* Ensure the image does not overflow its container */
+    height: 100%;
+    /* Set container height to match the parent */
+    width: 100%;
+    /* Set container width to match the parent */
+    position: relative;
+    /* Ensure absolute positioning works relative to this container */
 }
 
 .scale-on-hover {
-    transition: transform 0.3s ease-in-out; /* Add a smooth transition */
+    transition: transform 0.3s ease-in-out;
+    /* Add a smooth transition */
 }
 
 .scale-on-hover:hover {
-    transform: scale(1.2); /* Scale the image by 20% on hover */
+    transform: scale(1.2);
+    /* Scale the image by 20% on hover */
+}
+
+.case-study-left {
+    background-color: #013276;
+    background-image: url('/Images/casestudy.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media screen and (max-width:720px) {
+    .case-study-left {
+        min-height: 150px;
+    }
+}
+
+.analyzing{
+    background-color: #F6161E;
+    background-image: url('/Images/analyzing.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.strategies{
+    background-color: #0040A1;
+    background-image: url('/Images/strategies.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media screen and (min-width:1080px) and (max-width:1300px){
+    .responsive-strategies-top{
+        padding-left: 0 !important;
+    }
+    .responsive-strategies-mid{
+        padding-left: 1rem !important;
+    }
+    .responsive-strategies-bot{
+        padding-left: 1.5rem !important;
+    }
+    .responsive-strategies-marging{
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
 }
