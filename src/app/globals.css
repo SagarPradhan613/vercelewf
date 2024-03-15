@@ -85,7 +85,9 @@ body {
 
 
 
-
+.different-mouse{
+  cursor: grab !important;
+}
 
 
 .hideAnimation {

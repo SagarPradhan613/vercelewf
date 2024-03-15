@@ -1,4 +1,11 @@
-@media screen and (max-width: 720px) {}
+@media screen and (max-width: 720px) {
+    .hero-section {
+        background-image: url('/Images/herobg.png');
+        background-repeat: no-repeat;
+        background-size: cover ;
+        background-position: center;
+    }
+}
 
 @media screen and (min-width: 720px) {
     .hero-section {
@@ -10,6 +17,272 @@
 
 
 }
+
+@media screen and (max-width: 720px) {
+    .newhalf {
+        width: 50%;
+
+    }
+
+    .directionLeft {
+        flex-direction: column;
+        align-items: baseline;
+    }
+
+    .directionRight {
+        flex-direction: column;
+        align-items: end;
+    }
+}
+
+@media screen and (min-width:1080px) and (max-width:1400px) {
+    .resp-controls {
+        margin-top: -3rem !important;
+    }
+}
+
+@media screen and (min-width:1280px) {
+    .scaleAnimation {
+        animation: infiniteScale 2.5s infinite alternate ease-in-out;
+    }
+}
+
+@media screen and (min-width:1900px) {
+    .resp-large {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width:720px) {
+    .case-study-left {
+        min-height: 150px;
+    }
+}
+
+@media screen and (min-width:1080px) and (max-width:1300px) {
+    .responsive-strategies-top {
+        padding-left: 0 !important;
+    }
+
+    .responsive-strategies-mid {
+        padding-left: 1rem !important;
+    }
+
+    .responsive-strategies-bot {
+        padding-left: 1.5rem !important;
+    }
+
+    .responsive-strategies-marging {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .resposnive-exp-margin {
+        margin-left: 2rem;
+    }
+
+    .responsive-who-we-text {
+        font-size: 14px !important;
+    }
+}
+
+@media screen and (min-width:1300px) and (max-width:1500px) {
+    .resposnive-exp-margin {
+        margin-left: 2rem;
+    }
+
+    .responsive-who-we-text {
+        font-size: 14px !important;
+    }
+}
+
+.different-mouse {
+    cursor: grab !important;
+}
+
+@media screen and (min-width:1270px) {
+    .responsive-planCards-width{
+        min-width: 400px;
+    }
+}
+
+@media screen and (min-width:1024px) and (max-width:1050px) {
+    .responsive-firstSec-header {
+        font-size: 2.5rem;
+        line-height: 1.4;
+    }
+    .responsive-planCards-width{
+        min-width: 300px;
+    }
+    .responsive-forthCard-title{
+        font-size: 2rem !important;
+    }
+
+    .responsive-firstSec-para {
+        font-size: 0.8rem;
+        line-height: 2;
+    }
+
+    .responsive-total-text {
+        font-size: 2rem;
+    }
+
+    .responsive-secondBox-flex {
+        flex-direction: column;
+        justify-content: left !important;
+        align-items: start !important;
+    }
+
+    .responsive-secondBox-flex-right {
+        flex-direction: column;
+        text-align: end;
+        justify-content: right !important;
+        align-items: end !important;
+    }
+    .responsive-second-numbers{
+        font-size: 3rem !important;
+    }
+    .responsive-second-head{
+        font-size: 2rem;
+    }
+}
+
+@media screen and (min-width:1051px) and (max-width:1280px) {
+    .responsive-firstSec-header {
+        font-size: 2.5rem;
+        line-height: 1.4;
+    }
+    .responsive-forthCard-title{
+        font-size: 2rem !important;
+    }
+
+    .responsive-firstSec-para {
+        font-size: 0.9rem;
+    }
+
+    .responsive-firstSec-margin {
+        margin-top: 3rem;
+    }
+
+    .responsive-total-text {
+        font-size: 2rem;
+    }
+
+    .responsive-secondBox-flex {
+        flex-direction: column;
+        justify-content: left !important;
+        align-items: start !important;
+    }
+
+    .responsive-secondBox-flex-right {
+        flex-direction: column;
+        text-align: end;
+        justify-content: right !important;
+        align-items: end !important;
+    }
+    .responsive-planCards-width{
+        min-width: 300px;
+    }
+    .responsive-second-numbers{
+        font-size: 3rem !important;
+    }
+    .responsive-second-head{
+        font-size: 2.3rem;
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (min-width:1280px) and (max-width:1380px) {
+    .responsive-firstSec-header {
+        font-size: 2.5rem;
+        line-height: 1.4;
+    }
+
+    .responsive-total-text {
+        font-size: 2rem;
+    }
+
+    .responsive-secondBox-flex {
+        flex-direction: column;
+        justify-content: left !important;
+        align-items: start !important;
+    }
+
+    .responsive-secondBox-flex-right {
+        flex-direction: column;
+        text-align: end;
+        justify-content: right !important;
+        align-items: end !important;
+    }
+}
+
+@media screen and (min-width:1380px) and (max-width:1500px) {
+    .responsive-total-text {
+        font-size: 2rem;
+    }
+
+    .responsive-secondBox-flex {
+        flex-direction: column;
+        justify-content: left !important;
+        align-items: start !important;
+    }
+
+    .responsive-secondBox-flex-right {
+        flex-direction: column;
+        text-align: end;
+        justify-content: right !important;
+        align-items: end !important;
+    }
+}
+
+@media screen and (min-width:1000px) and (max-width:1280px) {
+    .responsive-body-padding{
+        padding-left: 4rem !important;
+        padding-right: 4rem !important;
+    }
+    .responsive-years-btn{
+        flex-direction: column;
+        gap: 3rem;
+    }
+    .responsive-analyzing-cardHead{
+        font-size: 3rem;
+    }
+    .responsive-btn-text{
+        font-size: 14px;
+        white-space: nowrap;
+    }
+    .responsive-btn-margin{
+        margin-left: 0.5rem;
+    }
+    .responsive-btn-padding{
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .responsive-submit-btn{
+        width: 40%;
+    }
+    .responsive-hide{
+        display: none;
+    }
+    .responsive-show{
+        display: flex;
+    }
+    .ewf-investment-head{
+        font-size: 3rem;
+    }
+}
+@media screen and (min-width:1280px) {
+    .responsive-hide{
+        display: flex;
+    }
+    .responsive-show{
+        display: none;
+    }
+}
+
 
 .second-section {
     position: relative;
@@ -85,28 +358,7 @@
     background-blend-mode: multiply;
 }
 
-@media screen and (max-width: 720px) {
-    .newhalf {
-        width: 50%;
 
-    }
-
-    .directionLeft {
-        flex-direction: column;
-        align-items: baseline;
-    }
-
-    .directionRight {
-        flex-direction: column;
-        align-items: end;
-    }
-}
-
-@media screen and (min-width:1080px) and (max-width:1400px) {
-    .resp-controls {
-        margin-top: -3rem !important;
-    }
-}
 
 
 
@@ -154,11 +406,7 @@ textarea:focus {
 }
 
 
-@media screen and (min-width:1280px) {
-    .scaleAnimation {
-        animation: infiniteScale 2.5s infinite alternate ease-in-out;
-    }
-}
+
 
 .input-wrapper {
     position: relative;
@@ -202,14 +450,6 @@ textarea:focus {
     opacity: 0;
 }
 
-@media screen and (min-width:1900px) {
-    .resp-large {
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
-        height: 100%;
-    }
-}
 
 .image-container {
     overflow: hidden;
@@ -239,52 +479,19 @@ textarea:focus {
     background-size: cover;
 }
 
-@media screen and (max-width:720px) {
-    .case-study-left {
-        min-height: 150px;
-    }
-}
 
-.analyzing{
+
+.analyzing {
     background-color: #F6161E;
     background-image: url('/Images/analyzing.png');
     background-repeat: no-repeat;
     background-size: cover;
 }
-.strategies{
+
+.strategies {
     background-color: #0040A1;
     background-image: url('/Images/strategies.png');
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-@media screen and (min-width:1080px) and (max-width:1300px){
-    .responsive-strategies-top{
-        padding-left: 0 !important;
-    }
-    .responsive-strategies-mid{
-        padding-left: 1rem !important;
-    }
-    .responsive-strategies-bot{
-        padding-left: 1.5rem !important;
-    }
-    .responsive-strategies-marging{
-        margin-top: 2rem;
-        margin-bottom: 2rem;
-    }
-    .resposnive-exp-margin{
-        margin-left: 2rem;
-    }
-    .responsive-who-we-text{
-        font-size: 14px !important;
-    }
-}
-@media screen and (min-width:1300px) and (max-width:1500px){
-    .resposnive-exp-margin{
-        margin-left: 2rem;
-    }
-    .responsive-who-we-text{
-        font-size: 14px !important;
-    }
-    
-}
