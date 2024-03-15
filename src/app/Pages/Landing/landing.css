@@ -100,7 +100,7 @@
 }
 
 .different-mouse {
-    cursor: grab !important;
+    cursor: pointer !important;
 }
 
 @media screen and (min-width:1270px) {
