@@ -62,6 +62,18 @@
     }
 }
 
+@media screen and (min-width:720px) and (max-width:1020px){
+   .case-study-top{
+    margin-top: 2rem;
+   }
+}
+@media screen and (min-width:1020px) and (max-width:1400px){
+    .responsive-top-bottom{
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+ }
+
 @media screen and (min-width:1080px) and (max-width:1300px) {
     .responsive-strategies-top {
         padding-left: 0 !important;
@@ -264,17 +276,30 @@
     .responsive-submit-btn{
         width: 40%;
     }
+   
+    .ewf-investment-head{
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width:1800px) {
     .responsive-hide{
         display: none;
     }
     .responsive-show{
         display: flex;
     }
-    .ewf-investment-head{
-        font-size: 3rem;
-    }
 }
-@media screen and (min-width:1280px) {
+/* @media screen and (min-width:1000px) and (max-width:1250px) {
+    .responsive-hide{
+        display: none;
+    }
+    .responsive-show{
+        display: flex;
+    }
+} */
+@media screen and (min-width:1800px) {
+   
     .responsive-hide{
         display: flex;
     }

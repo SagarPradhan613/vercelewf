@@ -17,7 +17,7 @@ const Landing = () => {
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
-                console.log(entry, "entryyyyyyy");
+
                 if (entry.isIntersecting) {
 
                     setTimeout(() => {
@@ -42,7 +42,7 @@ const Landing = () => {
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
-                console.log(entry, "entryyyyyyy");
+
                 if (entry.isIntersecting) {
                     entry.target.classList.add('bottom-to-top');
                     entry.target.classList.remove('hideTopAnimation');
@@ -64,7 +64,7 @@ const Landing = () => {
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
-                console.log(entry, "entryyyyyyy");
+
                 if (entry.isIntersecting) {
                     entry.target.classList.add('show');
                 } else {
@@ -81,7 +81,7 @@ const Landing = () => {
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
-                console.log(entry, "entryyyyyyy");
+
                 if (entry.isIntersecting) {
                     entry.target.classList.add('left-to-right');
                 }
@@ -96,7 +96,7 @@ const Landing = () => {
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
-                console.log(entry, "entryyyyyyy");
+
                 if (entry.isIntersecting) {
                     entry.target.classList.add('right-to-left');
                 }
@@ -113,7 +113,7 @@ const Landing = () => {
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
-                console.log(entry, "entryyyyyyy");
+
                 if (entry.isIntersecting) {
                     entry.target.classList.add('delayShow');
                 }
@@ -129,7 +129,7 @@ const Landing = () => {
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
-                console.log(entry, "entryyyyyyy");
+
                 if (entry.isIntersecting) {
 
                     setTimeout(() => {
@@ -152,7 +152,7 @@ const Landing = () => {
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
-                console.log(entry, "entryyyyyyy");
+
                 if (entry.isIntersecting) {
 
                     setTimeout(() => {
@@ -236,11 +236,23 @@ const Landing = () => {
             <div className="w-full overflow-hidden lg:py-28  lg:pb-44 px-4 lg:px-0 py-10 pb-28 relative hero-section ">
                 <div className='flex  flex-col lg:flex-row'>
                     <div className="w-full left-to-right lg:pl-28  lg:w-1/2">
-                        <div>
+                        <div className="md:block hidden">
                             <img src='/Images/herofulltext.png'></img>
                         </div>
+                        <div className="md:hidden block">
+                            <svg width="297" height="56" viewBox="0 0 297 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M154.561 31.0466C154.121 34.2733 153.791 37.555 153.571 40.8916C151.554 41.4783 149.501 42.01 147.411 42.4866C145.321 42.9633 143.084 43.2016 140.701 43.2016C136.631 43.2016 133.092 42.395 130.086 40.7816C127.116 39.1683 124.806 36.9133 123.156 34.0166C121.506 31.0833 120.681 27.6366 120.681 23.6766C120.681 19.68 121.506 16.16 123.156 13.1166C124.806 10.0366 127.134 7.63497 130.141 5.91164C133.147 4.18831 136.686 3.32664 140.756 3.32664C142.259 3.32664 143.579 3.41831 144.716 3.60164C145.852 3.78497 147.227 4.05997 148.841 4.42664C149.574 4.57331 150.216 4.71997 150.766 4.86664C151.316 5.01331 151.884 5.08664 152.471 5.08664C152.654 5.08664 152.856 5.08664 153.076 5.08664C153.296 5.04997 153.479 5.01331 153.626 4.97664C153.699 6.58997 153.772 8.25831 153.846 9.98164C153.919 11.705 154.029 13.5016 154.176 15.3716C153.442 15.4816 152.819 15.5183 152.306 15.4816C150.876 8.84497 147.117 5.52664 141.031 5.52664C138.574 5.52664 136.484 6.02164 134.761 7.01164C133.037 7.96497 131.644 9.28497 130.581 10.9716C129.517 12.6216 128.747 14.4916 128.271 16.5816C127.794 18.6716 127.556 20.8533 127.556 23.1266C127.556 26.3533 128.032 29.3233 128.986 32.0366C129.939 34.75 131.442 36.9133 133.496 38.5266C135.549 40.14 138.189 40.9466 141.416 40.9466C144.459 40.9466 146.879 40.14 148.676 38.5266C150.509 36.9133 151.829 34.4016 152.636 30.9916C152.929 30.9916 153.222 30.9916 153.516 30.9916C153.846 30.9916 154.194 31.01 154.561 31.0466ZM178.634 42.9816C176.214 42.9816 174.693 41.7716 174.069 39.3516C171.466 41.845 168.808 43.0916 166.094 43.0916C164.224 43.0916 162.629 42.5416 161.309 41.4416C160.026 40.305 159.384 38.7466 159.384 36.7666C159.384 31.9266 164.316 28.8833 174.179 27.6366C174.179 26.7566 174.179 25.8583 174.179 24.9416C174.216 24.025 174.234 23.0533 174.234 22.0266C174.234 20.7433 173.758 19.7533 172.804 19.0566C171.888 18.3233 170.769 17.9566 169.449 17.9566C168.496 17.9566 167.689 18.1033 167.029 18.3966C167.029 19.24 166.846 20.1016 166.479 20.9816C166.113 21.8616 165.599 22.6133 164.939 23.2366C164.316 23.8233 163.546 24.1166 162.629 24.1166C161.823 24.1166 161.181 23.8966 160.704 23.4566C160.264 22.98 160.044 22.4116 160.044 21.7516C160.044 20.8716 160.448 20.0466 161.254 19.2766C162.098 18.47 163.161 17.7916 164.444 17.2416C165.728 16.655 167.066 16.1966 168.459 15.8666C169.853 15.5366 171.099 15.3716 172.199 15.3716C173.556 15.3716 174.803 15.6283 175.939 16.1416C177.113 16.6183 178.048 17.3516 178.744 18.3416C179.478 19.295 179.844 20.4866 179.844 21.9166C179.844 22.7966 179.826 23.9516 179.789 25.3816C179.753 26.775 179.716 28.2783 179.679 29.8916C179.679 31.4683 179.661 32.9716 179.624 34.4016C179.588 35.8316 179.569 36.9866 179.569 37.8666C179.569 39.04 180.083 39.6266 181.109 39.6266C181.769 39.6266 182.778 39.4066 184.134 38.9666C184.281 39.15 184.373 39.3516 184.409 39.5716C184.483 39.7916 184.538 39.9933 184.574 40.1766C183.658 41.1666 182.686 41.8816 181.659 42.3216C180.669 42.7616 179.661 42.9816 178.634 42.9816ZM174.069 37.8666L174.179 29.6166C170.806 30.0566 168.478 30.7716 167.194 31.7616C165.948 32.7516 165.324 34.0166 165.324 35.5566C165.324 36.84 165.654 37.83 166.314 38.5266C167.011 39.1866 167.873 39.5166 168.899 39.5166C169.559 39.5166 170.293 39.37 171.099 39.0766C171.943 38.7833 172.933 38.38 174.069 37.8666ZM185.738 55.9616C185.702 55.375 185.702 54.8066 185.738 54.2566C187.022 54.1833 187.957 54.055 188.543 53.8716C189.13 53.6883 189.497 53.3216 189.643 52.7716C189.827 52.2583 189.918 51.415 189.918 50.2416V24.3916C189.918 22.9616 189.845 21.8983 189.698 21.2016C189.588 20.505 189.24 20.0283 188.653 19.7716C188.103 19.4783 187.15 19.24 185.793 19.0566C185.72 18.5433 185.72 18.0666 185.793 17.6266C187.297 17.3333 188.763 16.985 190.193 16.5816C191.623 16.1783 193.108 15.6833 194.648 15.0966L195.418 15.4816C195.382 16.3983 195.363 17.1866 195.363 17.8466C195.363 18.47 195.363 19.075 195.363 19.6616C196.793 18.1583 198.205 17.0766 199.598 16.4166C200.992 15.72 202.477 15.3716 204.053 15.3716C206.363 15.3716 208.307 15.9766 209.883 17.1866C211.497 18.3966 212.725 19.9733 213.568 21.9166C214.412 23.86 214.833 25.9683 214.833 28.2416C214.833 30.9183 214.247 33.3933 213.073 35.6666C211.937 37.9033 210.342 39.7 208.288 41.0566C206.235 42.4133 203.852 43.0916 201.138 43.0916C200.075 43.0916 199.067 43 198.113 42.8166C197.16 42.67 196.262 42.45 195.418 42.1566V49.5816C195.418 51.0116 195.528 52.0383 195.748 52.6616C195.968 53.285 196.445 53.67 197.178 53.8166C197.912 54 199.067 54.1283 200.643 54.2016C200.68 54.7883 200.68 55.375 200.643 55.9616C199.397 55.9616 198.132 55.9433 196.848 55.9066C195.602 55.87 194.227 55.8516 192.723 55.8516C191.293 55.8516 190.065 55.87 189.038 55.9066C188.012 55.9433 186.912 55.9616 185.738 55.9616ZM195.363 37.6466C196.94 39.92 199.03 41.0566 201.633 41.0566C203.467 41.0566 204.915 40.5433 205.978 39.5166C207.078 38.49 207.867 37.1516 208.343 35.5016C208.857 33.8516 209.113 32.11 209.113 30.2766C209.113 28.4433 208.875 26.6466 208.398 24.8866C207.922 23.1266 207.133 21.6783 206.033 20.5416C204.97 19.3683 203.503 18.7816 201.633 18.7816C199.397 18.7816 197.307 19.8633 195.363 22.0266V37.6466ZM232.262 42.4866C231.236 42.4866 230.172 42.4683 229.072 42.4316C227.972 42.395 226.781 42.3766 225.497 42.3766C224.324 42.3766 223.132 42.395 221.922 42.4316C220.749 42.4683 219.612 42.4866 218.512 42.4866C218.402 41.9 218.402 41.3316 218.512 40.7816C219.759 40.7083 220.676 40.5983 221.262 40.4516C221.849 40.2683 222.234 39.9016 222.417 39.3516C222.601 38.8016 222.692 37.9216 222.692 36.7116V24.3916C222.692 22.9616 222.637 21.8983 222.527 21.2016C222.417 20.505 222.069 20.0283 221.482 19.7716C220.932 19.4783 219.961 19.24 218.567 19.0566C218.457 18.5433 218.457 18.0666 218.567 17.6266C220.181 17.3333 221.721 16.9666 223.187 16.5266C224.654 16.0866 226.066 15.61 227.422 15.0966L228.357 15.4266C228.321 16.5633 228.284 17.6266 228.247 18.6166C228.247 19.6066 228.247 20.5416 228.247 21.4216V36.1616C228.247 37.5916 228.321 38.6183 228.467 39.2416C228.651 39.865 229.017 40.2683 229.567 40.4516C230.154 40.5983 231.052 40.7083 232.262 40.7816C232.372 41.3316 232.372 41.9 232.262 42.4866ZM221.262 5.74664C221.262 4.6833 221.629 3.78497 222.362 3.05164C223.132 2.3183 224.049 1.95164 225.112 1.95164C226.139 1.95164 227.019 2.3183 227.752 3.05164C228.522 3.78497 228.907 4.66497 228.907 5.69164C228.907 6.64497 228.541 7.52497 227.807 8.33164C227.074 9.10164 226.139 9.48664 225.002 9.48664C223.976 9.48664 223.096 9.11997 222.362 8.38664C221.629 7.6533 221.262 6.7733 221.262 5.74664ZM245.454 43.0916C243.254 43.0916 241.513 42.5783 240.229 41.5516C238.946 40.4883 238.304 38.9666 238.304 36.9866C238.304 33.76 238.323 30.6433 238.359 27.6366C238.433 24.63 238.488 21.7333 238.524 18.9466H234.344C234.234 18.3966 234.234 17.9016 234.344 17.4616C237.974 15.9216 240.706 13.41 242.539 9.92664C242.833 9.92664 243.126 9.94497 243.419 9.98164C243.713 9.98164 243.969 9.99997 244.189 10.0366C244.153 10.99 244.116 11.9983 244.079 13.0616C244.079 14.125 244.061 15.2433 244.024 16.4166H252.384C252.494 17.2233 252.494 18.0666 252.384 18.9466H244.024C243.951 21.5133 243.896 24.2266 243.859 27.0866C243.859 29.91 243.859 32.7516 243.859 35.6116C243.859 38.5816 245.399 40.0666 248.479 40.0666C249.799 40.0666 251.028 39.7183 252.164 39.0216C252.494 39.4616 252.696 40.0116 252.769 40.6716C250.606 42.285 248.168 43.0916 245.454 43.0916ZM274.401 42.9816C271.981 42.9816 270.459 41.7716 269.836 39.3516C267.233 41.845 264.574 43.0916 261.861 43.0916C259.991 43.0916 258.396 42.5416 257.076 41.4416C255.793 40.305 255.151 38.7466 255.151 36.7666C255.151 31.9266 260.083 28.8833 269.946 27.6366C269.946 26.7566 269.946 25.8583 269.946 24.9416C269.983 24.025 270.001 23.0533 270.001 22.0266C270.001 20.7433 269.524 19.7533 268.571 19.0566C267.654 18.3233 266.536 17.9566 265.216 17.9566C264.263 17.9566 263.456 18.1033 262.796 18.3966C262.796 19.24 262.613 20.1016 262.246 20.9816C261.879 21.8616 261.366 22.6133 260.706 23.2366C260.083 23.8233 259.313 24.1166 258.396 24.1166C257.589 24.1166 256.948 23.8966 256.471 23.4566C256.031 22.98 255.811 22.4116 255.811 21.7516C255.811 20.8716 256.214 20.0466 257.021 19.2766C257.864 18.47 258.928 17.7916 260.211 17.2416C261.494 16.655 262.833 16.1966 264.226 15.8666C265.619 15.5366 266.866 15.3716 267.966 15.3716C269.323 15.3716 270.569 15.6283 271.706 16.1416C272.879 16.6183 273.814 17.3516 274.511 18.3416C275.244 19.295 275.611 20.4866 275.611 21.9166C275.611 22.7966 275.593 23.9516 275.556 25.3816C275.519 26.775 275.483 28.2783 275.446 29.8916C275.446 31.4683 275.428 32.9716 275.391 34.4016C275.354 35.8316 275.336 36.9866 275.336 37.8666C275.336 39.04 275.849 39.6266 276.876 39.6266C277.536 39.6266 278.544 39.4066 279.901 38.9666C280.048 39.15 280.139 39.3516 280.176 39.5716C280.249 39.7916 280.304 39.9933 280.341 40.1766C279.424 41.1666 278.453 41.8816 277.426 42.3216C276.436 42.7616 275.428 42.9816 274.401 42.9816ZM269.836 37.8666L269.946 29.6166C266.573 30.0566 264.244 30.7716 262.961 31.7616C261.714 32.7516 261.091 34.0166 261.091 35.5566C261.091 36.84 261.421 37.83 262.081 38.5266C262.778 39.1866 263.639 39.5166 264.666 39.5166C265.326 39.5166 266.059 39.37 266.866 39.0766C267.709 38.7833 268.699 38.38 269.836 37.8666ZM295.365 42.4866C294.302 42.4866 293.22 42.4683 292.12 42.4316C291.02 42.395 289.792 42.3766 288.435 42.3766C287.078 42.3766 285.868 42.395 284.805 42.4316C283.742 42.4683 282.66 42.4866 281.56 42.4866C281.45 41.9 281.45 41.3316 281.56 40.7816C282.807 40.7083 283.723 40.5983 284.31 40.4516C284.897 40.2683 285.282 39.9016 285.465 39.3516C285.648 38.8016 285.74 37.9216 285.74 36.7116V9.15664C285.74 8.01997 285.63 7.17664 285.41 6.62664C285.227 6.03997 284.805 5.63664 284.145 5.41664C283.522 5.15997 282.568 4.97664 281.285 4.86664C281.175 4.38997 281.175 3.89497 281.285 3.38164C282.752 3.19831 284.255 2.92331 285.795 2.55664C287.335 2.1533 288.912 1.6033 290.525 0.906638L291.46 1.23664C291.423 2.0433 291.387 2.95997 291.35 3.98664C291.35 5.01331 291.35 6.13164 291.35 7.34164V36.1616C291.35 37.5916 291.423 38.6183 291.57 39.2416C291.753 39.865 292.12 40.2683 292.67 40.4516C293.257 40.5983 294.155 40.7083 295.365 40.7816C295.438 41.3316 295.438 41.9 295.365 42.4866Z" fill="#F6161E" />
+                                <path d="M28.1839 12.0101C27.4203 9.79567 26.5994 8.2875 25.7212 7.48566C24.8812 6.64569 23.4846 5.99661 21.884 5.99661V4.85121C22.0749 4.85121 22.3613 4.83209 22.7431 4.79395C23.0867 4.75571 23.4494 4.73669 23.8312 4.73669C25.9312 4.73669 27.8212 5.21389 29.5011 6.16839C31.2192 7.12298 32.5938 9.07022 33.6246 12.0101L40.6972 33.6669L46.8252 15.5118L45.4507 11.56C44.6871 9.3456 43.8662 7.83743 42.988 7.03559C42.148 6.19562 40.869 5.6993 39.1509 5.54654V4.40114C39.3418 4.40114 39.6091 4.38202 39.9526 4.34388C40.3344 4.30564 40.7162 4.28662 41.0981 4.28662C43.198 4.28662 45.088 4.76382 46.7679 5.71842C48.4861 6.67291 49.8606 8.62015 50.8916 11.56L58.5659 33.6669L57.7068 43.2312H56.5614L48.0852 19.1199L39.8381 43.2312H38.6927L28.1839 12.0101Z" fill="#012F6D" />
+                                <path d="M60.6955 12.0102C59.9317 9.7957 59.1108 8.28762 58.2327 7.48579C57.3927 6.64581 55.9962 5.99673 54.3955 5.99673V4.85133C54.5865 4.85133 54.8728 4.83222 55.2546 4.79408C55.5983 4.75584 55.9609 4.73682 56.3427 4.73682C58.4427 4.73682 60.3331 5.21402 62.0129 6.16851C63.7307 7.12311 65.1051 9.07034 66.1362 12.0102L73.2085 33.6669C73.2085 36.9521 72.6159 40.7709 72.3497 43.2313H71.2045L60.6955 12.0102Z" fill="#012F6D" />
+                                <path d="M5.30487 11.7317C5.30487 9.78447 5.03759 8.35268 4.50303 7.43632C3.96847 6.48183 2.89946 6.00453 1.29579 6.00453H0.150391V4.85913H25.3498C28.5952 4.85913 30.2179 6.38643 30.2179 9.44081V13.7362H29.0725C29.0725 9.34541 26.6862 7.15002 21.9135 7.15002H10.4593V22.0406H25.9226V24.3315H10.4593V40.3674H20.4817C23.1163 40.3674 25.178 39.8902 26.6671 38.9357C28.1561 37.9811 30.6919 34.013 31.57 31.7221L32.0963 33.1194L29.3589 39.7947C28.6716 41.7038 27.2398 42.6583 25.0635 42.6583H5.30487V11.7317Z" fill="#012F6D" />
+                                <path d="M77.4571 12.3045C77.4571 10.3572 77.1898 8.92543 76.6553 8.00918C76.1207 7.05458 75.0516 6.57738 73.4479 6.57738H72.3027V5.43188H97.502C100.747 5.43188 102.37 6.95918 102.37 10.0137V14.309H101.225C101.225 9.91817 98.8384 7.72278 94.0655 7.72278H82.6115V22.6133H98.0746V24.9042H82.6115V43.231C80.8937 43.231 77.4571 43.231 77.4571 43.231V12.3045Z" fill="#012F6D" />
+                                <path d="M77.4571 36.4051C77.4571 38.3523 77.1898 39.784 76.6553 40.7004C76.1207 41.655 75.0516 42.1322 73.4479 42.1322H72.3027V43.2777C84.3954 43.757 82.2351 42.1322 82.6115 40.9868V26.0962V23.8053V5.47852C80.8937 5.47852 77.4571 5.47852 77.4571 5.47852V36.4051Z" fill="#012F6D" />
+                                <path d="M59.6843 20.3301L56.6356 43.1966H58.4627L61.4471 25.1497L59.6843 20.3301Z" fill="#012F6D" />
+                            </svg>
+
+                        </div>
                         <div className='mt-10'>
-                            <p className='tiro-regular responsive-firstSec-header font-normal text-6xl text-[#012F6D]'>Guiding your <br></br> crypto investments to unforeseen heights</p>
+                            <p className='tiro-regular responsive-firstSec-header font-normal text-4xl lg:text-6xl text-[#012F6D]'>Guiding your <br></br> crypto investments to unforeseen heights</p>
                         </div>
                     </div>
 
@@ -293,7 +305,7 @@ const Landing = () => {
                         </span>
                     </p>
 
-                    <div onClick={() => scrollToSection(contact)} c className='flex w-full mt-6 lg:mt-0 justify-between'>
+                    <div onClick={() => scrollToSection(contact)} c className='flex different-mouse w-full mt-6 lg:mt-0 justify-between'>
                         <p className='lg:text-base text-xs font-semibold inter text-white'>Request an update</p>
 
                         <div className="rotate-360 transition duration-500 ease-in-out">
@@ -340,6 +352,7 @@ const Landing = () => {
 
                                 <div className='flex text-white'>
                                     <p className='font-bold lg:text-7xl text-3xl responsive-second-numbers'>6.17 M</p>
+                                    <p className='font-bold lg:text-3xl text-xl ml-1'>$</p>
                                     {/* <p className='font-bold lg:text-3xl text-xl ml-1'>M</p> */}
                                 </div>
 
@@ -353,7 +366,7 @@ const Landing = () => {
                             <div className='flex responsive-secondBox-flex directionLeft justify-between  w-1/2 items-center pr-10'>
                                 <div className='text-white inter font-medium flex lg:block gap-2  text-xl lg:text-2xl'>
                                     <p>Total</p>
-                                    <p>Return (%)</p>
+                                    <p className="whitespace-nowrap">Return (%)</p>
                                 </div>
 
                                 <div className=' text-3xl responsive-total-text ml- lg:text-4xl text-white font-bold'>
@@ -652,8 +665,8 @@ const Landing = () => {
                     <img src="/Images/thirdbg.png" className="w-full h-full"></img>
                 </div>
                 <div ref={plans} className="relative lg:px-48 lg:py-24 px-6 py-6 h-full w-full z-20">
-                    <div className="flex w-full justify-center items-center">
-                        <p className="text-[#012F6D] ewf-investment-head tiro-regular font-light text-3xl lg:text-7xl">EWF Investment <span className="tiro">Plans</span> </p>
+                    <div className="flex mt-3 w-full justify-center items-center">
+                        <p className="text-[#012F6D] text-center lg:text-left ewf-investment-head tiro-regular font-light text-4xl md:text-5xl lg:text-7xl">EWF Investment <span className="tiro">Plans</span> </p>
                     </div>
                     <div className="lg:mt-20  test-scroll mt-10 lg:items-end w-full justify-center items-center lg:flex-row flex-col flex gap-6">
                         <div className="transform group hideLeftAnimation  hover:scale-90 transition-transform duration-500 flex flex-col justify-between h-full px-8 min-h-[481px] min-w-[350px] responsive-planCards-width py-8 bg-[#012F6D]">
@@ -702,7 +715,7 @@ const Landing = () => {
 
                             <div className="w-full items-end -mt-10 flex justify-between">
                                 <p className="text-lg font-bold text-white">Starter Plan</p>
-                                <div className="rotate-360 different-mouse">
+                                <div onClick={() => scrollToSection(contact)} className="rotate-360 different-mouse">
                                     <img className="transform hover:scale-110 transition-transform duration-500" src="/Images/redbtn.png"></img>
                                 </div>
                             </div>
@@ -763,7 +776,7 @@ const Landing = () => {
 
                                 <div className="w-full items-center -mt-10 flex justify-between">
                                     <p className="text-lg font-bold text-white">Medium Plan</p>
-                                    <div className="flex different-mouse responsive-btn-padding transform group-hover:scale-110 transition-transform duration-500 items-center lg:px-6 px-4 py-2 lg:py-3 text-white bg-[#F6161E]">
+                                    <div onClick={() => scrollToSection(contact)} className="flex different-mouse responsive-btn-padding transform group-hover:scale-110 transition-transform duration-500 items-center lg:px-6 px-4 py-2 lg:py-3 text-white bg-[#F6161E]">
                                         <div className="flex responsive-btn-text font-bold text-base">
                                             Get Started
                                         </div>
@@ -824,7 +837,7 @@ const Landing = () => {
                                 </div>
                             </div>
 
-                            <div className="w-full items-end -mt-10 flex justify-between">
+                            <div onClick={() => scrollToSection(contact)} className="w-full items-end -mt-10 flex justify-between">
                                 <p className="text-lg font-bold text-white">Advanced Plan</p>
                                 <div className="rotate-360 different-mouse">
                                     <img className="transform hover:scale-110 transition-transform duration-500" src="/Images/redbtn.png"></img>
@@ -1026,8 +1039,8 @@ const Landing = () => {
                 </div>
 
                 <div className="w-full mt-24 lg:flex hideTopAnimationnodelay bg-[#013276] lg:min-h-[290px]">
-                    <div className="lg:w-1/2 group w-full case-study-left  flex justify-center items-center">
-                        <p className="tiro mr-6 font-normal text-5xl lg:text-6xl text-white">Case Study</p>
+                    <div className="lg:w-1/2 group w-full case-study-left   flex justify-center items-center">
+                        <p className="tiro case-study-top mr-6 font-normal text-5xl lg:text-6xl text-white">Case Study</p>
                         <div className="lg:block hidden  group-hover:translate-x-4 transition-all duration-500 ease-in-out">
                             <svg width="57" height="24" viewBox="0 0 57 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M56.0607 13.0607C56.6464 12.4749 56.6464 11.5251 56.0607 10.9393L46.5147 1.3934C45.9289 0.807615 44.9792 0.807615 44.3934 1.3934C43.8076 1.97919 43.8076 2.92894 44.3934 3.51472L52.8787 12L44.3934 20.4853C43.8076 21.0711 43.8076 22.0208 44.3934 22.6066C44.9792 23.1924 45.9289 23.1924 46.5147 22.6066L56.0607 13.0607ZM-1.31134e-07 13.5L55 13.5L55 10.5L1.31134e-07 10.5L-1.31134e-07 13.5Z" fill="white" />
@@ -1044,14 +1057,14 @@ const Landing = () => {
                 </div>
 
                 <div className="flex lg:flex-row flex-col w-full gap-5 mt-5">
-                    <div className="group w-full hideLeftAnimation  lg:w-1/3 px-10 py-10 min-h-[537px] flex flex-col justify-between analyzing ">
+                    <div className="group w-full flex-grow hideLeftAnimation  lg:w-1/3 px-10 py-10 min-h-[537px] flex flex-col justify-between analyzing ">
                         <div>
                             <p className="tiro-regular font-normal text-6xl responsive-analyzing-cardHead text-white">Analyzing </p>
                             <p className="tiro font-normal text-4xl text-white mt-2">Bitcoin Bull Run <br /> Cycles</p>
                         </div>
                         <div className="flex  w-full justify-between">
                             <p className="font-medium inter  lg:block hidden  text-base text-white">Analysis on right</p>
-                            <p className="font-medium inter  lg:hidden block  text-base text-white">Analysis on bottom</p>
+                            <p className="font-medium inter  lg:hidden block  text-base text-white">Analysis at bottom</p>
                             <div className="lg:block transition-all duration-500 ease-in-out group-hover:translate-x-4 hidden">
                                 <svg width="34" height="24" viewBox="0 0 34 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M33.2237 13.0607C33.8095 12.4749 33.8095 11.5251 33.2237 10.9393L23.6778 1.3934C23.092 0.807609 22.1423 0.80761 21.5565 1.3934C20.9707 1.97918 20.9707 2.92893 21.5565 3.51472L30.0418 12L21.5565 20.4853C20.9707 21.0711 20.9707 22.0208 21.5565 22.6066C22.1423 23.1924 23.092 23.1924 23.6778 22.6066L33.2237 13.0607ZM1.31134e-07 13.5L32.1631 13.5L32.1631 10.5L-1.31134e-07 10.5L1.31134e-07 13.5Z" fill="white" />
@@ -1099,14 +1112,14 @@ const Landing = () => {
                 </div>
 
                 <div className="flex lg:flex-row flex-col w-full  mt-5">
-                    <div className="group w-full lg:w-1/3 px-10 py-10 min-h-[517px] flex flex-col justify-between strategies hideLeftAnimation">
+                    <div className="group flex-grow w-full lg:w-1/3 px-10 py-10 min-h-[517px] flex flex-col justify-between strategies hideLeftAnimation">
                         <div>
-                            <p className="tiro font-normal text-6xl responsive-analyzing-cardHead text-white">Strategies </p>
+                            <p className="tiro-regular font-normal text-6xl responsive-analyzing-cardHead text-white">Strategies </p>
                             <p className="tiro font-normal text-4xl text-white mt-2">Employed</p>
                         </div>
                         <div className="flex  w-full justify-between">
                             <p className="font-medium inter  lg:block hidden text-base text-white">Strategies on right</p>
-                            <p className="font-medium inter  lg:hidden block text-base text-white">Strategies on bottom</p>
+                            <p className="font-medium inter  lg:hidden block text-base text-white">Strategies at bottom</p>
                             <div className="lg:block transition-all duration-500 ease-in-out group-hover:translate-x-4 hidden">
                                 <svg width="34" height="24" viewBox="0 0 34 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M33.2237 13.0607C33.8095 12.4749 33.8095 11.5251 33.2237 10.9393L23.6778 1.3934C23.092 0.807609 22.1423 0.80761 21.5565 1.3934C20.9707 1.97918 20.9707 2.92893 21.5565 3.51472L30.0418 12L21.5565 20.4853C20.9707 21.0711 20.9707 22.0208 21.5565 22.6066C22.1423 23.1924 23.092 23.1924 23.6778 22.6066L33.2237 13.0607ZM1.31134e-07 13.5L32.1631 13.5L32.1631 10.5L-1.31134e-07 10.5L1.31134e-07 13.5Z" fill="white" />
@@ -1121,7 +1134,7 @@ const Landing = () => {
 
                     </div>
 
-                    <div className="flex hideRightAnimation lg:flex-row flex-col w-full lg:ml-5 gap-4 lg:w-2/3 bg-white">
+                    <div className="flex hideRightAnimation lg:flex-row flex-col w-full lg:ml-5 gap-4 lg:w-[70%] bg-white">
                         <div className="px-10 w-full font-normal text-3xl text-[#012F6D] flex flex-col justify-between py-10">
                             <div className="w-full lg:flex-row flex-col flex items-start justify-between">
                                 <div>
@@ -1133,7 +1146,7 @@ const Landing = () => {
                                 </div>
                             </div>
 
-                            <div className="w-full my-10 responsive-strategies-marging lg:my-0 flex lg:flex-row flex-col  items-start justify-between">
+                            <div className="w-full responsive-top-bottom my-10 responsive-strategies-marging lg:my-0 flex lg:flex-row flex-col  items-start justify-between">
                                 <div>
                                     <p className="tiro-regular">Tactical Trading During <br />Downturns</p>
                                 </div>
@@ -1144,8 +1157,13 @@ const Landing = () => {
                             </div>
 
                             <div className="w-full flex lg:flex-row flex-col  items-start justify-between">
-                                <div>
-                                    <p className="mb-10 tiro-regular">Active Participation in <br /> Project Launches</p>
+                                <div className="lg:block hidden">
+                                    <p className=" tiro-regular">Active 
+                                    Participation in <br /> Project Launches</p>
+                                </div>
+                                <div className="lg:hidden block">
+                                    <p className=" tiro-regular">Active 
+                                    Participation in Project Launches</p>
                                 </div>
 
                                 <div className="lg:w-1/2 mt-6 lg:mt-0 lg:pl-10 responsive-strategies-bot">
@@ -1187,9 +1205,9 @@ const Landing = () => {
                             </div>
 
 
-                            <div className="flex w-full relative z-50 mt-24 lg:mt-10 gap-6">
+                            <div className="md:flex w-full relative z-50 mt-24 lg:mt-10 gap-6">
                                 <div onClick={() => scrollToSection(book)} className="flex different-mouse items-center px-3 transform hover:scale-110 transition-transform duration-500 lg:px-6 py-3 gap-2 responsive-btn-padding bg-[#012F6D]">
-                                    <p className="lg:text-base text-sm responsive-btn-text font-medium text-white ">Book an appointment</p>
+                                    <p className="lg:text-base text-sm whitespace-nowrap responsive-btn-text font-medium text-white ">Book an appointment</p>
                                     <div className="flex items-center h-full ">
                                         <svg width="19" height="12" viewBox="0 0 19 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M18.2812 6.26764C18.5741 5.97474 18.5741 5.49987 18.2812 5.20698L13.5082 0.434005C13.2153 0.141112 12.7404 0.141111 12.4475 0.434005C12.1546 0.726898 12.1546 1.20177 12.4475 1.49467L16.6902 5.73731L12.4475 9.97995C12.1546 10.2728 12.1546 10.7477 12.4475 11.0406C12.7404 11.3335 13.2153 11.3335 13.5082 11.0406L18.2812 6.26764ZM0.839844 6.4873L17.7508 6.48731L17.7508 4.98731L0.839844 4.9873L0.839844 6.4873Z" fill="white" />
@@ -1197,8 +1215,8 @@ const Landing = () => {
 
                                     </div>
                                 </div>
-                                <div onClick={() => scrollToSection(contact)} className="flex different-mouse responsive-btn-padding items-center px-3 transform hover:scale-110 transition-transform duration-500 lg:px-6 py-3 gap-2 bg-[#0040A1]">
-                                    <p className="lg:text-base text-sm font-medium text-white responsive-btn-text">Contact Us</p>
+                                <div onClick={() => scrollToSection(contact)} className="flex mt-4 md:mt-0 different-mouse responsive-btn-padding items-center px-3 transform hover:scale-110 transition-transform duration-500 lg:px-6 py-3 gap-2 bg-[#0040A1]">
+                                    <p className="lg:text-base whitespace-nowrap text-sm font-medium text-white responsive-btn-text">Contact Us</p>
                                     <div className="flex items-center h-full ">
                                         <svg width="19" height="12" viewBox="0 0 19 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M18.2812 6.26764C18.5741 5.97474 18.5741 5.49987 18.2812 5.20698L13.5082 0.434005C13.2153 0.141112 12.7404 0.141111 12.4475 0.434005C12.1546 0.726898 12.1546 1.20177 12.4475 1.49467L16.6902 5.73731L12.4475 9.97995C12.1546 10.2728 12.1546 10.7477 12.4475 11.0406C12.7404 11.3335 13.2153 11.3335 13.5082 11.0406L18.2812 6.26764ZM0.839844 6.4873L17.7508 6.48731L17.7508 4.98731L0.839844 4.9873L0.839844 6.4873Z" fill="white" />
@@ -1358,7 +1376,7 @@ const Landing = () => {
 
             {/* footer */}
 
-            <div className="flex flex-col lg:flex-row justify-between lg:px-28 px-10 py-6 lg:py-10 bg-white w-full">
+            <div className="flex items-center flex-col lg:flex-row justify-between lg:px-28 px-10 py-6 lg:py-10 bg-white w-full">
                 <div>
                     <svg width="81" height="31" viewBox="0 0 81 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M22.2684 6.25997C21.6717 4.5297 21.0303 3.35126 20.3441 2.72473C19.6878 2.0684 18.5965 1.56123 17.3458 1.56123V0.66625C17.495 0.66625 17.7188 0.651312 18.0171 0.621511C18.2856 0.591631 18.569 0.576768 18.8673 0.576768C20.5082 0.576768 21.985 0.949638 23.2976 1.69545C24.6401 2.44134 25.7141 3.96285 26.5196 6.25997L32.0459 23.1819L36.8341 8.99614L35.7601 5.9083C35.1635 4.17803 34.5221 2.99959 33.8359 2.37306C33.1795 1.71673 32.1801 1.32892 30.8377 1.20956V0.314579C30.9868 0.314579 31.1957 0.299641 31.4641 0.26984C31.7624 0.23996 32.0608 0.225098 32.3592 0.225098C34 0.225098 35.4767 0.597967 36.7894 1.34386C38.1319 2.08967 39.2059 3.61118 40.0115 5.9083L46.0079 23.1819L45.3366 30.6552H44.4417L37.8187 11.8154L31.3746 30.6552H30.4797L22.2684 6.25997Z" fill="#012F6D" />
@@ -1369,7 +1387,7 @@ const Landing = () => {
                         <path d="M46.8832 12.7607L44.501 30.628H45.9287L48.2606 16.5267L46.8832 12.7607Z" fill="#012F6D" />
                     </svg>
                 </div>
-                <div className="my-6 lg:my-0">
+                <div className="my-6 text-center  lg:my-0">
                     <p className="text-black font-bold text-base">All rights are reserved ewfcapital @2024</p>
                 </div>
                 <div className="flex gap-8">

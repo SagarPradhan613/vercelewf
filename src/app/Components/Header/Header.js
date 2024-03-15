@@ -7,7 +7,7 @@ const Header = ({ handleToggleModal }) => {
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
-                console.log(entry, "entryyyyyyy");
+             
                 if (entry.isIntersecting) {
                     entry.target.classList.add('show');
                 } else {
