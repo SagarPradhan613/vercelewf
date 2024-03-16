@@ -1353,7 +1353,7 @@ const Landing = () => {
                             Whether you are an experienced investor or new to the cryptocurrency landscape, we are committed to providing expert guidance and support at every stage of your investment journey.
                         </p>
 
-                        <div className="mt-16 group responsive-book-calendy-margin flex items-center transform  gap-6 px-4 ">
+                        <div className="mt-16 group responsive-book-calendy-margin flex items-center transform  gap-6  ">
                             {/* <p className="text-white different-mouse font-bold text-base transition-all duration-700 group-hover:text-[rgba(255,255,255,0.5)]">Book Appoinment</p> */}
                             <Calendly />
                             <div className="rotate-360 different-mouse">
@@ -1421,9 +1421,9 @@ const Landing = () => {
                 </div>
 
                 <div className="flex different-mouse slowly-visible newhalf transform hover:scale-110 transition-transform duration-500 justify-between mt-6 lg:mt-0 items-center px-3 responsive-btn-padding lg:px-6 lg:py-4 py-3 gap-10 bg-white">
-                    <div>
+                    <a href="https://t.me/EWFCapital" target="_blank">
                         <p className="lg:text-base text-sm font-bold text-[#0040A1] responsive-btn-text">Join now</p>
-                    </div>
+                    </a>
 
                     <div className="flex items-center h-full ">
                         <svg width="24" height="12" viewBox="0 0 24 12" fill="none" xmlns="http://www.w3.org/2000/svg">
