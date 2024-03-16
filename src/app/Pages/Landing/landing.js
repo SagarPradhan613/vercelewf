@@ -1420,17 +1420,17 @@ const Landing = () => {
                     <p className="tiro-regular text-white text-3xl lg:text-6xl  lg:ml-0 lg:mt-2">Conquer this bull run with us</p>
                 </div>
 
-                <div className="flex different-mouse slowly-visible newhalf transform hover:scale-110 transition-transform duration-500 justify-between mt-6 lg:mt-0 items-center px-3 responsive-btn-padding lg:px-6 lg:py-4 py-3 gap-10 bg-white">
-                    <a href="https://t.me/EWFCapital" target="_blank">
+                <a href="https://t.me/EWFCapital" target="_blank" className="flex different-mouse slowly-visible newhalf transform hover:scale-110 transition-transform duration-500 justify-between mt-6 lg:mt-0 items-center px-3 responsive-btn-padding lg:px-6 lg:py-4 py-3 gap-10 bg-white">
+                    <div>
                         <p className="lg:text-base text-sm font-bold text-[#0040A1] responsive-btn-text">Join now</p>
-                    </a>
+                    </div>
 
                     <div className="flex items-center h-full ">
                         <svg width="24" height="12" viewBox="0 0 24 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M23.2508 6.68536C23.5437 6.39247 23.5437 5.91759 23.2508 5.6247L18.4778 0.85173C18.1849 0.558837 17.71 0.558837 17.4171 0.85173C17.1242 1.14462 17.1242 1.6195 17.4171 1.91239L21.6598 6.15503L17.4171 10.3977C17.1242 10.6906 17.1242 11.1654 17.4171 11.4583C17.71 11.7512 18.1849 11.7512 18.4778 11.4583L23.2508 6.68536ZM0.345886 6.90503L22.7204 6.90503L22.7204 5.40503L0.345886 5.40503L0.345886 6.90503Z" fill="#012F6D" />
                         </svg>
                     </div>
-                </div>
+                </a>
 
             </div>
 
