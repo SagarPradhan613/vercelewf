@@ -7,11 +7,19 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-
+import { InlineWidget, PopupWidget, PopupButton, PopupModal } from "react-calendly";
+import Calendly from "@/app/Components/Calendly";
+import emailjs from '@emailjs/browser';
 
 const Landing = () => {
     const boxRef = useRef(null);
     const viewRef = useRef(null);
+
+    const [firstName, setFirstName] = useState("");
+    const [lastName, setLastName] = useState("");
+    const [email, setEmail] = useState("");
+    const [message, setMessage] = useState("");
+    const [notFilled, setNotFilled] = useState(false);
 
     // top direction Animation
     useEffect(() => {
@@ -223,15 +231,56 @@ const Landing = () => {
     const contact = useRef(null);
     const plans = useRef(null);
     const book = useRef(null);
+    const [success, setSuccess] = useState(false);
 
     const scrollToSection = (ref) => {
         ref.current.scrollIntoView({ behavior: 'smooth' });
     };
 
+    const [rootElement, setRootElement] = useState(null);
+
+    useEffect(() => {
+        // Wait for the component to be mounted before setting the rootElement
+        if (typeof window !== "undefined") {
+            setRootElement(document.getElementById("__next"));
+        }
+    }, []);
+
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        if (!firstName || !lastName || !email || !message) {
+            setNotFilled(true);
+            setTimeout(() => {
+                setNotFilled(false);
+            }, 5000);
+            return;
+        } else {
+            emailjs
+                .sendForm('service_uqy0eon', 'template_9v6z2i5', contact.current, {
+                    publicKey: 'rQeyD6ypqkfwo_4XG',
+                })
+                .then(
+                    () => {
+                        console.log('SUCCESS!');
+                        setSuccess(true);
+                        setTimeout(() => {
+                            setSuccess(false);
+                        }, 5000); // Hide success message after 5 seconds
+                    },
+                    (error) => {
+                        console.log('FAILED...', error.text);
+                    },
+                );
+            setNotFilled(false);
+        }
+    };
+
 
 
     return (
-        <>
+        <div id="__next">
             {/* first box */}
             <div className="w-full overflow-hidden lg:py-28  lg:pb-44 px-4 lg:px-0 py-10 pb-28 relative hero-section ">
                 <div className='flex  flex-col lg:flex-row'>
@@ -1159,12 +1208,12 @@ const Landing = () => {
 
                             <div className="w-full flex lg:flex-row flex-col  items-start justify-between">
                                 <div className="lg:block hidden">
-                                    <p className=" tiro-regular">Active 
-                                    Participation in <br /> Project Launches</p>
+                                    <p className=" tiro-regular">Active
+                                        Participation in <br /> Project Launches</p>
                                 </div>
                                 <div className="lg:hidden block">
-                                    <p className=" tiro-regular">Active 
-                                    Participation in Project Launches</p>
+                                    <p className=" tiro-regular">Active
+                                        Participation in Project Launches</p>
                                 </div>
 
                                 <div className="lg:w-1/2 mt-6 lg:mt-0 lg:pl-10 responsive-strategies-bot">
@@ -1285,28 +1334,15 @@ const Landing = () => {
                         </div>
                         <div className="w-full group  group mt-1 flex">
                             <input placeholder="Email" className="white hover:border-b-[rgba(255,255,255,0.5)] transition-all duration-700 px-4 w-full py-4 text-white font-bold text-base bg-[#012F6D] border-b border-b-white"></input>
-                            {/* <div className="flex  items-center justify-between w-[20%] border-b transition-all duration-700 group-hover:border-b-[rgba(255,255,255,0.5)] border-t-0  border-white">
-                                <p className="font-bold text-base group-hover:text-[rgba(255,255,255,0.5)] transition-all duration-700 text-white">Verify</p>
-                                <div className="rotate-360">
-                                    <svg width="19" height="12" viewBox="0 0 19 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M17.8788 6.35064C18.1717 6.05775 18.1717 5.58288 17.8788 5.28998L13.1058 0.517013C12.813 0.224119 12.3381 0.224119 12.0452 0.517013C11.7523 0.809906 11.7523 1.28478 12.0452 1.57767L16.2878 5.82031L12.0452 10.063C11.7523 10.3558 11.7523 10.8307 12.0452 11.1236C12.3381 11.4165 12.813 11.4165 13.1058 11.1236L17.8788 6.35064ZM0.4375 6.57031L17.3485 6.57031L17.3485 5.07031L0.4375 5.07031L0.4375 6.57031Z" fill="white" />
-                                    </svg>
-                                </div>
-                            </div> */}
+
                         </div>
                         <div className="w-full mt-1 group flex">
                             <input placeholder="Mobile (Optional)" className="px-4 w-full hover:border-b-[rgba(255,255,255,0.5)] transition-all duration-700 white py-4 text-white font-bold text-base bg-[#012F6D] border-b border-white"></input>
-                            {/* <div className="flex items-center justify-between w-[20%] border-b border-white transition-all group-hover:border-b-[rgba(255,255,255,0.5)] duration-700">
-                                <p className="font-bold text-base text-white  group-hover:text-[rgba(255,255,255,0.5)] transition-all duration-700">Verify</p>
-                                <div className="rotate-360">
-                                    <svg width="19" height="12" viewBox="0 0 19 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M17.8788 6.35064C18.1717 6.05775 18.1717 5.58288 17.8788 5.28998L13.1058 0.517013C12.813 0.224119 12.3381 0.224119 12.0452 0.517013C11.7523 0.809906 11.7523 1.28478 12.0452 1.57767L16.2878 5.82031L12.0452 10.063C11.7523 10.3558 11.7523 10.8307 12.0452 11.1236C12.3381 11.4165 12.813 11.4165 13.1058 11.1236L17.8788 6.35064ZM0.4375 6.57031L17.3485 6.57031L17.3485 5.07031L0.4375 5.07031L0.4375 6.57031Z" fill="white" />
-                                    </svg>
-                                </div>
-                            </div> */}
+
                         </div>
-                        <div className="mt-16 group  flex items-center transform  gap-6 px-6 ">
-                            <p className="text-white different-mouse font-bold text-base transition-all duration-700 group-hover:text-[rgba(255,255,255,0.5)]">Book Appoinment</p>
+                        <div className="mt-16 group  flex items-center transform  gap-6 px-4 ">
+                            {/* <p className="text-white different-mouse font-bold text-base transition-all duration-700 group-hover:text-[rgba(255,255,255,0.5)]">Book Appoinment</p> */}
+                            <Calendly />
                             <div className="rotate-360 different-mouse">
                                 <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M17.4472 6.4151C17.7401 6.1222 17.7401 5.64733 17.4472 5.35444L12.6742 0.581466C12.3813 0.288572 11.9064 0.288572 11.6135 0.581466C11.3207 0.874359 11.3207 1.34923 11.6135 1.64213L15.8562 5.88477L11.6135 10.1274C11.3207 10.4203 11.3207 10.8952 11.6135 11.1881C11.9064 11.481 12.3813 11.481 12.6742 11.1881L17.4472 6.4151ZM0.00585931 6.63477L16.9168 6.63477L16.9168 5.13477L0.00585944 5.13477L0.00585931 6.63477Z" fill="white" />
@@ -1318,25 +1354,36 @@ const Landing = () => {
 
                 </div>
 
-                <div ref={contact} id="section1" className="lg:w-1/2 lg:py-24 w-full   px-10 py-10 lg:px-28 bg-white">
+
+                <form onSubmit={sendEmail} ref={contact} id="section1" className="lg:w-1/2 lg:py-24 w-full   px-10 py-10 lg:px-28 bg-white">
                     <div className="w-full flex gap-2 text-[#0040A1] text-6xl">
                         <p className="tiro-regular">Contact</p>
                         <p className="tiro">us</p>
                     </div>
                     <div className="form hideDelay mt-16">
                         <div className="w-full flex gap-10">
-                            <input placeholder="First Name" className="w-1/2 black px-4 py-4 text-[#000000] font-bold text-base bg-white border-b border-b-[#000000] hover:border-b-[rgba(112,112,112,0.5)] transition-all duration-700"></input>
-                            <input placeholder="Second Name" className="w-1/2 black px-4 py-4 text-[#000000] font-bold text-base bg-white border-b border-b-[#000000] hover:border-b-[rgba(112,112,112,0.5)] transition-all duration-700"></input>
+                            <input onChange={(e) => { setFirstName(e.target.value) }} name="firstName" placeholder="First Name" className="w-1/2 black px-4 py-4 text-[#000000] font-bold text-base bg-white border-b border-b-[#000000] hover:border-b-[rgba(112,112,112,0.5)] transition-all duration-700"></input>
+                            <input onChange={(e) => { setLastName(e.target.value) }} name="secondName" placeholder="Second Name" className="w-1/2 black px-4 py-4 text-[#000000] font-bold text-base bg-white border-b border-b-[#000000] hover:border-b-[rgba(112,112,112,0.5)] transition-all duration-700"></input>
                         </div>
                         <div className="w-full gap-10 mt-1 flex">
-                            <input placeholder="Phone (Optional)" className="w-1/2 black px-4 py-4 text-[#000000] hover:border-b-[rgba(112,112,112,0.5)] transition-all duration-700 font-bold text-base bg-white border-b border-b-[#000000]"></input>
-                            <input placeholder="Email" className="w-1/2 black px-4 py-4 text-[#000000] font-bold text-base hover:border-b-[rgba(112,112,112,0.5)] transition-all duration-700 bg-white border-b border-b-[#000000]"></input>
+                            <input name="phone" placeholder="Phone (Optional)" className="w-1/2 black px-4 py-4 text-[#000000] hover:border-b-[rgba(112,112,112,0.5)] transition-all duration-700 font-bold text-base bg-white border-b border-b-[#000000]"></input>
+                            <input onChange={(e) => { setEmail(e.target.value) }} name="email" placeholder="Email" className="w-1/2 black px-4 py-4 text-[#000000] font-bold text-base hover:border-b-[rgba(112,112,112,0.5)] transition-all duration-700 bg-white border-b border-b-[#000000]"></input>
                         </div>
                         <div className="w-full flex mt-6 ">
-                            <textarea type="textArea" placeholder="Message" className="px-4 hover:border-b-[rgba(112,112,112,0.5)] transition-all duration-700 pb-12 w-[100%] py-4 text-black font-bold text-base bg-white black border-b border-black"></textarea>
-
+                            <textarea style={{ outline: 'none' }} onChange={(e) => { setMessage(e.target.value) }} name="message" id="textarea" type="textArea" placeholder="Message" className="px-4 focus:outline-none focus:none border-t-0 border-l-0 border-r-0 resize-none hover:border-b-[rgba(112,112,112,0.5)] focus:none transition-all duration-700 pb-12 w-[100%] py-4 text-black font-bold text-base bg-white black border-b border-black"></textarea>
                         </div>
-                        <div className="flex different-mouse mt-4 w-[50%] responsive-btn-padding responsive-submit-btn transform hover:scale-110 transition-transform duration-500 lg:w-1/3 items-center justify-between px-3 lg:px-6 py-3 gap-2 bg-[#0040A1]">
+                        {notFilled && (
+                            <p className="font-bold text-base text-[rgba(0,0,0,0.5)] ml-2 mt-2">Please fill in all the required fields</p>
+                        )}
+                        {success ?
+                            <>
+                                <p className="font-bold text-base text-[rgba(0,0,0,0.5)] ml-2 mt-2">Message Sent Successfully !</p>
+                            </>
+                            :
+                            null
+                        }
+
+                        <button type="submit" className="flex different-mouse mt-4 w-[50%] responsive-btn-padding responsive-submit-btn transform hover:scale-110 transition-transform duration-500 lg:w-1/3 items-center justify-between px-3 lg:px-6 py-3 gap-2 bg-[#0040A1]">
                             <p className="lg:text-base responsive-btn-text text-sm font-bold  text-white ">Submit</p>
                             <div className="flex items-center h-full ">
                                 <svg width="19" height="12" viewBox="0 0 19 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1344,11 +1391,11 @@ const Landing = () => {
                                 </svg>
 
                             </div>
-                        </div>
+                        </button>
 
                     </div>
 
-                </div>
+                </form>
 
             </div>
 
@@ -1410,7 +1457,7 @@ const Landing = () => {
                 </div>
             </div>
 
-        </>
+        </div>
     )
 }
 export default Landing

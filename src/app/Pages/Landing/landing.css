@@ -2,7 +2,7 @@
     .hero-section {
         background-image: url('/Images/herobg.png');
         background-repeat: no-repeat;
-        background-size: cover ;
+        background-size: cover;
         background-position: center;
     }
 }
@@ -62,17 +62,18 @@
     }
 }
 
-@media screen and (min-width:720px) and (max-width:1020px){
-   .case-study-top{
-    margin-top: 2rem;
-   }
+@media screen and (min-width:720px) and (max-width:1020px) {
+    .case-study-top {
+        margin-top: 2rem;
+    }
 }
-@media screen and (min-width:1020px) and (max-width:1400px){
-    .responsive-top-bottom{
+
+@media screen and (min-width:1020px) and (max-width:1400px) {
+    .responsive-top-bottom {
         margin-top: 2rem;
         margin-bottom: 2rem;
     }
- }
+}
 
 @media screen and (min-width:1080px) and (max-width:1300px) {
     .responsive-strategies-top {
@@ -116,7 +117,7 @@
 }
 
 @media screen and (min-width:1270px) {
-    .responsive-planCards-width{
+    .responsive-planCards-width {
         min-width: 400px;
     }
 }
@@ -126,10 +127,12 @@
         font-size: 2.5rem;
         line-height: 1.4;
     }
-    .responsive-planCards-width{
+
+    .responsive-planCards-width {
         min-width: 300px;
     }
-    .responsive-forthCard-title{
+
+    .responsive-forthCard-title {
         font-size: 2rem !important;
     }
 
@@ -154,10 +157,12 @@
         justify-content: right !important;
         align-items: end !important;
     }
-    .responsive-second-numbers{
+
+    .responsive-second-numbers {
         font-size: 3rem !important;
     }
-    .responsive-second-head{
+
+    .responsive-second-head {
         font-size: 2rem;
     }
 }
@@ -167,7 +172,8 @@
         font-size: 2.5rem;
         line-height: 1.4;
     }
-    .responsive-forthCard-title{
+
+    .responsive-forthCard-title {
         font-size: 2rem !important;
     }
 
@@ -195,13 +201,16 @@
         justify-content: right !important;
         align-items: end !important;
     }
-    .responsive-planCards-width{
+
+    .responsive-planCards-width {
         min-width: 300px;
     }
-    .responsive-second-numbers{
+
+    .responsive-second-numbers {
         font-size: 3rem !important;
     }
-    .responsive-second-head{
+
+    .responsive-second-head {
         font-size: 2.3rem;
         flex-wrap: wrap;
     }
@@ -251,45 +260,53 @@
 }
 
 @media screen and (min-width:1000px) and (max-width:1280px) {
-    .responsive-body-padding{
+    .responsive-body-padding {
         padding-left: 4rem !important;
         padding-right: 4rem !important;
     }
-    .responsive-years-btn{
+
+    .responsive-years-btn {
         flex-direction: column;
         gap: 3rem;
     }
-    .responsive-analyzing-cardHead{
+
+    .responsive-analyzing-cardHead {
         font-size: 3rem;
     }
-    .responsive-btn-text{
+
+    .responsive-btn-text {
         font-size: 14px;
         white-space: nowrap;
     }
-    .responsive-btn-margin{
+
+    .responsive-btn-margin {
         margin-left: 0.5rem;
     }
-    .responsive-btn-padding{
+
+    .responsive-btn-padding {
         padding-left: 1rem;
         padding-right: 1rem;
     }
-    .responsive-submit-btn{
+
+    .responsive-submit-btn {
         width: 40%;
     }
-   
-    .ewf-investment-head{
+
+    .ewf-investment-head {
         font-size: 3rem;
     }
 }
 
 @media screen and (max-width:1800px) {
-    .responsive-hide{
+    .responsive-hide {
         display: none;
     }
-    .responsive-show{
+
+    .responsive-show {
         display: flex;
     }
 }
+
 /* @media screen and (min-width:1000px) and (max-width:1250px) {
     .responsive-hide{
         display: none;
@@ -299,11 +316,12 @@
     }
 } */
 @media screen and (min-width:1800px) {
-   
-    .responsive-hide{
+
+    .responsive-hide {
         display: flex;
     }
-    .responsive-show{
+
+    .responsive-show {
         display: none;
     }
 }
@@ -520,3 +538,16 @@ textarea:focus {
     background-size: cover;
 }
 
+/* .calendly-inline-widget{
+    height: 900px !important;
+} */
+
+
+#textarea:focus {
+    outline: none !important;
+}
+
+.fadeout {
+    transition: opacity 1s ease-in-out;
+    opacity: 0;
+}
