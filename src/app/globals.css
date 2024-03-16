@@ -213,3 +213,6 @@ body {
   opacity: 0;
 }
 
+.calendly-popup-close{
+  display: none !important;
+}

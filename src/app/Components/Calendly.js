@@ -15,11 +15,12 @@ export default function Calendly() {
   return (
     <div className="cal_div">
       <PopupButton
-        className="rounded-md bg-primary hover:text-[rgba(255,255,255,0.5)] text-white transition-all duration-700 ease-in-out  text-base font-semibold   "
+        className="rounded-md whitespace-nowrap bg-primary hover:text-[rgba(255,255,255,0.5)] text-white transition-all duration-700 ease-in-out  text-base font-semibold   "
         url="https://calendly.com/ewfcapital"
         rootElement={rootElement}
-        text="Book Appointment"
+        text="Book your appointment now!"
       />
     </div>
   );
 }
+

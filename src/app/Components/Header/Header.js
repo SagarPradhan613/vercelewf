@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState, useRef } from "react";
 import './Header.css'
+import CalendlyBtnDynamic from "../CalendlyBtnDynamic";
 
 const Header = ({ handleToggleModal }) => {
     useEffect(() => {
@@ -45,7 +46,7 @@ const Header = ({ handleToggleModal }) => {
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M18.9217 17.2197C18.4966 16.7975 17.8151 16.7975 17.3898 17.2197C17.1694 17.4418 17.0454 17.7435 17.0454 18.0581C17.0454 18.3278 17.1365 18.5878 17.3014 18.7965L17.3898 18.8963L19.7219 21.569C20.2904 22.1437 21.2122 22.1437 21.7807 21.569C22.3491 20.9945 22.3491 20.0628 21.7807 19.4881H21.7319L18.9217 17.2197ZM16.3144 2.7933C14.5448 1.00478 12.1449 0 9.64246 0C4.43142 0 0.207031 4.26983 0.207031 9.53694C0.207031 14.804 4.43142 19.0739 9.64246 19.0739C14.8535 19.0739 19.0779 14.804 19.0779 9.53694C19.0779 7.00758 18.0838 4.58182 16.3144 2.7933ZM9.70703 17C13.8492 17 17.207 13.6421 17.207 9.5C17.207 5.35786 13.8492 2 9.70703 2C5.5649 2 2.20703 5.35786 2.20703 9.5C2.20703 13.6421 5.5649 17 9.70703 17Z" fill="#012F6D" />
                         </svg>
                     </div> */}
-                    <div className='flex different-mouse bg-[#012F6D] transform hover:scale-110 transition-transform duration-500 px-9 py-3 items-center justify-center gap-3'>
+                    {/* <div className='flex different-mouse bg-[#012F6D] transform hover:scale-110 transition-transform duration-500 px-9 py-3 items-center justify-center gap-3'>
                         <div>
                             <p className='font-bold text-base text-white'>Join Us</p>
                         </div>
@@ -54,7 +55,9 @@ const Header = ({ handleToggleModal }) => {
                                 <path d="M18.251 6.53814C18.5439 6.24525 18.5439 5.77038 18.251 5.47748L13.4781 0.704512C13.1852 0.411618 12.7103 0.411618 12.4174 0.704512C12.1245 0.997405 12.1245 1.47228 12.4174 1.76517L16.66 6.00781L12.4174 10.2505C12.1245 10.5433 12.1245 11.0182 12.4174 11.3111C12.7103 11.604 13.1852 11.604 13.4781 11.3111L18.251 6.53814ZM0.720703 6.75781H17.7207V5.25781H0.720703V6.75781Z" fill="white" />
                             </svg>
                         </div>
-                    </div>
+                    </div> */}
+                    <CalendlyBtnDynamic/>
+                  
                 </div>
 
             </div>

@@ -5,6 +5,7 @@ import Modal from "./Components/Modal/Modal";
 import Landing from "./Pages/Landing/landing";
 import Head from 'next/head';
 import CalendlyDynamic from "./Components/CalendlyDynamic";
+import CalendlyBtnDynamic from './Components/CalendlyBtnDynamic';
 
 
 export default function Home() {
@@ -53,6 +54,7 @@ export default function Home() {
       <Modal isOpen={isModalOpen} handleToggleModal={handleToggleModal} onClose={handleCloseModal} openPrivacy={openPrivacy} setOpenPrivacy={setOpenPrivacy}></Modal>
       <Header handleToggleModal={handleToggleModal} openPrivacy={openPrivacy} setOpenPrivacy={setOpenPrivacy} />
       <CalendlyDynamic />
+      {/* <CalendlyBtnDynamic /> */}
       <Landing />
 
     </>

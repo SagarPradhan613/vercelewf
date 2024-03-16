@@ -1,7 +1,7 @@
 'use client'
 import React, { useState, useEffect, useContext } from 'react'
 import { usePathname } from 'next/navigation'
-
+import CalendlyBtnDynamic from '../CalendlyBtnDynamic'
 
 const Modal = ({ isOpen, onClose, setOpenPrivacy, handleToggleModal }) => {
     const [userChoice, setUserChoice] = useState(null);
@@ -66,23 +66,15 @@ const Modal = ({ isOpen, onClose, setOpenPrivacy, handleToggleModal }) => {
                 </div>
                 <div className="flex flex-col justify-between h-full lg:space-x-10 space-y-5 align-middle items-center mt-6 text-center">
                     <div className='flex justify-center items-center'>
-                        <div className=' hover:transform hover:scale-110 hover:transition-transform hover:ease-in hover:duration-300'>
-                            <a href='/'>
-                                <div className='bg-[#012F6D] text-white px-10 py-3  rounded-[5px]  ' >
-                                    <p className='md:text-lg text-sm font-medium'>
+                        <div  className=' hover:transform hover:scale-110 hover:transition-transform hover:ease-in hover:duration-300'>
+                            <div className='bg-[#012F6D] text-white px-10 py-3  rounded-[5px]  ' >
+                                {/* <p className='md:text-lg text-sm font-medium'>
                                       Join Us
-                                    </p>
-                                </div>
-                            </a>
+                                    </p> */}
+                                <CalendlyBtnDynamic />
+                            </div>
                         </div>
                     </div>
-
-
-
-
-
-
-
                 </div>
             </div>
         </div>

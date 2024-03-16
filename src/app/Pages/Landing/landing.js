@@ -19,6 +19,7 @@ const Landing = () => {
     const [lastName, setLastName] = useState("");
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
+    const [phone, setPhone] = useState("");
     const [notFilled, setNotFilled] = useState(false);
 
     // top direction Animation
@@ -263,7 +264,12 @@ const Landing = () => {
                 })
                 .then(
                     () => {
-                        console.log('SUCCESS!');
+                        setFirstName('');
+                        setLastName('');
+                        setEmail('');
+                        setMessage('');
+                        setPhone('');
+
                         setSuccess(true);
                         setTimeout(() => {
                             setSuccess(false);
@@ -1328,7 +1334,7 @@ const Landing = () => {
                         <p className="tiro">appointment</p>
                     </div>
                     <div className="form hideDelay mt-16">
-                        <div className="w-full flex gap-10">
+                        {/* <div className="w-full flex gap-10">
                             <input placeholder="First Name" className="white  w-1/2 px-4 py-4 text-white font-bold text-base bg-[#012F6D] border-b hover:border-b-[rgba(255,255,255,0.5)] transition-all duration-700 border-b-white"></input>
                             <input placeholder="Second Name" className="white w-1/2 px-4 py-4 text-white font-bold text-base bg-[#012F6D] border-b border-b-white hover:border-b-[rgba(255,255,255,0.5)]"></input>
                         </div>
@@ -1339,8 +1345,15 @@ const Landing = () => {
                         <div className="w-full mt-1 group flex">
                             <input placeholder="Mobile (Optional)" className="px-4 w-full hover:border-b-[rgba(255,255,255,0.5)] transition-all duration-700 white py-4 text-white font-bold text-base bg-[#012F6D] border-b border-white"></input>
 
-                        </div>
-                        <div className="mt-16 group  flex items-center transform  gap-6 px-4 ">
+                        </div> */}
+                        <p className="text-white responsive-book-text font-bold opacity-70 text-base">
+                            Schedule a consultation with EWF Capital to initiate a path towards financial empowerment and success in the WEB3 space. Our team of experienced analysts and cryptocurrency specialists is prepared to offer investment plans aligned with your financial objectives and risk preferences.
+                        </p>
+                        <p className="text-white responsive-book-text responsive-book-margin mt-4 font-bold opacity-70 text-base">
+                            Whether you are an experienced investor or new to the cryptocurrency landscape, we are committed to providing expert guidance and support at every stage of your investment journey.
+                        </p>
+
+                        <div className="mt-16 group responsive-book-calendy-margin flex items-center transform  gap-6 px-4 ">
                             {/* <p className="text-white different-mouse font-bold text-base transition-all duration-700 group-hover:text-[rgba(255,255,255,0.5)]">Book Appoinment</p> */}
                             <Calendly />
                             <div className="rotate-360 different-mouse">
@@ -1362,15 +1375,15 @@ const Landing = () => {
                     </div>
                     <div className="form hideDelay mt-16">
                         <div className="w-full flex gap-10">
-                            <input onChange={(e) => { setFirstName(e.target.value) }} name="firstName" placeholder="First Name" className="w-1/2 black px-4 py-4 text-[#000000] font-bold text-base bg-white border-b border-b-[#000000] hover:border-b-[rgba(112,112,112,0.5)] transition-all duration-700"></input>
-                            <input onChange={(e) => { setLastName(e.target.value) }} name="secondName" placeholder="Second Name" className="w-1/2 black px-4 py-4 text-[#000000] font-bold text-base bg-white border-b border-b-[#000000] hover:border-b-[rgba(112,112,112,0.5)] transition-all duration-700"></input>
+                            <input onChange={(e) => { setFirstName(e.target.value) }} value={firstName} name="firstName" placeholder="First Name" className="w-1/2 black px-4 py-4 text-[#000000] font-bold text-base bg-white border-b border-b-[#000000] hover:border-b-[rgba(112,112,112,0.5)] transition-all duration-700"></input>
+                            <input onChange={(e) => { setLastName(e.target.value) }} value={lastName} name="secondName" placeholder="Second Name" className="w-1/2 black px-4 py-4 text-[#000000] font-bold text-base bg-white border-b border-b-[#000000] hover:border-b-[rgba(112,112,112,0.5)] transition-all duration-700"></input>
                         </div>
                         <div className="w-full gap-10 mt-1 flex">
-                            <input name="phone" placeholder="Phone (Optional)" className="w-1/2 black px-4 py-4 text-[#000000] hover:border-b-[rgba(112,112,112,0.5)] transition-all duration-700 font-bold text-base bg-white border-b border-b-[#000000]"></input>
-                            <input onChange={(e) => { setEmail(e.target.value) }} name="email" placeholder="Email" className="w-1/2 black px-4 py-4 text-[#000000] font-bold text-base hover:border-b-[rgba(112,112,112,0.5)] transition-all duration-700 bg-white border-b border-b-[#000000]"></input>
+                            <input onChange={(e) => { setPhone(e.target.value) }} value={phone} name="phone" placeholder="Phone (Optional)" className="w-1/2 black px-4 py-4 text-[#000000] hover:border-b-[rgba(112,112,112,0.5)] transition-all duration-700 font-bold text-base bg-white border-b border-b-[#000000]"></input>
+                            <input onChange={(e) => { setEmail(e.target.value) }} value={email} name="email" placeholder="Email" className="w-1/2 black px-4 py-4 text-[#000000] font-bold text-base hover:border-b-[rgba(112,112,112,0.5)] transition-all duration-700 bg-white border-b border-b-[#000000]"></input>
                         </div>
                         <div className="w-full flex mt-6 ">
-                            <textarea style={{ outline: 'none' }} onChange={(e) => { setMessage(e.target.value) }} name="message" id="textarea" type="textArea" placeholder="Message" className="px-4 focus:outline-none focus:none border-t-0 border-l-0 border-r-0 resize-none hover:border-b-[rgba(112,112,112,0.5)] focus:none transition-all duration-700 pb-12 w-[100%] py-4 text-black font-bold text-base bg-white black border-b border-black"></textarea>
+                            <textarea style={{ outline: 'none' }} value={message} onChange={(e) => { setMessage(e.target.value) }} name="message" id="textarea" type="textArea" placeholder="Message" className="px-4 focus:outline-none focus:none border-t-0 border-l-0 border-r-0 resize-none hover:border-b-[rgba(112,112,112,0.5)] focus:none transition-all duration-700 pb-12 w-[100%] py-4 text-black font-bold text-base bg-white black border-b border-black"></textarea>
                         </div>
                         {notFilled && (
                             <p className="font-bold text-base text-[rgba(0,0,0,0.5)] ml-2 mt-2">Please fill in all the required fields</p>

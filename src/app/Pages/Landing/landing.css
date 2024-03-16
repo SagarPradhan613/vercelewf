@@ -295,6 +295,15 @@
     .ewf-investment-head {
         font-size: 3rem;
     }
+    .responsive-book-margin{
+        margin-top: 0.6rem !important;
+    }
+    .responsive-book-calendy-margin{
+        margin-top: 2rem;
+    }
+    .responsive-book-text{
+        font-size: 14px;
+    }
 }
 
 @media screen and (max-width:1800px) {
