@@ -330,12 +330,12 @@ const Landing = () => {
                     </div>
                 </div>
                 <div className='flex mb-10 md:mb-0 slowly-visible-icons gap-10 w-full lg:bottom-10 bottom-5 right-[10%] absolute justify-end'>
-                    <a href="https://t.me/EWFCapital" target="_blank" className="icon-360 different-mouse">
+                    <a href="https://t.me/EWFCapital" target="_blank" className="hover:scale-125  rotate-90 transition-all ease-in-out duration-300 different-mouse">
                         <svg width="21" height="25" viewBox="0 0 21 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M19.3769 4.2892C19.3769 4.2892 3.73608 0.453939 1.64357 0.3109L1.64131 0.308664C1.40204 0.308664 1.25757 0.286314 1.13568 0.286314C0.918976 0.286314 0.727106 0.3109 0.630042 0.33325C0.390769 0.429356 0.318535 0.525459 0.246302 0.690849C0.126665 1.04845 0.318536 1.6452 0.318536 1.6452C0.318536 1.6452 7.9956 22.7794 8.8624 23.9952C9.02944 24.2567 9.15134 24.3282 9.27097 24.3752C9.87141 24.5897 10.1355 23.946 10.1355 23.946L11.9414 18.4904C11.9414 18.4904 11.9639 18.2758 11.9188 18.2043C11.1242 16.9661 3.95278 5.74195 3.73608 5.09827C3.68868 4.97982 3.73608 4.91053 3.78349 4.93288C4.72252 5.19438 13.4808 14.939 13.4808 14.939C13.4808 14.939 13.5057 14.9882 13.5779 15.0127L13.6276 15.0351L13.675 15.0351L19.185 15.5357C19.5213 15.5357 20.1715 15.4396 19.4017 14.5121C19.2816 14.361 19.1527 14.217 19.0157 14.0807L18.9931 14.0584C18.7216 13.7868 18.4567 13.5089 18.1986 13.2247C17.5259 12.5341 16.9706 11.8904 16.5869 11.4613C16.5208 11.3763 16.4484 11.2964 16.3702 11.2222C17.6929 9.3403 19.1376 7.33998 19.8825 6.45715C20.0286 6.31512 20.1427 6.14414 20.2174 5.95541C20.292 5.76669 20.3256 5.56447 20.3159 5.362C20.2933 4.52835 19.3769 4.2892 19.3769 4.2892Z" fill="#F6161E" />
                         </svg>
                     </a>
-                    <a href="https://twitter.com/EWFCapital" target="_blank" className="icon-360 different-mouse">
+                    <a href="https://twitter.com/EWFCapital" target="_blank" className="hover:scale-125 rotate-90 transition-all ease-in-out duration-300 different-mouse">
                         <svg width="21" height="24" viewBox="0 0 21 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M20.8508 16.0839C20.8508 7.28449 13.1203 2.46749 6.42079 2.46749C6.20627 2.46749 5.99176 2.46749 5.76384 2.48045C5.04362 1.53906 4.15505 0.729753 3.14009 0.0907344C3.5423 0.949942 3.81044 1.87395 3.94451 2.8472C3.29757 1.84026 2.29868 1.09082 1.12904 0.734816C1.71895 1.65882 2.13456 2.68261 2.36248 3.78287C1.85259 4.22041 1.44438 4.75743 1.16477 5.35853C0.885147 5.95963 0.74046 6.61117 0.740234 7.27024C0.740234 9.91525 3.01809 12.0652 5.81747 12.0652C6.21968 12.0652 6.59508 12.0147 6.97047 11.9382C6.76937 15.909 4.73284 19.4365 1.66532 21.8003C2.44577 22.226 3.32725 22.4484 4.22338 22.4457C5.9797 22.4457 7.53357 21.5981 8.4439 20.3204C8.41728 21.0799 8.20109 21.8219 7.81378 22.4833L7.88081 22.4833C10.3343 22.4833 12.3963 20.8271 12.8521 18.6525C12.9728 19.0568 13.0264 19.4741 13.0264 19.9173C13.0264 20.2206 12.9996 20.5238 12.9326 20.8141C14.9557 20.2076 16.4157 18.4374 16.4559 16.3392C17.8627 18.0209 18.6294 20.1185 18.6279 22.2811C18.6279 22.6608 18.6145 23.0522 18.5608 23.4189C20.0561 21.2459 20.8528 18.6938 20.8508 16.0839Z" fill="#F6161E" />
                         </svg>
@@ -355,13 +355,13 @@ const Landing = () => {
                     <p className='tiro text-white text-3xl lg:text-5xl'>
                         A Glance<br />
                         <span className="tiro-regular">
-                            At Past<br />
+                            At Early<br />
                             Investments
                         </span>
                     </p>
 
                     <div onClick={() => scrollToSection(contact)} c className='flex different-mouse w-full mt-6 lg:mt-0 justify-between'>
-                        <p className='lg:text-base text-xs font-semibold inter text-white'>Request an update</p>
+                        <p className='lg:text-base text-xs font-semibold inter text-white'>Book your profits today</p>
 
                         <div className="rotate-360 transition duration-500 ease-in-out">
                             <svg className="" width="35" height="24" viewBox="0 0 35 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -373,7 +373,7 @@ const Landing = () => {
                 </div>
 
 
-                <div className='lg:w-1/2 hideTopAnimation w-full'>
+                {/* <div className='lg:w-1/2 hideTopAnimation w-full'>
                     <div className='mt-20  px-4 lg:px-0'>
                         <div>
                             <p className='text-white font-bold text-base opacity-50'>Updated on March </p>
@@ -409,7 +409,6 @@ const Landing = () => {
                                     <p className='font-bold lg:text-7xl text-3xl responsive-second-numbers'>6.17 </p>
                                     <p className='font-bold responsive-second-numbers lg:text-7xl text-3xl ml-2'>M</p>
                                     <p className='font-bold lg:text-3xl text-xl ml-1'>$</p>
-                                    {/* <p className='font-bold lg:text-3xl text-xl ml-1'>M</p> */}
                                 </div>
 
                             </div>
@@ -447,13 +446,13 @@ const Landing = () => {
 
                         </div>
                     </div>
-                </div>
+                </div> */}
 
 
-                <div className="lg:w-1/2  hideTopAnimation w-full mt-8 lg:mt-0 lg:pl-28">
-                    <div className="w-full  px-4 lg:px-0 flex justify-start items-start">
+                <div className="  hideTopAnimation w-full mt-10 lg:mt-6 lg:pr-28">
+                    {/* <div className="w-full  px-4 lg:px-0 flex justify-start items-start">
                         <p className="tiro responsive-second-head text-3xl lg:text-5xl text-white">our early<span className="tiro-regular ml-2">Investments</span> </p>
-                    </div>
+                    </div> */}
 
                     <div ref={boxRef} className="carousel-container  mt-10 scroll-smooth w-full relative overflow-hidden flex h-full">
                         <div className="carousel-card group transition-all duration-500 ease-in-out hover:scale-110 relative z-10 flex flex-col justify-between px-10 py-10 h-[85%] mx-3 min-w-[300px] bg-white">
@@ -697,7 +696,7 @@ const Landing = () => {
                     </div>
 
 
-                    <div className="flex mt-6 px-4 lg:px-0 resp-controls relative z-50 lg:-mt-6 lg:pr-10 text-white  justify-between w-full items-center">
+                    <div className="flex mt-6 px-4 lg:px-0 resp-controls relative z-50 lg:-mt-2 lg:pr-10 text-white  justify-between w-full items-center">
                         <div className="hover:scale-125 transition-all duration-500 ease-in-out" onClick={() => { handlePrev() }}>
                             <svg width="33" height="23" viewBox="0 0 33 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M-0.866325 12.6339C-1.45211 12.0481 -1.45211 11.0984 -0.866325 10.5126L8.67962 0.966638C9.2654 0.380852 10.2152 0.380852 10.8009 0.966639C11.3867 1.55243 11.3867 2.50217 10.8009 3.08796L2.31566 11.5732L10.8009 20.0585C11.3867 20.6443 11.3867 21.5941 10.8009 22.1798C10.2151 22.7656 9.2654 22.7656 8.67962 22.1798L-0.866325 12.6339ZM32.3574 13.0732L0.194336 13.0732L0.194336 10.0732L32.3574 10.0732L32.3574 13.0732Z" fill="white" />
