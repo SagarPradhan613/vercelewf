@@ -322,10 +322,9 @@ const Landing = () => {
                                 </svg>
                             </div>
 
-                            <div onClick={() => scrollToSection(plans)} className='bg-white different-mouse transform hover:scale-110 transition-transform duration-500 border border-[#012F6D] w-[169px] py-3 text-[#012F6D] flex items-center justify-center gap-8'>
-                                <p className='text-base font-bold '>Our Plans</p>
-
-                            </div>
+                            <a href="https://ewf-capital.gitbook.io/ewf-capital" target="_blank" className='bg-white different-mouse transform hover:scale-110 transition-transform duration-500 border border-[#012F6D] w-[169px] py-3 text-[#012F6D] flex items-center justify-center gap-8'>
+                                <p className='text-base font-bold '>Documentation</p>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -918,7 +917,7 @@ const Landing = () => {
 
                             <div>
                                 <p className="opacity-70 lg:text-xl text-base font-bold text-white">Leveraging big data and machine learning to uncover market patterns</p>
-                                <div onClick={() => scrollToSection(contact)} className="flex different-mouse mt-8 items-center justify-between w-full">
+                                <a  href="https://ewf-capital.gitbook.io/ewf-capital/early-stage-investments" target="_blank" className="flex different-mouse mt-8 items-center justify-between w-full">
                                     <p className="text-white transform group-hover:scale-125 transition-transform duration-500 text-lg font-semibold">Learn More</p>
                                     <div>
                                         <svg className="transform group-hover:scale-125 transition-transform duration-500" width="34" height="23" viewBox="0 0 34 23" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -926,7 +925,7 @@ const Landing = () => {
                                         </svg>
 
                                     </div>
-                                </div>
+                                </a>
                             </div>
 
 
@@ -947,14 +946,14 @@ const Landing = () => {
 
                             <div>
                                 <p className="opacity-70 lg:text-xl text-base font-bold text-white">Utilizing advanced modeling techniques and stringent controls to protect your capital</p>
-                                <div onClick={() => scrollToSection(contact)} className="flex mt-8 different-mouse items-center justify-between w-full">
+                                <a href="https://ewf-capital.gitbook.io/ewf-capital/early-stage-investments" target="_blank" className="flex mt-8 different-mouse items-center justify-between w-full">
                                     <p className="text-white group-hover:scale-125 transition-transform duration-500 transform hover:scale-110 text-lg font-semibold">Learn More</p>
                                     <div>
                                         <svg className="group-hover:scale-125 transition-transform duration-500" width="34" height="23" viewBox="0 0 34 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M33.4308 12.7735C34.0166 12.1878 34.0166 11.238 33.4308 10.6522L23.8848 1.10629C23.299 0.5205 22.3493 0.5205 21.7635 1.10629C21.1777 1.69207 21.1777 2.64182 21.7635 3.22761L30.2488 11.7129L21.7635 20.1982C21.1777 20.784 21.1777 21.7337 21.7635 22.3195C22.3493 22.9053 23.2991 22.9053 23.8848 22.3195L33.4308 12.7735ZM0.207031 13.2129L32.3701 13.2129L32.3701 10.2129L0.207031 10.2129L0.207031 13.2129Z" fill="white" />
                                         </svg>
                                     </div>
-                                </div>
+                                </a>
                             </div>
 
 
@@ -973,7 +972,7 @@ const Landing = () => {
                             </div>
 
                             <div>
-                                <div onClick={() => scrollToSection(contact)} className="flex different-mouse mt-8 items-center justify-between w-full">
+                                <a href="https://ewf-capital.gitbook.io/ewf-capital/early-stage-investments" target="_blank" className="flex different-mouse mt-8 items-center justify-between w-full">
                                     <p className="text-white group-hover:scale-125 transition-transform duration-500 text-lg font-semibold">Learn More</p>
                                     <div className="group-hover:scale-125 transition-transform duration-500">
                                         <svg width="34" height="23" viewBox="0 0 34 23" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -981,7 +980,7 @@ const Landing = () => {
                                         </svg>
 
                                     </div>
-                                </div>
+                                </a>
                             </div>
 
 
@@ -998,7 +997,7 @@ const Landing = () => {
                             </div>
 
                             <div>
-                                <div onClick={() => scrollToSection(contact)} className="flex different-mouse  mt-8 items-center justify-between w-full">
+                                <a href="https://ewf-capital.gitbook.io/ewf-capital/early-stage-investments" target="_blank" className="flex different-mouse  mt-8 items-center justify-between w-full">
                                     <p className="text-white text-lg group-hover:scale-125 transition-transform duration-500 font-semibold">Learn More</p>
                                     <div className="group-hover:scale-125 transition-transform duration-500">
                                         <svg width="34" height="23" viewBox="0 0 34 23" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1006,7 +1005,7 @@ const Landing = () => {
                                         </svg>
 
                                     </div>
-                                </div>
+                                </a>
                             </div>
 
 
@@ -1040,7 +1039,7 @@ const Landing = () => {
                                 <p className="font-bold text-[10px] lg:text-2xl text-[#F6161E] lg:whitespace-nowrap ml-2 lg:ml-3">Years Experience</p>
                             </div>
                             <div className="flex half items-end ">
-                                <div onClick={() => scrollToSection(contact)} className="flex different-mouse items-center px-3 transform hover:scale-110 transition-transform duration-500 lg:px-6 py-3 gap-2 bg-[#012F6D]">
+                                <a href="https://ewf-capital.gitbook.io/ewf-capital/early-stage-investments" target="_blank" className="flex different-mouse items-center px-3 transform hover:scale-110 transition-transform duration-500 lg:px-6 py-3 gap-2 bg-[#012F6D]">
                                     <p className="lg:text-base text-sm font-medium text-white ">Learn more</p>
                                     <div className="flex items-center h-full mt-1">
                                         <svg width="19" height="12" viewBox="0 0 19 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1048,7 +1047,7 @@ const Landing = () => {
                                         </svg>
 
                                     </div>
-                                </div>
+                                </a>
                             </div>
                         </div>
 
@@ -1078,7 +1077,7 @@ const Landing = () => {
                                 <p className="font-bold text-[10px] lg:text-2xl text-[#F6161E] whitespace-nowrap ml-3">Years Experience</p>
                             </div>
                             <div className="flex items-end ">
-                                <div onClick={() => scrollToSection(contact)} className="flex different-mouse items-center px-3 lg:px-6 py-3 transform hover:scale-110 transition-transform duration-500 gap-2 bg-[#012F6D]">
+                                <a href="https://ewf-capital.gitbook.io/ewf-capital/early-stage-investments" target="_blank"  className="flex different-mouse items-center px-3 lg:px-6 py-3 transform hover:scale-110 transition-transform duration-500 gap-2 bg-[#012F6D]">
                                     <p className="lg:text-base text-sm font-medium text-white ">Learn more</p>
                                     <div className="flex items-center h-full mt-1">
                                         <svg width="19" height="12" viewBox="0 0 19 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1086,7 +1085,7 @@ const Landing = () => {
                                         </svg>
 
                                     </div>
-                                </div>
+                                </a>
                             </div>
                         </div>
 
