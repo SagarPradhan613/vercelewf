@@ -1346,7 +1346,9 @@ const Landing = () => {
 
                         </div> */}
                         <p className="text-white responsive-book-text font-bold opacity-70 text-base">
-                            Schedule a consultation with EWF Capital to initiate a path towards financial empowerment and success in the WEB3 space. Our team of experienced analysts and cryptocurrency specialists is prepared to offer investment plans aligned with your financial objectives and risk preferences.
+                            Schedule a consultation with EWF Capital to initiate a path towards financial empowerment and success in the WEB3 space.</p>
+                        <p className="mt-4 responsive-book-margin text-white responsive-book-text font-bold opacity-70 text-base">
+                            Our teams of experienced analysts and cryptocurrency specialists are prepared to offer investment plans aligned with your financial objectives and risk preferences.
                         </p>
                         <p className="text-white responsive-book-text responsive-book-margin mt-4 font-bold opacity-70 text-base">
                             Whether you are an experienced investor or new to the cryptocurrency landscape, we are committed to providing expert guidance and support at every stage of your investment journey.
@@ -1375,7 +1377,7 @@ const Landing = () => {
                     <div className="form hideDelay mt-16">
                         <div className="w-full flex gap-10">
                             <input onChange={(e) => { setFirstName(e.target.value) }} value={firstName} name="firstName" placeholder="First Name" className="w-1/2 black px-4 py-4 text-[#000000] font-bold text-base bg-white border-b border-b-[#000000] hover:border-b-[rgba(112,112,112,0.5)] transition-all duration-700"></input>
-                            <input onChange={(e) => { setLastName(e.target.value) }} value={lastName} name="secondName" placeholder="Second Name" className="w-1/2 black px-4 py-4 text-[#000000] font-bold text-base bg-white border-b border-b-[#000000] hover:border-b-[rgba(112,112,112,0.5)] transition-all duration-700"></input>
+                            <input onChange={(e) => { setLastName(e.target.value) }} value={lastName} name="secondName" placeholder="Last Name" className="w-1/2 black px-4 py-4 text-[#000000] font-bold text-base bg-white border-b border-b-[#000000] hover:border-b-[rgba(112,112,112,0.5)] transition-all duration-700"></input>
                         </div>
                         <div className="w-full gap-10 mt-1 flex">
                             <input onChange={(e) => { setPhone(e.target.value) }} value={phone} name="phone" placeholder="Phone (Optional)" className="w-1/2 black px-4 py-4 text-[#000000] hover:border-b-[rgba(112,112,112,0.5)] transition-all duration-700 font-bold text-base bg-white border-b border-b-[#000000]"></input>
