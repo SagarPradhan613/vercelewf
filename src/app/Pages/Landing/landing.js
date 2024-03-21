@@ -917,7 +917,7 @@ const Landing = () => {
 
                             <div>
                                 <p className="opacity-70 lg:text-xl text-base font-bold text-white">Leveraging big data and machine learning to uncover market patterns</p>
-                                <a  href="https://ewf-capital.gitbook.io/ewf-capital/early-stage-investments" target="_blank" className="flex different-mouse mt-8 items-center justify-between w-full">
+                                <a  href="https://ewf-capital.gitbook.io/ewf-capital/market-research-and-analysis" target="_blank" className="flex different-mouse mt-8 items-center justify-between w-full">
                                     <p className="text-white transform group-hover:scale-125 transition-transform duration-500 text-lg font-semibold">Learn More</p>
                                     <div>
                                         <svg className="transform group-hover:scale-125 transition-transform duration-500" width="34" height="23" viewBox="0 0 34 23" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -946,7 +946,7 @@ const Landing = () => {
 
                             <div>
                                 <p className="opacity-70 lg:text-xl text-base font-bold text-white">Utilizing advanced modeling techniques and stringent controls to protect your capital</p>
-                                <a href="https://ewf-capital.gitbook.io/ewf-capital/early-stage-investments" target="_blank" className="flex mt-8 different-mouse items-center justify-between w-full">
+                                <a href="https://ewf-capital.gitbook.io/ewf-capital/market-research-and-analysis" target="_blank" className="flex mt-8 different-mouse items-center justify-between w-full">
                                     <p className="text-white group-hover:scale-125 transition-transform duration-500 transform hover:scale-110 text-lg font-semibold">Learn More</p>
                                     <div>
                                         <svg className="group-hover:scale-125 transition-transform duration-500" width="34" height="23" viewBox="0 0 34 23" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -972,7 +972,7 @@ const Landing = () => {
                             </div>
 
                             <div>
-                                <a href="https://ewf-capital.gitbook.io/ewf-capital/early-stage-investments" target="_blank" className="flex different-mouse mt-8 items-center justify-between w-full">
+                                <a href="https://ewf-capital.gitbook.io/ewf-capital/market-research-and-analysis" target="_blank" className="flex different-mouse mt-8 items-center justify-between w-full">
                                     <p className="text-white group-hover:scale-125 transition-transform duration-500 text-lg font-semibold">Learn More</p>
                                     <div className="group-hover:scale-125 transition-transform duration-500">
                                         <svg width="34" height="23" viewBox="0 0 34 23" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -997,7 +997,7 @@ const Landing = () => {
                             </div>
 
                             <div>
-                                <a href="https://ewf-capital.gitbook.io/ewf-capital/early-stage-investments" target="_blank" className="flex different-mouse  mt-8 items-center justify-between w-full">
+                                <a href="https://ewf-capital.gitbook.io/ewf-capital/market-research-and-analysis" target="_blank" className="flex different-mouse  mt-8 items-center justify-between w-full">
                                     <p className="text-white text-lg group-hover:scale-125 transition-transform duration-500 font-semibold">Learn More</p>
                                     <div className="group-hover:scale-125 transition-transform duration-500">
                                         <svg width="34" height="23" viewBox="0 0 34 23" fill="none" xmlns="http://www.w3.org/2000/svg">
