@@ -1039,7 +1039,7 @@ const Landing = () => {
                                 <p className="font-bold text-[10px] lg:text-2xl text-[#F6161E] lg:whitespace-nowrap ml-2 lg:ml-3">Years Experience</p>
                             </div>
                             <div className="flex half items-end ">
-                                <a href="https://ewf-capital.gitbook.io/ewf-capital/early-stage-investments" target="_blank" className="flex different-mouse items-center px-3 transform hover:scale-110 transition-transform duration-500 lg:px-6 py-3 gap-2 bg-[#012F6D]">
+                                <a href="https://ewf-capital.gitbook.io/ewf-capital/market-research-and-analysis" target="_blank" className="flex different-mouse items-center px-3 transform hover:scale-110 transition-transform duration-500 lg:px-6 py-3 gap-2 bg-[#012F6D]">
                                     <p className="lg:text-base text-sm font-medium text-white ">Learn more</p>
                                     <div className="flex items-center h-full mt-1">
                                         <svg width="19" height="12" viewBox="0 0 19 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1077,7 +1077,7 @@ const Landing = () => {
                                 <p className="font-bold text-[10px] lg:text-2xl text-[#F6161E] whitespace-nowrap ml-3">Years Experience</p>
                             </div>
                             <div className="flex items-end ">
-                                <a href="https://ewf-capital.gitbook.io/ewf-capital/early-stage-investments" target="_blank"  className="flex different-mouse items-center px-3 lg:px-6 py-3 transform hover:scale-110 transition-transform duration-500 gap-2 bg-[#012F6D]">
+                                <a href="https://ewf-capital.gitbook.io/ewf-capital/market-research-and-analysis" target="_blank"  className="flex different-mouse items-center px-3 lg:px-6 py-3 transform hover:scale-110 transition-transform duration-500 gap-2 bg-[#012F6D]">
                                     <p className="lg:text-base text-sm font-medium text-white ">Learn more</p>
                                     <div className="flex items-center h-full mt-1">
                                         <svg width="19" height="12" viewBox="0 0 19 12" fill="none" xmlns="http://www.w3.org/2000/svg">
